@@ -1,0 +1,11 @@
+.logo-container {
+  background-color: #99E2D0;
+  width: 400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.logo-container .logo-format {
+  background-color: #9356DC;
+  color: #FF79DA;
+}/*# sourceMappingURL=main.css.map */
