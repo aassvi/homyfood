@@ -1,0 +1,16 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    }
+    html, body, main{
+    width: 100%;
+    
+    
+    }
+    .cover{                                   /* rempli la card partie image*/
+        object-fit: cover;
+        height: 100%;
+      }

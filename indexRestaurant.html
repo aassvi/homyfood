@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"> <!-- encodage important pour enregistrer tous les formats de caracteres-->
+<meta name="viewport" content="width=device-width"> <!--modifie la largeur viewport du navigateur mobile et obtenir un rendu facile à lire sans zoom -->
+<title>homyfood</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<!--<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">-->
+<link rel="stylesheet" type="text/css" href=".public\css\style.css"> 
+
+<script src="https://kit.fontawesome.com/fcc853d552.js" crossorigin="anonymous"></script>
+<!-- declaration font Awesome https://fontawesome.com/  -->
+</head>
+<body>
+<header>
+    
+    <div class="header__logo"> 
+        <img src="./images/logo/ohmyfood2.png" alt="logo">
+    </div>
+    <form method="post" action="#">
+        <div class="form__input">
+           <i class="fa-sharp fa-solid fa-location-dot"></i>
+           <input type="text" name="ville" id="ville" placeholder="Paris,Bellevile"  >
+        </div>
+        <div class="form__heading">
+            <h1>Reservez le menu qui vous convient</h1>
+            <h2>Decouvrez les restaurants d'exception, seléctionés par nos soins.</h2>
+            </div>
+            <button  class="form__button" type="button" >
+                    <p>Explorer nos restaurants </p>
+            </button> 
+    </form>
+    
+    <nav>
+        <div class="nav__heading">
+            <h3>Fonctionnement</h3>
+        </div>
+       
+        <div class="nav__etape">
+        
+            <div class="icon2">1</i></div> 
+            <button  class="button" type="button" >
+            <i class="fa-regular fa-mobile-screen-button"></i> 
+                 <p> Choisissez un restaurant</p>
+            </button> 
+        </div>
+        <div class="nav__etape">
+           
+                <div class="icon2">2</i></div> 
+                <button  class="button" type="button" >
+                 <i class="fa-solid fa-list-ul"></i>
+                  <p>Composez votre menu</p>
+                </button> 
+            </div>
+         </div>
+         <div class="nav__etape ">
+                    <div class="icon2">3</i></div> 
+                     <button  class="button button-violet" type="button" >
+                        <i class="fa-solid fa-store"></i>
+                        <p>Dégustez au restaurant</p>
+                     </button> 
+                </div>
+        </div>
+    </nav> 
+</header>
+<main>
+<section>
+    <div class="card__container ">
+        <div class="card__heading">
+            <h4>Restaurants</h4>
+        </div>
+        <a href="indexMenu.html" >	
+			<div class="card__restaurant">
+				<!-- Image restaurant  -->
+				<img class="cover" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="card1">
+                <div class="card__img__nouveau">
+                    <p>nouveau</p>
+                </div>
+				<!-- Corp de notre carte -->
+				<div class="card__body">
+					    <!-- nom  restaurant -->
+					<div class="card__nom"> 
+                        <p>La palette du goût</p>
+                            <div class="card__lieu">
+                                <p>Ménilmontant</p>
+                            </div>
+                        </div>
+					<!-- coeur restaurant -->
+				    <div class="card__coeurVide ">
+						<i class="fa-regular fa-heart"></i>
+                        
+					</div>
+                    <div class="card__coeurRempli">
+						
+                        <i class="fa-sharp fa-solid fa-heart"></i>
+					</div>
+				</div> <!-- Fin du corp de notre carte -->
+			</div>
+        </a>
+    </div>
+</section>
+</main> 
+   
+
+<footer>
+    <div class="footer__logo"> 
+        <img src="./images/logo/ohmyfood3.png" alt="logo">
+    </div>
+    <div class="footer__iconText">
+        <i class="fa-solid fa-utensils"></i>
+        <div class="footer__text">
+            <p> <a href="#">proposer un restaurant</a></p>
+    </div>
+    </div>
+    <div class="footer__iconText">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <div class="footer__text">
+            <p> <a href="#">Devenir partenaire</a></p>
+    </div>
+    </div>
+    <div class="footer__iconText">
+    <p> Mentions légales</p>
+    </div>
+    <div class="footer__iconText">
+    <p><a href="mailto:aassvicentet@hotmail.com"> <strong> Contact </strong><a href="#"></a></p>
+    </div>
+</footer>
+</body>
+</html>
