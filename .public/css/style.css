@@ -322,10 +322,15 @@ html, body, main {
   height: 100%;
 }
 
+h1, h2, h3 {
+  font-family: "shrikhand";
+}
+
 header {
   width: 100%;
+  display: block;
   font-family: "roboto";
-  margin-top: 40px;
+  padding-top: 10px;
   text-align: center;
 }
 header__logo {
@@ -336,16 +341,53 @@ header__logo {
 header__logo__logo img {
   width: 50%;
 }
-header form {
+
+#loader {
+  width: 40%;
+  height: 40%;
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+form {
   background-color: rgb(247, 243, 243);
 }
-header .form {
+
+.form {
   width: 100%;
+  display: block;
 }
-header .form:hover {
-  color: #0065FC;
-}
-header .form__input {
+.form__input {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -354,28 +396,33 @@ header .form__input {
   border: 1px solid gainsboro;
   box-shadow: 0 -5px 5px -5px gainsboro;
 }
-header .form__input i {
+.form__input i {
   padding-top: 10px;
 }
-header .form__input input {
+.form__input input {
   border: none;
   background-color: gainsboro;
 }
-header .form__input #ville {
+.form__input #ville {
   width: 40%;
 }
-header .form__input ::placeholder {
+.form__input ::placeholder {
   font-size: 16px;
   background-color: gainsboro;
   color: black;
   text-align: left;
   padding-left: 10px;
 }
-header .form__heading {
-  font-size: 12px;
+.form__heading {
+  width: 100%;
+  font-size: 14px;
   margin-bottom: 20px;
 }
-header .form__button {
+.form__heading p {
+  max-width: 100%;
+  font-size: 18px;
+}
+.form__button {
   width: 50%;
   height: 50px;
   border-radius: 16px;
@@ -383,28 +430,29 @@ header .form__button {
   border: none;
   box-shadow: 0 5px 5px -5px #333;
   color: #F2F2F2;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 0px;
   margin-bottom: 40px;
 }
-header .form__button:hover {
-  background-color: beige;
+.form__button p {
+  width: 100%;
 }
-header .nav {
+
+.nav {
   width: 80%;
   margin-top: 50px;
   padding-left: 50px;
 }
-header .nav__heading {
+.nav__heading {
   font-size: 16px;
   text-align: left;
   padding-top: 20px;
   padding-left: 50px;
 }
-header .nav__etape {
+.nav__etape {
   padding-left: 60px;
 }
-header .nav__etape .icon2 {
+.nav__etape .icon2 {
   position: relative;
   width: 20px;
   height: 20px;
@@ -416,54 +464,61 @@ header .nav__etape .icon2 {
   background-color: darkorchid;
   border-radius: 50%;
 }
-header .nav__etape button {
+.nav__etape button {
   display: flex;
   width: 70%;
   height: 50px;
   border-radius: 16px;
   border: 2px solid white;
   margin-bottom: 10px;
+  box-shadow: 0 5px 5px -5px #333;
 }
-header .nav__etape button:hover {
+.nav__etape button:hover {
   background-color: rgb(247, 229, 247);
 }
-header .nav__etape i {
-  font-size: 18px;
-  width: 20px;
-  height: 20px;
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 10px;
+.nav__etape button:hover:hover i {
+  color: darkorchid;
 }
-header .nav__etape button p {
+.nav__etape button p {
   font-size: 14px;
   padding-top: 15px;
   padding-left: 20px;
 }
+.nav__etape button i {
+  font-size: 18px;
+  width: 20px;
+  height: 20px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
 
 section {
   width: 100%;
-  height: 300px;
+  height: 1000px;
+  margin-top: 40px;
   background-color: rgb(247, 243, 243);
 }
 
-.card__container {
+.card {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 90%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 50px;
   font-family: "roboto";
 }
-.card__container a {
+.card a {
   text-decoration: none;
 }
-
-/* cards modele 1*/
-.card__heading {
+.card__heading h4 {
   font-size: 18px;
-  margin-top: 20px;
   padding-top: 20px;
-  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
-
 .card__restaurant {
   width: 100%; /* card responsive */
   height: 206px;
@@ -474,7 +529,6 @@ section {
 .card__restaurant:hover {
   background-color: #DEEBFF;
 }
-
 .card__restaurant img {
   width: 100%; /* image responsive */
   height: 119px;
@@ -482,86 +536,99 @@ section {
   border-top-right-radius: 20px;
   overflow: hidden;
 }
-
 .card__img__nouveau {
   position: relative;
-  width: 60px;
+  width: 25%;
+  max-width: 70px;
   height: 20px;
-  left: 250px;
+  left: 70%;
   bottom: 110px;
   font-size: 14px;
   color: rgb(53, 87, 53);
   background-color: #99E2D0;
   text-align: center;
 }
-
 .card__body {
   display: flex;
-  padding-left: 10px;
   width: 100%;
   height: 90px;
   color: black;
   font-size: 16px;
 }
-
 .card__nom {
+  width: 70%;
   padding-left: 10px;
+  padding-right: 50px;
   font-weight: bold;
 }
-
+.card__nom p {
+  width: 200px;
+}
 .card__lieu {
+  width: 70%;
   padding-top: 10px;
   font-weight: normal;
 }
-
 .card__coeurVide {
-  margin-left: 50px;
+  width: 20%;
+  margin-left: 40px;
+  /*  &__coeurRempli{
+        margin-left: 50px;
+       i{
+         background-image:linear-gradient(to right, $couleur_secondaire, $couleur_primaire ) ;
+         background-clip: text;
+         color: transparent;
+       }
+      }*/
 }
-
-.card__coeurRempli {
-  margin-left: 50px;
-  /*color: transparent;
-  background-clip: text;
-  background-image:linear-gradient(to right, $couleur_secondaire, $couleur_primaire) ;*/
+.card__coeurVide i {
+  font-size: 20px;
 }
 
 footer {
   background-color: grey;
   color: white;
-  font-size: 14px;
-  width: 100%;
-  margin-top: 0px;
+  font-family: "roboto";
+  font-size: 12px;
 }
-
-.footer__logo {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-bottom: 30px;
-}
-
-.footer__iconText {
-  display: flex;
-  width: 100%;
-  padding-bottom: 20px;
-  padding-left: 20px;
-}
-
-.footer__iconText i {
-  margin-right: 10px;
-  font-size: 16px;
-}
-
 footer a {
   color: white;
   text-decoration: none;
 }
-
 footer a:link {
   color: white;
 }
-
 footer a:visited {
   color: white;
+}
+
+.footer {
+  width: 100%;
+  display: block;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.footer__logo {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.footer__logo h5 {
+  font-family: "shrikhand";
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+}
+.footer__iconText {
+  display: flex;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+}
+.footer__iconText i {
+  margin-right: 10px;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */
