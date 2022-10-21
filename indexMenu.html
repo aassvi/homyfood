@@ -3,33 +3,117 @@
 <head>
 <meta charset="utf-8"> <!-- encodage important pour enregistrer tous les formats de caracteres-->
 <meta name="viewport" content="width=device-width"> <!--modifie la largeur viewport du navigateur mobile et obtenir un rendu facile à lire sans zoom -->
-<title>homyfood</title>
+<title>ohmyfood</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href=".public\css\style.css"> 
+<link rel="stylesheet" type="text/css" href=".public\css\stylemenu.css"> 
 <script src="https://kit.fontawesome.com/fcc853d552.js" crossorigin="anonymous"></script>
 <!-- declaration font Awesome https://fontawesome.com/  -->
 </head>
 <body>
 <header>
-    <p>logo</p>
-    <p>page menu restaurant   </p>
+    <div class="header__logo">
+        <a href="indexRestaurant.html" >	<i class="fa-solid fa-arrow-left"></i></a>
+        <img src="./images/logo/ohmyfood3.png" alt="logo">
+     </div>
 </header>
 <main>
 <section>
-<section> 
-    <p> entrees</p>
-</section>
-<section> 
-    <p> plats</p>
-</section>
-<section> 
-    <p> desserts </p>
-</section>
+    <div class="card">   
+        <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="menu">
+        <div class="card__body">
+            <div class="card__restaurant">
+              <h1>A la française</h1>
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div class="card__entrees">
+                <div class="card__heading">
+                   <p>ENTREES</p>
+                </div>
+                <button  class="button" type="button" >
+                    <div class="card__choix">
+                        <p>Tartare de poulpe acidulé</p>
+                   </div>
+                   <p>Aux zestes d'orange</p>
+                   <p>25<i class="fa-solid fa-euro-sign"></i></p>
+                   <div class="card__ckeck">
+                   <i class="fa-solid fa-check"></i>
+                   </div>
+                </button>
+                <button  class="button" type="button" >
+                    <div class="card__choix">
+                     <p>Velouté de légumes d'antan</p>
+                    </div>
+                   <p>Carotte, panis, topinambour</p>
+                   <p>35<i class="fa-solid fa-euro-sign"></i></p>
+                   <i class="fa-solid fa-check"></i>
+                </button>
+                <button  class="button" type="button" >
+                    <div class="card__choix">
+                       <p>Soupe à l'oignon</p>
+                    </div>
+                    <p>Revisitée</p>
+                    <p>20<i class="fa-solid fa-euro-sign"></i></p>
+                    <i class="fa-solid fa-check"></i>
+                </button>
+            </div>
+            <div class="card__plats">
+                <div class="card__heading">
+                    <p>PLATS</p>
+                </div>
+                <button  class="button" type="button" >
+                    <div class="card__choix">
+                        <p>Coquilles Saint-Jacques</p>
+                    </div>
+                    <p>Accompagnées d'une purée de pannais</p>
+                    <p>40<i class="fa-solid fa-euro-sign"></i></p>
+                </button>
+                <button  class="button" type="button" >
+                    <div class="card__choix">
+                        <p>Magré de canard</p>
+                    </div>
+                    <p>Et parmentier de pommes de terres</p>
+                    <p>35<i class="fa-solid fa-euro-sign"></i></p>
+                </button>
+                <button  class="button" type="button" >
+                    <div class="card__choix">
+                        <p>Pigeonneau d'Ille-et-Vilaine</p>
+                    </div>
+                    <p>Sur son lit de gnocchis aux légumes</p>
+                    <p>44<i class="fa-solid fa-euro-sign"></i></p>
+                </button>
+            </div>
+            <div class="card__desserts">
+                <div class="card__heading">
+                    <p>DESSERTS</p>
+                </div>
+                <button  class="button" type="button" >
+                    <div class="card__choix">
+                        <p>Pétales de violettes glacées</p>
+                    </div>
+                    <p>Et purée de noisettes</p>
+                    <p>18<i class="fa-solid fa-euro-sign"></i></p>
+                </button>
+                <button  class="button" type="button" >
+                    <div class="card__choix">
+                        <p>fondant au chocolat</p>
+                    </div>
+                    <p>Revisité</p>
+                    <p>22<i class="fa-solid fa-euro-sign"></i></p>
+                </button>
+                <button  class="button" type="button" >
+                    <div class="card__choix">
+                        <p>Millefeuille croustillant</p>
+                    </div>
+                    <p>Myrtilles et pâte d'amande</p>
+                    <p>23<i class="fa-solid fa-euro-sign"></i></p>
+                </button>
+            </div>
+        </div>
+    </div>
 </section>
 </main>
 <footer>
     <div class="footer__logo"> 
-        <!--<img src="./images/logo/ohmyfood3.png" alt="logo">-->
         <h3>ohmyfood</h3>
     </div>
     <div class="footer__iconText">

@@ -9,7 +9,6 @@ section{
   display: flex;
   flex-direction: column;
   gap:20px;
-
   width: 90%;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -18,8 +17,8 @@ section{
   a{
     text-decoration: none;
   }
-  &__heading h4{
-    font-size: 18px;
+  &__heading h2{
+    font-size: 20px;
     padding-top: 20px;
     padding-bottom: 10px;
     }
