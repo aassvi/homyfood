@@ -2,8 +2,44 @@ $couleur_primaire:#9356DC;
 $couleur_secondaire:#FF79DA ;
 $couleur_tertiare:#99E2D0;
 
+$coul_backg_formsectnav:lighten(#ecf0f1,1%);
+$coul_backg_inputform:lighten(#bdc3c7,15%);
+$coul_backg_footer:#2c3e50;
+
 
 // box shadow //
 
+$box-shadow-card:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$box-shadow-btn: 0 5px 5px -5px #333;
+$box-shadow-btnnav:0 0 4px 4px darken(#ecf0f1,1%);
+$box-shadow-btnnavhover:0 0 4px 4px lighten($couleur_primaire,35%) ;
+ 
 
-$box-shadow: 0 5px 5px -5px #333;
+
+$colour:#333;
+
+// button shadow plus sombre //
+
+@mixin box-shadow_fonce($colour:rgb(216, 190, 190)){
+    box-shadow: 0 5px 5px -5px darken($colour, 80%);
+    }
+
+// mixin couleur button formulaire  //
+
+@mixin couleur-button{
+    background-image:linear-gradient($couleur_secondaire,$couleur_primaire);
+}
+
+// mixin couleur button formulaire eclaircie deux couleurs //
+@mixin couleur-button-eclaircie{
+   background-image:linear-gradient(lighten($couleur_secondaire,10%),lighten($couleur_primaire,20%));
+  
+}
+
+// mixin couleur button formulaire eclaircie une couleur //
+@mixin couleur-btn-eclaircie-nav{
+    background-color:lighten($couleur_primaire,35%);
+   
+ }
+
+

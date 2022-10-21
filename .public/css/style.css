@@ -322,7 +322,7 @@ html, body, main {
   height: 100%;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "shrikhand";
 }
 
@@ -330,26 +330,37 @@ header {
   width: 100%;
   display: block;
   font-family: "roboto";
-  padding-top: 10px;
   text-align: center;
 }
-header__logo {
-  padding-bottom: 20px;
-  width: 10%;
-  height: 50px;
+
+.header__logo {
+  width: 100%;
+  height: 40px;
 }
-header__logo__logo img {
-  width: 50%;
+.header__logo h1 {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bolder;
 }
 
-#loader {
+.section {
+  width: 500Px;
+  line-height: 500px;
+}
+
+.page {
+  visibility: hidden;
+}
+
+.loader {
   width: 40%;
   height: 40%;
 }
 
 /* Center the loader */
-#loader {
+.loader__spin {
   position: absolute;
+  overflow: hidden;
   left: 50%;
   top: 50%;
   z-index: 1;
@@ -358,9 +369,11 @@ header__logo__logo img {
   margin: -76px 0 0 -76px;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
+  border-right: 16px solid #99E2D0;
+  border-left: 16px solid #9356DC;
+  border-top: 16px solid #FF79DA;
+  -webkit-animation: spin 3s linear;
+  animation: spin 3s linear;
 }
 
 @-webkit-keyframes spin {
@@ -380,7 +393,7 @@ header__logo__logo img {
   }
 }
 form {
-  background-color: rgb(247, 243, 243);
+  background-color: #eff2f3;
 }
 
 .form {
@@ -392,35 +405,44 @@ form {
   justify-content: center;
   width: 100%;
   height: 40px;
-  background-color: gainsboro;
-  border: 1px solid gainsboro;
-  box-shadow: 0 -5px 5px -5px gainsboro;
+  background-color: #e6e9ea;
+  border: 1px solid #e6e9ea;
+  box-shadow: 0 -5px 5px -5px #e6e9ea;
 }
 .form__input i {
   padding-top: 10px;
 }
 .form__input input {
   border: none;
-  background-color: gainsboro;
+  background-color: #e6e9ea;
 }
 .form__input #ville {
   width: 40%;
 }
 .form__input ::placeholder {
   font-size: 16px;
-  background-color: gainsboro;
+  background-color: #e6e9ea;
   color: black;
   text-align: left;
   padding-left: 10px;
 }
 .form__heading {
   width: 100%;
-  font-size: 14px;
-  margin-bottom: 20px;
+  text-align: center;
+}
+.form__heading h2 {
+  width: 300px;
+  font-size: 20px;
+  padding-top: 40px;
+  padding-left: 70px;
+  padding-bottom: 10px;
+  font-size: 24px;
 }
 .form__heading p {
-  max-width: 100%;
-  font-size: 18px;
+  width: 100%;
+  font-size: 16px;
+  padding-left: 30px;
+  padding-bottom: 20px;
 }
 .form__button {
   width: 50%;
@@ -437,6 +459,10 @@ form {
 .form__button p {
   width: 100%;
 }
+.form__button:hover {
+  box-shadow: 0 5px 5px -5px black;
+  background-image: linear-gradient(#fface8, #c9abee);
+}
 
 .nav {
   width: 80%;
@@ -444,7 +470,8 @@ form {
   padding-left: 50px;
 }
 .nav__heading {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: bold;
   text-align: left;
   padding-top: 20px;
   padding-left: 50px;
@@ -459,9 +486,9 @@ form {
   right: 10px;
   top: 35px;
   padding: 5px;
-  font-size: 8px;
+  font-size: 10px;
   color: white;
-  background-color: darkorchid;
+  background-color: #9356DC;
   border-radius: 50%;
 }
 .nav__etape button {
@@ -469,15 +496,17 @@ form {
   width: 70%;
   height: 50px;
   border-radius: 16px;
-  border: 2px solid white;
+  border: none;
   margin-bottom: 10px;
-  box-shadow: 0 5px 5px -5px #333;
+  box-shadow: 0 0 4px 4px #e9eeef;
+  background-color: #eff2f3;
 }
 .nav__etape button:hover {
-  background-color: rgb(247, 229, 247);
+  background-color: #f2eafb;
+  box-shadow: 0 0 4px 4px #f2eafb;
 }
 .nav__etape button:hover:hover i {
-  color: darkorchid;
+  color: #9356DC;
 }
 .nav__etape button p {
   font-size: 14px;
@@ -486,6 +515,7 @@ form {
 }
 .nav__etape button i {
   font-size: 18px;
+  color: grey;
   width: 20px;
   height: 20px;
   padding-top: 15px;
@@ -497,7 +527,7 @@ section {
   width: 100%;
   height: 1000px;
   margin-top: 40px;
-  background-color: rgb(247, 243, 243);
+  background-color: #eff2f3;
 }
 
 .card {
@@ -526,21 +556,18 @@ section {
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.card__restaurant:hover {
-  background-color: #DEEBFF;
-}
 .card__restaurant img {
   width: 100%; /* image responsive */
   height: 119px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
+  object-fit: cover; /* rempli la card partie image*/
 }
-.card__img__nouveau {
+.card figcaption {
   position: relative;
   width: 25%;
   max-width: 70px;
-  height: 20px;
   left: 70%;
   bottom: 110px;
   font-size: 14px;
@@ -552,6 +579,7 @@ section {
   display: flex;
   width: 100%;
   height: 90px;
+  padding-top: 10px;
   color: black;
   font-size: 16px;
 }
@@ -586,7 +614,7 @@ section {
 }
 
 footer {
-  background-color: grey;
+  background-color: #2c3e50;
   color: white;
   font-family: "roboto";
   font-size: 12px;
@@ -613,11 +641,12 @@ footer a:visited {
   padding-left: 20px;
   padding-bottom: 10px;
 }
-.footer__logo h5 {
-  font-family: "shrikhand";
+.footer__logo h4 {
+  font-weight: bold;
   font-size: 20px;
   font-style: italic;
   color: white;
+  width: 100%;
 }
 .footer__iconText {
   display: flex;

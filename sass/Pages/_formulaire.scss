@@ -1,5 +1,5 @@
 form{
-  background-color:rgb(247, 243, 243);
+  background-color:$coul_backg_formsectnav;
 }
 .form {
   width: 100%;
@@ -10,23 +10,23 @@ form{
     justify-content: center;
     width: 100%;
     height: 40px;
-    background-color:gainsboro;
-    border: 1px solid gainsboro;
-    box-shadow: 0 -5px 5px -5px gainsboro;
+    background-color:$coul_backg_inputform;
+    border: 1px solid $coul_backg_inputform;
+    box-shadow: 0 -5px 5px -5px $coul_backg_inputform;
     
     i{
       padding-top: 10px;
     }
     input {
       border: none;
-      background-color:gainsboro;    
+      background-color:$coul_backg_inputform;    
     } 
     #ville{
       width: 40%;
     }
     ::placeholder{
       font-size:16px;
-      background-color:gainsboro;
+      background-color:$coul_backg_inputform;
       color: black;
       text-align: left;
       padding-left: 10px;
@@ -34,20 +34,31 @@ form{
   }
   &__heading{
     width: 100%;
-    font-size: 14px;
-    margin-bottom: 20px;
+    text-align: center;
+    h2{
+      width: 300px;
+      font-size: 20px;
+      padding-top: 40px;
+      padding-left: 70px;
+      padding-bottom: 10px;
+      font-size: 24px;
+      
+    }
     p{
-      max-width: 100%;
-      font-size: 18px;
+      width: 100%;
+      font-size: 16px;
+      padding-left: 30px;
+      padding-bottom: 20px;
     }      
   }
   &__button{
     width: 50%;
     height: 50px;   
     border-radius: 16px;
-    background-image:linear-gradient($couleur_secondaire,$couleur_primaire);
+    // melange des trois couleurs de la chartre graphique du site//
+    @include couleur-button;
     border: none;
-    box-shadow: 0 5px 5px -5px #333;
+    box-shadow: $box-shadow-btn;
     color: #F2F2F2;
     font-size: 14px;
     font-weight: 0px;
@@ -55,8 +66,12 @@ form{
     p{
       width: 100%;
     }
-    // &:hover{} couleur eclaircie et ombre plus importante// 
-    
+    &:hover{
+      // mixin shadow plus foncee //
+      @include box-shadow-fonce($colour);  
+      // mixin color background eclaircie //
+      @include couleur-button-eclaircie;
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 footer {
-  background-color:grey;
+  background-color:$coul_backg_footer;
   color: white;
   font-family: 'roboto';
   font-size: 12px;
@@ -25,11 +25,12 @@ footer {
     padding-top: 30px;
     padding-left: 20px;
     padding-bottom: 10px;
-    h5{
-      font-family: 'shrikhand';
+    h4{
+      font-weight: bold;
       font-size: 20px;
       font-style: italic;
       color:white;
+      width: 100%;
     }
    
   }

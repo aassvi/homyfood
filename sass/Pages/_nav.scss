@@ -5,14 +5,16 @@
    
    
     &__heading{
-      font-size: 16px;
+      font-size: 18px;
+      font-weight: bold;
       text-align: left;
       padding-top: 20px;
       padding-left: 50px;
 
     }
     &__etape{
-        padding-left: 60px;        
+        padding-left: 60px; 
+
         .icon2{
             position: relative;
             width: 20px;
@@ -20,43 +22,44 @@
             right: 10px;
             top:35px;
             padding:5px;
-           font-size: 8px;
+            font-size: 10px;
             color:white;
-            background-color: darkorchid;
+            background-color: $couleur_primaire;
             border-radius: 50%;
         }
 
         button {
-                display: flex;
-                width: 70%;
-                height: 50px;
-                border-radius: 16px;
-                border: 2px solid white;
-                margin-bottom: 10px;
-                box-shadow: $box-shadow;
+            display: flex;
+            width: 70%;
+            height: 50px;
+            border-radius: 16px;
+            border: none;
+            margin-bottom: 10px;
+            box-shadow: $box-shadow-btnnav;
+            background-color: $coul_backg_formsectnav;
                
-                &:hover{
-                    background-color: rgb(247, 229, 247);
-                    &:hover i{
-                        color: darkorchid ;
-                    }
+            &:hover{
+                @include couleur-btn-eclaircie-nav;
+                box-shadow: $box-shadow-btnnavhover;
+                &:hover i{
+                    color:$couleur_primaire ;
                 }
-                p{
-                    font-size: 14px;
-                    padding-top: 15px;
-                    padding-left: 20px;
-                }
-
-                i{
-                    font-size: 18px;
-                    width: 20px;
-                    height: 20px;
-                    padding-top: 15px;
-                    padding-left: 20px;
-                    padding-right:10px;
-                 
-                
-                }
+            }
+            p{
+                font-size: 14px;
+                padding-top: 15px;
+                padding-left: 20px;
+            }
+            i{
+                font-size: 18px;
+                color:grey;
+                width: 20px;
+                height: 20px;
+                padding-top: 15px;
+                padding-left: 20px;
+                padding-right:10px;
+    
+            }
         }
     }
 }
