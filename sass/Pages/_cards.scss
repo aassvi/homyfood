@@ -12,7 +12,7 @@ section{
   width: 90%;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 50px;
+  padding-left: 40px;
   font-family: 'roboto';
   a{
     text-decoration: none;
@@ -39,6 +39,7 @@ section{
     }
     figcaption{
     position: relative;
+    //z-index: 1;     opacity: 0,5;//
     width:25%;
     max-width: 70px;
     left:70%;

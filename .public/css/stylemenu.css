@@ -8,8 +8,12 @@ html, body, main {
   width: 100%;
 }
 
+p, span {
+  font-family: "roboto";
+}
+
 h1, h2 {
-  font-family: "shrikhand";
+  font-family: "Shrikhand";
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -348,13 +352,13 @@ header {
 
 section {
   width: 100%;
-  height: 1600px;
+  height: 1390px;
   background-color: #eff2f3;
 }
 
 .card {
   width: 100%;
-  height: 1500px;
+  height: 1250px;
   display: block;
 }
 .card img {
@@ -371,92 +375,248 @@ section {
   position: absolute;
   top: 320px;
   width: 100%;
-  height: 1200px;
+  height: 700px;
 }
 .card__restaurant {
   display: flex;
   flex-direction: row;
 }
-.card__restaurant__heading h1 {
+.card__restaurant h1 {
   padding-left: 30px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 22px;
+  width: 70%;
+}
+.card__restaurant i {
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 22px;
+  width: 10%;
 }
 .card__entrees {
   padding-left: 30px;
   padding-bottom: 20px;
 }
+.card__entrees .card__heading {
+  font-size: 14px;
+  width: 30%;
+}
+.card__entrees .card__trait {
+  border-bottom: #99E2D0 solid 2px;
+  width: 35%;
+}
 .card__entrees button {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  height: 90px;
+  width: 90%;
+  height: 70px;
   border-radius: 16px;
   border: none;
   margin-bottom: 10px;
   margin-top: 10px;
-  padding-left: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
 }
-.card__entrees button:hover {
-  background-color: antiquewhite;
-}
-.card__heading p {
+.card__entrees .button__choix p {
   font-weight: bold;
+  text-align: left;
+  padding-left: 5px;
+  font-size: 14px;
+  width: 70%;
+}
+.card__entrees .button__prix {
+  display: flex;
+  padding-top: 10px;
+}
+.card__entrees .button__prix p {
+  text-align: left;
+  width: 70%;
+  padding-left: 5px;
+  font-size: 12px;
+}
+.card__entrees .button__euro {
+  display: flex;
+  padding-left: 30px;
+  width: 30%;
+}
+.card__entrees .button__ckeck {
+  opacity: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 70px;
+  position: absolute;
+  left: 295px;
+  top: 92px;
+}
+.card__entrees .button__ckeck:hover {
+  opacity: 1;
+  padding-top: 20px;
+}
+.card__entrees .button__ckeck i {
+  text-align: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #99E2D0;
+  background-color: white;
 }
 .card__plats {
   padding-left: 30px;
   padding-bottom: 20px;
 }
-.card__plats__heading {
-  color: red;
+.card__plats .card__heading {
+  font-size: 14px;
+  width: 30%;
 }
-.card__plats__heading p {
-  font-weight: bold;
+.card__plats .card__trait {
+  border-bottom: #99E2D0 solid 2px;
+  width: 35%;
 }
 .card__plats button {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  height: 90px;
+  width: 90%;
+  height: 70px;
   border-radius: 16px;
   border: none;
   margin-bottom: 10px;
   margin-top: 10px;
-  padding-left: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
 }
-.card__plats button:hover {
-  background-color: antiquewhite;
+.card__plats .button__choix p {
+  font-weight: bold;
+  text-align: left;
+  padding-left: 5px;
+  font-size: 14px;
+  width: 70%;
+}
+.card__plats .button__prix {
+  display: flex;
+  padding-top: 10px;
+}
+.card__plats .button__prix p {
+  text-align: left;
+  width: 70%;
+  padding-left: 5px;
+  font-size: 12px;
+}
+.card__plats .button__euro {
+  display: flex;
+  padding-left: 30px;
+  width: 30%;
+}
+.card__plats .button__ckeck {
+  opacity: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 70px;
+  position: absolute;
+  left: 295px;
+  top: 92px;
+}
+.card__plats .button__ckeck:hover {
+  opacity: 1;
+  padding-top: 20px;
+}
+.card__plats .button__ckeck i {
+  text-align: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #99E2D0;
+  background-color: white;
 }
 .card__desserts {
   padding-left: 30px;
   padding-bottom: 20px;
 }
-.card__desserts__heading p {
-  color: red;
+.card__desserts .card__heading {
+  font-size: 14px;
+  width: 30%;
 }
-.card__desserts__heading p p {
-  font-weight: bold;
+.card__desserts .card__trait {
+  border-bottom: #99E2D0 solid 2px;
+  width: 35%;
 }
 .card__desserts button {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  height: 90px;
+  width: 90%;
+  height: 70px;
   border-radius: 16px;
   border: none;
   margin-bottom: 10px;
   margin-top: 10px;
-  padding-left: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
 }
-.card__desserts button:hover {
-  background-color: antiquewhite;
+.card__desserts .button__choix p {
+  font-weight: bold;
+  text-align: left;
+  padding-left: 5px;
+  font-size: 14px;
+  width: 70%;
+}
+.card__desserts .button__prix {
+  display: flex;
+  padding-top: 10px;
+}
+.card__desserts .button__prix p {
+  text-align: left;
+  width: 70%;
+  padding-left: 5px;
+  font-size: 12px;
+}
+.card__desserts .button__euro {
+  display: flex;
+  padding-left: 30px;
+  width: 30%;
+}
+.card__desserts .button__ckeck {
+  opacity: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 70px;
+  position: absolute;
+  left: 295px;
+  top: 92px;
+}
+.card__desserts .button__ckeck:hover {
+  opacity: 1;
+  padding-top: 20px;
+}
+.card__desserts .button__ckeck i {
+  text-align: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #99E2D0;
+  background-color: white;
+}
+.card__button {
+  width: 35%;
+  height: 30px;
+  margin-left: 130px;
+  border-radius: 16px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  box-shadow: 0 5px 5px -5px #333;
+  color: #F2F2F2;
+  font-size: 12px;
+  font-weight: 0px;
+  margin-top: 40px;
+}
+.card__button p {
+  width: 100%;
+}
+.card__button:hover {
+  box-shadow: 0 5px 5px -5px black;
+  background-image: linear-gradient(#fface8, #c9abee);
 }
 
 footer {
@@ -489,7 +649,7 @@ footer a:visited {
 }
 .footer__logo h2 {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   font-style: italic;
   color: white;
   width: 100%;

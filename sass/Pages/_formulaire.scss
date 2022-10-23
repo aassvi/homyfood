@@ -34,25 +34,30 @@ form{
   }
   &__heading{
     width: 100%;
-    text-align: center;
-    span{
-      width: 300px;
-      font-size: 20px;
-      font-weight: bold;
-      padding-top: 40px;
-      padding-left: 70px;
-      padding-bottom: 10px;    
-    }
+       
     p{
       width: 100%;
       font-size: 16px;
       padding-left: 30px;
-      padding-bottom: 20px;
+     
     }      
+  }
+  &__titre{
+   width: 100%;
+   
+    padding-top: 40px;
+    padding-bottom: 10px;    
+    p{
+      width: 80%;
+      text-align: center;
+      padding-left: 100px;
+      font-size: 18px;
+      font-weight: bold;
+    }
   }
   &__button{
     width: 50%;
-    height: 50px;   
+    height: 40px;   
     border-radius: 16px;
     // melange des trois couleurs de la chartre graphique du site//
     @include couleur-button;
@@ -61,6 +66,7 @@ form{
     color: #F2F2F2;
     font-size: 14px;
     font-weight: 0px;
+    margin-top: 30px;
     margin-bottom: 40px;
     p{
       width: 100%;

@@ -2,12 +2,12 @@
 header{
   width: 100%;
   display: block;
-  font-family: 'roboto';
   text-align: center;
 }
 
 .header{
   &__logo{
+    padding-top: 10px;
     width:100% ;
     height: 40px;
   }

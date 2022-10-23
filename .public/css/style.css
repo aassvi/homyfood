@@ -317,18 +317,22 @@ html, body, main {
   width: 100%;
 }
 
+p, span {
+  font-family: "roboto";
+}
+
 h1, h2 {
-  font-family: "shrikhand";
+  font-family: "Shrikhand";
 }
 
 header {
   width: 100%;
   display: block;
-  font-family: "roboto";
   text-align: center;
 }
 
 .header__logo {
+  padding-top: 10px;
   width: 100%;
   height: 40px;
 }
@@ -418,25 +422,27 @@ form {
 }
 .form__heading {
   width: 100%;
-  text-align: center;
-}
-.form__heading span {
-  width: 300px;
-  font-size: 20px;
-  font-weight: bold;
-  padding-top: 40px;
-  padding-left: 70px;
-  padding-bottom: 10px;
 }
 .form__heading p {
   width: 100%;
   font-size: 16px;
   padding-left: 30px;
-  padding-bottom: 20px;
+}
+.form__titre {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+.form__titre p {
+  width: 80%;
+  text-align: center;
+  padding-left: 100px;
+  font-size: 18px;
+  font-weight: bold;
 }
 .form__button {
   width: 50%;
-  height: 50px;
+  height: 40px;
   border-radius: 16px;
   background-image: linear-gradient(#FF79DA, #9356DC);
   border: none;
@@ -444,6 +450,7 @@ form {
   color: #F2F2F2;
   font-size: 14px;
   font-weight: 0px;
+  margin-top: 30px;
   margin-bottom: 40px;
 }
 .form__button p {
@@ -462,13 +469,13 @@ form {
 .nav__heading {
   text-align: left;
   padding-top: 20px;
-  padding-left: 50px;
+  padding-left: 40px;
 }
 .nav__heading h1 {
   font-size: 20px;
 }
 .nav__etape {
-  padding-left: 60px;
+  padding-left: 50px;
 }
 .nav__etape .icon2 {
   position: relative;
@@ -484,7 +491,7 @@ form {
 }
 .nav__etape button {
   display: flex;
-  width: 70%;
+  width: 90%;
   height: 50px;
   border-radius: 16px;
   border: none;
@@ -529,7 +536,7 @@ section {
   width: 90%;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 50px;
+  padding-left: 40px;
   font-family: "roboto";
 }
 .card a {
@@ -634,7 +641,7 @@ footer a:visited {
 }
 .footer__logo h2 {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   font-style: italic;
   color: white;
   width: 100%;
