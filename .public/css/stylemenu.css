@@ -360,6 +360,158 @@ section {
   width: 100%;
   height: 1250px;
   display: block;
+  /* &__plats{
+       padding-left: 30px;
+       padding-bottom: 20px;
+       .card__heading{
+           font-size: 14px;
+           width: 30%;            
+       }
+       .card__trait{
+           border-bottom:$couleur_tertiare solid 2px ;
+           width: 35%;
+       }
+
+       button{
+           width: 90%;
+           height: 70px;
+           border-radius: 16px;
+           border: none;
+           margin-bottom: 10px;
+           margin-top: 10px;           
+           padding-top: 10px;
+           padding-bottom: 10px;
+           background-color: white; 
+       }
+       .button__choix {
+           p{
+             font-weight: bold;
+             text-align: left;
+             padding-left: 5px;
+             font-size: 14px;
+             width: 70%;                      
+           }
+
+       }
+       .button__prix{
+           display: flex;      
+           padding-top: 10px;
+           p{
+               text-align: left;
+               width: 70%;
+               padding-left: 5px;
+               font-size: 12px;
+           }
+       }
+       .button__euro{
+               display: flex;
+
+               padding-left: 30px;
+               width: 30%;
+
+       }
+       .button__ckeck{
+               opacity: 0;
+               border-top-right-radius : 20px;
+               border-bottom-right-radius : 20px;
+               background-color:$couleur_tertiare;
+               width: 50px;
+               height: 70px;
+               position: absolute;
+               left: 295px;
+               top: 92px;
+               &:hover{
+                   opacity: 1;
+                   padding-top:20px;
+               }
+               i{
+                   text-align: center;
+                   border-radius: 50%;
+                   width: 20px;
+                   height: 20px;
+                   color: $couleur_tertiare;
+                   background-color: white;
+
+               }
+       }
+
+   }
+   &__desserts{
+       padding-left: 30px;
+       padding-bottom: 20px;
+       .card__heading{
+           font-size: 14px;
+           width: 30%;            
+       }
+       .card__trait{
+           border-bottom:$couleur_tertiare solid 2px ;
+           width: 35%;
+       }
+
+       button{
+           width: 90%;
+           height: 70px;
+           border-radius: 16px;
+           border: none;
+           margin-bottom: 10px;
+           margin-top: 10px;           
+           padding-top: 10px;
+           padding-bottom: 10px;
+           background-color: white; 
+       }
+       .button__choix {
+           p{
+             font-weight: bold;
+             text-align: left;
+             padding-left: 5px;
+             font-size: 14px; 
+             width: 70%;                     
+           }
+
+       }
+       .button__prix{
+           display: flex;      
+           padding-top: 10px;
+           p{
+               text-align: left;
+               width: 70%;
+               padding-left: 5px;
+               font-size: 12px;
+           }
+       }
+       .button__euro{
+               display: flex;
+
+               padding-left: 30px;
+               width: 30%;
+
+       }
+       .button__ckeck{
+               opacity: 0;
+               border-top-right-radius : 20px;
+               border-bottom-right-radius : 20px;
+               background-color:$couleur_tertiare;
+               width: 50px;
+               height: 70px;
+               position: absolute;
+               left: 295px;
+               top: 92px;
+               &:hover{
+                   opacity: 1;
+                   padding-top:20px;
+               }
+               i{
+                   text-align: center;
+                   border-radius: 50%;
+                   width: 20px;
+                   height: 20px;
+                   color: $couleur_tertiare;
+                   background-color: white;
+
+               }
+       }
+
+   }*/
 }
 .card img {
   width: 100%; /* image responsive */
@@ -394,19 +546,19 @@ section {
   font-size: 22px;
   width: 10%;
 }
-.card__entrees {
+.card__label {
   padding-left: 30px;
   padding-bottom: 20px;
 }
-.card__entrees .card__heading {
+.card__label .card__heading {
   font-size: 14px;
   width: 30%;
 }
-.card__entrees .card__trait {
+.card__label .card__trait {
   border-bottom: #99E2D0 solid 2px;
   width: 35%;
 }
-.card__entrees button {
+.card__label .container {
   width: 90%;
   height: 70px;
   border-radius: 16px;
@@ -417,29 +569,29 @@ section {
   padding-bottom: 10px;
   background-color: white;
 }
-.card__entrees .button__choix p {
+.card__label .choix p {
   font-weight: bold;
   text-align: left;
   padding-left: 5px;
   font-size: 14px;
   width: 70%;
 }
-.card__entrees .button__prix {
+.card__label .prix {
   display: flex;
   padding-top: 10px;
 }
-.card__entrees .button__prix p {
+.card__label .prix p {
   text-align: left;
   width: 70%;
   padding-left: 5px;
   font-size: 12px;
 }
-.card__entrees .button__euro {
+.card__label .euro {
   display: flex;
   padding-left: 30px;
   width: 30%;
 }
-.card__entrees .button__ckeck {
+.card__label .check {
   opacity: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -450,147 +602,11 @@ section {
   left: 295px;
   top: 92px;
 }
-.card__entrees .button__ckeck:hover {
+.card__label .check:hover {
   opacity: 1;
   padding-top: 20px;
 }
-.card__entrees .button__ckeck i {
-  text-align: center;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  color: #99E2D0;
-  background-color: white;
-}
-.card__plats {
-  padding-left: 30px;
-  padding-bottom: 20px;
-}
-.card__plats .card__heading {
-  font-size: 14px;
-  width: 30%;
-}
-.card__plats .card__trait {
-  border-bottom: #99E2D0 solid 2px;
-  width: 35%;
-}
-.card__plats button {
-  width: 90%;
-  height: 70px;
-  border-radius: 16px;
-  border: none;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: white;
-}
-.card__plats .button__choix p {
-  font-weight: bold;
-  text-align: left;
-  padding-left: 5px;
-  font-size: 14px;
-  width: 70%;
-}
-.card__plats .button__prix {
-  display: flex;
-  padding-top: 10px;
-}
-.card__plats .button__prix p {
-  text-align: left;
-  width: 70%;
-  padding-left: 5px;
-  font-size: 12px;
-}
-.card__plats .button__euro {
-  display: flex;
-  padding-left: 30px;
-  width: 30%;
-}
-.card__plats .button__ckeck {
-  opacity: 0;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  background-color: #99E2D0;
-  width: 50px;
-  height: 70px;
-  position: absolute;
-  left: 295px;
-  top: 92px;
-}
-.card__plats .button__ckeck:hover {
-  opacity: 1;
-  padding-top: 20px;
-}
-.card__plats .button__ckeck i {
-  text-align: center;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  color: #99E2D0;
-  background-color: white;
-}
-.card__desserts {
-  padding-left: 30px;
-  padding-bottom: 20px;
-}
-.card__desserts .card__heading {
-  font-size: 14px;
-  width: 30%;
-}
-.card__desserts .card__trait {
-  border-bottom: #99E2D0 solid 2px;
-  width: 35%;
-}
-.card__desserts button {
-  width: 90%;
-  height: 70px;
-  border-radius: 16px;
-  border: none;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: white;
-}
-.card__desserts .button__choix p {
-  font-weight: bold;
-  text-align: left;
-  padding-left: 5px;
-  font-size: 14px;
-  width: 70%;
-}
-.card__desserts .button__prix {
-  display: flex;
-  padding-top: 10px;
-}
-.card__desserts .button__prix p {
-  text-align: left;
-  width: 70%;
-  padding-left: 5px;
-  font-size: 12px;
-}
-.card__desserts .button__euro {
-  display: flex;
-  padding-left: 30px;
-  width: 30%;
-}
-.card__desserts .button__ckeck {
-  opacity: 0;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  background-color: #99E2D0;
-  width: 50px;
-  height: 70px;
-  position: absolute;
-  left: 295px;
-  top: 92px;
-}
-.card__desserts .button__ckeck:hover {
-  opacity: 1;
-  padding-top: 20px;
-}
-.card__desserts .button__ckeck i {
+.card__label .check i {
   text-align: center;
   border-radius: 50%;
   width: 20px;

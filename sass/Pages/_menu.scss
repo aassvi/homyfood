@@ -43,7 +43,7 @@ section{
        
     }
         
-    &__entrees{
+    &__label{
         padding-left: 30px;
         padding-bottom: 20px;
         .card__heading{
@@ -55,7 +55,7 @@ section{
             width: 35%;
         }
        
-        button{
+        .container{
             width: 90%;
             height: 70px;
             border-radius: 16px;
@@ -66,7 +66,7 @@ section{
             padding-bottom: 10px;
             background-color: white; 
         }
-        .button__choix {
+        .choix {
             p{
               font-weight: bold;
               text-align: left;
@@ -76,7 +76,7 @@ section{
             }
                    
         }
-        .button__prix{
+        .prix{
             display: flex;      
             padding-top: 10px;
             p{
@@ -86,14 +86,13 @@ section{
                 font-size: 12px;
             }
         }
-        .button__euro{
+        .euro{
                 display: flex;
-              
                 padding-left: 30px;
                 width: 30%;
                 
         }
-        .button__ckeck{
+        .check{
                 opacity: 0;
                 border-top-right-radius : 20px;
                 border-bottom-right-radius : 20px;
@@ -120,7 +119,7 @@ section{
            
     }
     
-    &__plats{
+   /* &__plats{
         padding-left: 30px;
         padding-bottom: 20px;
         .card__heading{
@@ -271,7 +270,7 @@ section{
                 }
         }
            
-    }
+    }*/
     &__button{
         width: 35%;
         height: 30px; 
