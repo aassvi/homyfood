@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-      "sass:watch": " npm run style:watch & npm run stylemenu:watch",
+      "sass:watch": " npm run style:watch && npm run stylemenu:watch",
       "style:watch": "sass --watch ./sass/style.scss:.public/css/style.css",
       "stylemenu:watch": "sass --watch ./sass/stylemenu.scss:.public/css/stylemenu.css"
     },

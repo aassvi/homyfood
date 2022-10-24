@@ -65,6 +65,7 @@ section{
     font-weight: bold; 
     p{
       width: 200px;
+  
     }
   }
   &__lieu{
@@ -75,9 +76,25 @@ section{
   &__coeurVide{
     width: 20%;
     margin-left: 40px;
-    i{
-      font-size: 20px;
-    }    
+    display: inline-block;
+   
+    -webkit-background-clip: text ; 
+    background-clip: text ; 
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+   
+  
+    
+      i{
+        font-size: 20px;
+      
+        background-image:linear-gradient(to right, $couleur_secondaire, $couleur_primaire ) ;
+        
+       } 
+  }
+    
+    
+    
  /*  &__coeurRempli{
        margin-left: 50px;
       i{
@@ -86,7 +103,7 @@ section{
         color: transparent;
       }
      }*/
-    }   
+       
 }
 
  

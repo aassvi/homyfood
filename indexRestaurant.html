@@ -11,13 +11,19 @@
 </head>
 <body>
 
- <!--<section>
-    <div class="loader">
-       <span class="loader__spin"></span>
-    </div>
-   <div class="page">  contenu page
-   
-</section>   -->
+ <!--<div class="loader-animation">
+       <span class="loader-spin">
+        
+    </span>
+    </div></div>-->
+ 
+    <div id="loader"></div>
+
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+      <h2>Code ohmyfood!</h2>
+      
+    
+
 
 <header>
     <div class="header__logo"> 
@@ -49,7 +55,7 @@
             <div class="icon2">1</div> 
             <button  class="button" type="button" >
                 <i class="fa-regular fa-mobile-screen-button"></i> 
-                  Choisissez un restaurant
+                  <span>Choisissez un restaurant</span>
             </button> 
         </div>
         <div class="nav__etape">
@@ -57,7 +63,7 @@
                 <div class="icon2">2</div> 
                 <button  class="button" type="button" >
                  <i class="fa-solid fa-list-ul"></i>
-                  Composez votre menu
+                 <span>Composez votre menu</span>
                 </button> 
           
          </div>
@@ -65,7 +71,7 @@
                     <div class="icon2">3</div> 
                      <button  class="button" type="button" >
                         <i class="fa-solid fa-store"></i>
-                        Dégustez au restaurant
+                        <span>Dégustez au restaurant</span>
                      </button>
         </div>
     </nav> 
@@ -94,10 +100,10 @@
                         </div>
 					<!-- coeur restaurant -->
 				    <div class="card__coeurVide ">
-						<i class="fa-regular fa-heart"></i>
-                        <!-- animation-->
-                        <div class="card__coeurRempli"></div>  
-					</div>
+                        <i class="fa-regular fa-heart"></i>
+                        <!-- animation
+                        <div class="card__coeurRempli"></div> --> 
+                        </div>
                    
 				</div> <!-- Fin du corp de notre carte -->
 			</div>
