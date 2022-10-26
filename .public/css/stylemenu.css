@@ -356,23 +356,23 @@ section {
   background-color: #eff2f3;
 }
 
-.card {
+.menu {
   width: 100%;
   height: 1250px;
   display: block;
   /* &__plats{
        padding-left: 30px;
        padding-bottom: 20px;
-       .card__heading{
+       .menu__heading{
            font-size: 14px;
            width: 30%;            
        }
-       .card__trait{
+       .menu__trait{
            border-bottom:$couleur_tertiare solid 2px ;
            width: 35%;
        }
 
-       button{
+       .menu__container{
            width: 90%;
            height: 70px;
            border-radius: 16px;
@@ -382,57 +382,56 @@ section {
            padding-top: 10px;
            padding-bottom: 10px;
            background-color: white; 
-       }
-       .button__choix {
-           p{
-             font-weight: bold;
-             text-align: left;
-             padding-left: 5px;
-             font-size: 14px;
-             width: 70%;                      
+           &__choix {
+               p{
+                 font-weight: bold;
+                 text-align: left;
+                 padding-left: 5px;
+                 font-size: 14px;  
+                 width: 70%;                
+               }
+
+           }
+           &__prix{
+               display: flex;      
+               padding-top: 10px;
+               p{
+                   text-align: left;
+                   width: 70%;
+                   padding-left: 5px;
+                   font-size: 12px;
+               }
+               &__euro{
+                   display: flex;
+                   padding-left: 30px;
+                   width: 30%;
+               }
            }
 
-       }
-       .button__prix{
-           display: flex;      
-           padding-top: 10px;
-           p{
-               text-align: left;
-               width: 70%;
-               padding-left: 5px;
-               font-size: 12px;
+           &__check{
+                   opacity: 0;
+                   border-top-right-radius : 20px;
+                   border-bottom-right-radius : 20px;
+                   background-color:$couleur_tertiare;
+                   width: 50px;
+                   height: 70px;
+                   position: absolute;
+                   left: 295px;
+                   top: 92px;
+                   &:hover{
+                       opacity: 1;
+                       padding-top:20px;
+                   }
+                   i{
+                       text-align: center;
+                       border-radius: 50%;
+                       width: 20px;
+                       height: 20px;
+                       color: $couleur_tertiare;
+                       background-color: white;
+
+                   }
            }
-       }
-       .button__euro{
-               display: flex;
-
-               padding-left: 30px;
-               width: 30%;
-
-       }
-       .button__ckeck{
-               opacity: 0;
-               border-top-right-radius : 20px;
-               border-bottom-right-radius : 20px;
-               background-color:$couleur_tertiare;
-               width: 50px;
-               height: 70px;
-               position: absolute;
-               left: 295px;
-               top: 92px;
-               &:hover{
-                   opacity: 1;
-                   padding-top:20px;
-               }
-               i{
-                   text-align: center;
-                   border-radius: 50%;
-                   width: 20px;
-                   height: 20px;
-                   color: $couleur_tertiare;
-                   background-color: white;
-
-               }
        }
 
    }
@@ -443,12 +442,12 @@ section {
            font-size: 14px;
            width: 30%;            
        }
-       .card__trait{
+       .menu__trait{
            border-bottom:$couleur_tertiare solid 2px ;
            width: 35%;
        }
 
-       button{
+       .menu__container{
            width: 90%;
            height: 70px;
            border-radius: 16px;
@@ -458,68 +457,68 @@ section {
            padding-top: 10px;
            padding-bottom: 10px;
            background-color: white; 
-       }
-       .button__choix {
-           p{
-             font-weight: bold;
-             text-align: left;
-             padding-left: 5px;
-             font-size: 14px; 
-             width: 70%;                     
+           &__choix {
+               p{
+                 font-weight: bold;
+                 text-align: left;
+                 padding-left: 5px;
+                 font-size: 14px;  
+                 width: 70%;                
+               }
+
+           }
+           &__prix{
+               display: flex;      
+               padding-top: 10px;
+               p{
+                   text-align: left;
+                   width: 70%;
+                   padding-left: 5px;
+                   font-size: 12px;
+               }
+           &__euro{
+                   display: flex;
+                   padding-left: 30px;
+                   width: 30%;
+               }
            }
 
-       }
-       .button__prix{
-           display: flex;      
-           padding-top: 10px;
-           p{
-               text-align: left;
-               width: 70%;
-               padding-left: 5px;
-               font-size: 12px;
+           &__check{
+                   opacity: 0;
+                   border-top-right-radius : 20px;
+                   border-bottom-right-radius : 20px;
+                   background-color:$couleur_tertiare;
+                   width: 50px;
+                   height: 70px;
+                   position: absolute;
+                   left: 295px;
+                   top: 92px;
+                   &:hover{
+                       opacity: 1;
+                       padding-top:20px;
+                   }
+                   i{
+                       text-align: center;
+                       border-radius: 50%;
+                       width: 20px;
+                       height: 20px;
+                       color: $couleur_tertiare;
+                       background-color: white;
+
+                   }
            }
        }
-       .button__euro{
-               display: flex;
 
-               padding-left: 30px;
-               width: 30%;
-
-       }
-       .button__ckeck{
-               opacity: 0;
-               border-top-right-radius : 20px;
-               border-bottom-right-radius : 20px;
-               background-color:$couleur_tertiare;
-               width: 50px;
-               height: 70px;
-               position: absolute;
-               left: 295px;
-               top: 92px;
-               &:hover{
-                   opacity: 1;
-                   padding-top:20px;
-               }
-               i{
-                   text-align: center;
-                   border-radius: 50%;
-                   width: 20px;
-                   height: 20px;
-                   color: $couleur_tertiare;
-                   background-color: white;
-
-               }
-       }
 
    }*/
 }
-.card img {
+.menu img {
   width: 100%; /* image responsive */
   height: 300px;
   overflow: hidden;
   object-fit: cover; /* rempli la card partie image*/
 }
-.card__body {
+.menu__body {
   padding-top: 10px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -529,36 +528,36 @@ section {
   width: 100%;
   height: 700px;
 }
-.card__restaurant {
+.menu__restaurant {
   display: flex;
   flex-direction: row;
 }
-.card__restaurant h1 {
+.menu__restaurant h1 {
   padding-left: 30px;
   font-style: italic;
   font-weight: bold;
   font-size: 22px;
   width: 70%;
 }
-.card__restaurant i {
+.menu__restaurant i {
   padding-top: 20px;
   padding-left: 20px;
   font-size: 22px;
   width: 10%;
 }
-.card__label {
+.menu__entrees {
   padding-left: 30px;
   padding-bottom: 20px;
 }
-.card__label .card__heading {
+.menu__entrees .menu__heading {
   font-size: 14px;
   width: 30%;
 }
-.card__label .card__trait {
+.menu__entrees .menu__trait {
   border-bottom: #99E2D0 solid 2px;
   width: 35%;
 }
-.card__label .container {
+.menu__entrees .menu__container {
   width: 90%;
   height: 70px;
   border-radius: 16px;
@@ -569,52 +568,56 @@ section {
   padding-bottom: 10px;
   background-color: white;
 }
-.card__label .choix p {
+.menu__entrees .menu__container__choix p {
   font-weight: bold;
   text-align: left;
   padding-left: 5px;
   font-size: 14px;
   width: 70%;
 }
-.card__label .prix {
+.menu__entrees .menu__container__prix {
   display: flex;
   padding-top: 10px;
 }
-.card__label .prix p {
+.menu__entrees .menu__container__prix p {
   text-align: left;
   width: 70%;
   padding-left: 5px;
   font-size: 12px;
 }
-.card__label .euro {
+.menu__entrees .menu__container__prix__euro {
   display: flex;
   padding-left: 30px;
   width: 30%;
 }
-.card__label .check {
+.menu__entrees .menu__container__prix__euro i {
+  opacity: 1;
+}
+.menu__entrees .menu__container__check i {
   opacity: 0;
+}
+.menu__entrees .menu__container:hover .menu__container__check {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #99E2D0;
   width: 50px;
   height: 70px;
-  position: absolute;
-  left: 295px;
-  top: 92px;
+  position: relative;
+  margin-left: 300px;
+  margin-top: -50px;
 }
-.card__label .check:hover {
+.menu__entrees .menu__container:hover .menu__container__check i {
   opacity: 1;
-  padding-top: 20px;
-}
-.card__label .check i {
   text-align: center;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   color: #99E2D0;
   background-color: white;
+  margin-top: 20px;
+  margin-left: 10px;
 }
-.card__button {
+.menu__button {
   width: 35%;
   height: 30px;
   margin-left: 130px;
@@ -627,10 +630,10 @@ section {
   font-weight: 0px;
   margin-top: 40px;
 }
-.card__button p {
+.menu__button p {
   width: 100%;
 }
-.card__button:hover {
+.menu__button:hover {
   box-shadow: 0 5px 5px -5px black;
   background-image: linear-gradient(#fface8, #c9abee);
 }

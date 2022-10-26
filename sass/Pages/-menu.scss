@@ -1,0 +1,317 @@
+section{
+    width: 100%;
+    height: 1390px;
+    background-color: $coul_backg_formsectnav;
+}
+.menu{
+    width: 100%;
+    height: 1250px;
+    display: block;
+    img {
+        width: 100%;                    /* image responsive */
+        height: 300px;
+        overflow: hidden;
+        object-fit: cover;                  /* rempli la card partie image*/
+    }
+    &__body{
+        padding-top: 10px;
+        border-top-left-radius : 20px;
+        border-top-right-radius : 20px;
+        background-color: $coul_backg_formsectnav;
+        position:absolute;
+        top: 320px;
+        width: 100%;
+        height: 700px; 
+    }
+    &__restaurant{
+        display: flex;
+        flex-direction: row;
+        h1{
+            padding-left: 30px;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 22px;
+            width: 70%;
+        }
+        i{
+            padding-top: 20px;
+            padding-left: 20px;
+            font-size: 22px;
+            width: 10%;
+        }
+       
+    }
+        
+    &__entrees{
+        padding-left: 30px;
+        padding-bottom: 20px;
+        .menu__heading{
+            font-size: 14px;
+            width: 30%;            
+        }
+        .menu__trait{
+            border-bottom:$couleur_tertiare solid 2px ;
+            width: 35%;
+        }
+       
+        .menu__container{
+            width: 90%;
+            height: 70px;
+            border-radius: 16px;
+            border: none;
+            margin-bottom: 10px;
+            margin-top: 10px;           
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: white; 
+            &__choix {
+                p{
+                  font-weight: bold;
+                  text-align: left;
+                  padding-left: 5px;
+                  font-size: 14px;  
+                  width: 70%;                
+                }
+                       
+            }
+            &__prix{
+                display: flex;      
+                padding-top: 10px;
+                p{
+                    text-align: left;
+                    width: 70%;
+                    padding-left: 5px;
+                    font-size: 12px;
+                }
+                &__euro{
+                    display: flex;
+                    padding-left: 30px;
+                    width: 30%;
+                    i{
+                        opacity: 1;
+                    }
+                    
+                }
+            }
+           &__check{
+            i{
+                opacity: 0;
+            }
+           }
+           &:hover{
+
+           .menu__container__check{
+              
+                border-top-right-radius : 20px;
+                border-bottom-right-radius : 20px;
+                background-color:$couleur_tertiare;
+                width: 50px;
+                height: 70px;
+                position: relative;
+                margin-left: 300px;
+                margin-top: -50px;
+                
+                i{
+                    opacity: 1;
+                    text-align: center;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    color: $couleur_tertiare;
+                    background-color: white;
+                   
+                    margin-top: 20px;
+                    margin-left: 10px;
+                
+                  
+                }
+            }
+        } 
+        }
+        
+        
+    }
+   /* &__plats{
+        padding-left: 30px;
+        padding-bottom: 20px;
+        .menu__heading{
+            font-size: 14px;
+            width: 30%;            
+        }
+        .menu__trait{
+            border-bottom:$couleur_tertiare solid 2px ;
+            width: 35%;
+        }
+       
+        .menu__container{
+            width: 90%;
+            height: 70px;
+            border-radius: 16px;
+            border: none;
+            margin-bottom: 10px;
+            margin-top: 10px;           
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: white; 
+            &__choix {
+                p{
+                  font-weight: bold;
+                  text-align: left;
+                  padding-left: 5px;
+                  font-size: 14px;  
+                  width: 70%;                
+                }
+                       
+            }
+            &__prix{
+                display: flex;      
+                padding-top: 10px;
+                p{
+                    text-align: left;
+                    width: 70%;
+                    padding-left: 5px;
+                    font-size: 12px;
+                }
+                &__euro{
+                    display: flex;
+                    padding-left: 30px;
+                    width: 30%;
+                }
+            }
+           
+            &__check{
+                    opacity: 0;
+                    border-top-right-radius : 20px;
+                    border-bottom-right-radius : 20px;
+                    background-color:$couleur_tertiare;
+                    width: 50px;
+                    height: 70px;
+                    position: absolute;
+                    left: 295px;
+                    top: 92px;
+                    &:hover{
+                        opacity: 1;
+                        padding-top:20px;
+                    }
+                    i{
+                        text-align: center;
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        color: $couleur_tertiare;
+                        background-color: white;
+                      
+                    }
+            }
+        }
+           
+    }
+    &__desserts{
+        padding-left: 30px;
+        padding-bottom: 20px;
+        .card__heading{
+            font-size: 14px;
+            width: 30%;            
+        }
+        .menu__trait{
+            border-bottom:$couleur_tertiare solid 2px ;
+            width: 35%;
+        }
+       
+        .menu__container{
+            width: 90%;
+            height: 70px;
+            border-radius: 16px;
+            border: none;
+            margin-bottom: 10px;
+            margin-top: 10px;           
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: white; 
+            &__choix {
+                p{
+                  font-weight: bold;
+                  text-align: left;
+                  padding-left: 5px;
+                  font-size: 14px;  
+                  width: 70%;                
+                }
+                       
+            }
+            &__prix{
+                display: flex;      
+                padding-top: 10px;
+                p{
+                    text-align: left;
+                    width: 70%;
+                    padding-left: 5px;
+                    font-size: 12px;
+                }
+            &__euro{
+                    display: flex;
+                    padding-left: 30px;
+                    width: 30%;
+                }
+            }
+          
+            &__check{
+                    opacity: 0;
+                    border-top-right-radius : 20px;
+                    border-bottom-right-radius : 20px;
+                    background-color:$couleur_tertiare;
+                    width: 50px;
+                    height: 70px;
+                    position: absolute;
+                    left: 295px;
+                    top: 92px;
+                    &:hover{
+                        opacity: 1;
+                        padding-top:20px;
+                    }
+                    i{
+                        text-align: center;
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        color: $couleur_tertiare;
+                        background-color: white;
+                      
+                    }
+            }
+        }
+        
+           
+    }*/
+    
+   
+    &__button{
+        width: 35%;
+        height: 30px; 
+        margin-left: 130px;
+        border-radius: 16px;
+        // melange des trois couleurs de la chartre graphique du site//
+        @include couleur-button;
+        border: none;
+        box-shadow: $box-shadow-btn;
+        color: #F2F2F2;
+        font-size: 12px;
+        font-weight: 0px;
+        margin-top: 40px;
+    
+        p{
+          width: 100%;
+         
+        }
+        &:hover{
+          // mixin shadow plus foncee //
+          @include box-shadow-fonce($colour);  
+          // mixin color background eclaircie //
+          @include couleur-button-eclaircie;
+        }
+    }
+ 
+}
+    
+
+
+ 

@@ -337,7 +337,7 @@ header {
   height: 40px;
 }
 
-.loader__spin {
+.loader-spin {
   position: absolute;
   overflow: hidden;
   left: 50%;
@@ -540,14 +540,6 @@ section {
   padding-bottom: 20px;
   padding-left: 40px;
   font-family: "roboto";
-  /*  &__coeurRempli{
-        margin-left: 50px;
-       i{
-         background-image:linear-gradient(to right, $couleur_secondaire, $couleur_primaire ) ;
-         background-clip: text;
-         color: transparent;
-       }
-      }*/
 }
 .card a {
   text-decoration: none;
@@ -570,14 +562,27 @@ section {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
-  object-fit: cover; /* rempli la card partie image*/
-}
-.card figcaption {
+  object-fit: cover;
   position: relative;
+  /* rempli la card partie image*/
+}
+.card .text-over {
+  position: absolute;
   width: 25%;
   max-width: 70px;
-  left: 70%;
-  bottom: 110px;
+  left: 67%;
+  top: 770px;
+  font-size: 14px;
+  color: rgb(53, 87, 53);
+  background-color: #99E2D0;
+  text-align: center;
+}
+.card .text-over2 {
+  position: absolute;
+  width: 25%;
+  max-width: 70px;
+  left: 67%;
+  top: 990px;
   font-size: 14px;
   color: rgb(53, 87, 53);
   background-color: #99E2D0;
@@ -609,12 +614,15 @@ section {
   width: 20%;
   margin-left: 40px;
   display: inline-block;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
 }
 .card__coeurVide i {
+  font-size: 20px;
+}
+.card__coeurVide:hover {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.card__coeurVide:hover i {
   font-size: 20px;
   background-image: linear-gradient(to right, #FF79DA, #9356DC);
 }

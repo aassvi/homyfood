@@ -43,7 +43,157 @@ section{
        
     }
         
-    &__label{
+    &__entrees{
+        padding-left: 30px;
+        padding-bottom: 20px;
+        .card__heading{
+            font-size: 14px;
+            width: 30%;            
+        }
+        .card__trait{
+            border-bottom:$couleur_tertiare solid 2px ;
+            width: 35%;
+        }
+       
+        .container{
+            width: 90%;
+            height: 70px;
+            border-radius: 16px;
+            border: none;
+            margin-bottom: 10px;
+            margin-top: 10px;           
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: white; 
+        }
+        .choix {
+            p{
+              font-weight: bold;
+              text-align: left;
+              padding-left: 5px;
+              font-size: 14px;  
+              width: 70%;                
+            }
+                   
+        }
+        .prix{
+            display: flex;      
+            padding-top: 10px;
+            p{
+                text-align: left;
+                width: 70%;
+                padding-left: 5px;
+                font-size: 12px;
+            }
+        }
+        .euro{
+                display: flex;
+                padding-left: 30px;
+                width: 30%;
+                
+        }
+        .check{
+                opacity: 0;
+                border-top-right-radius : 20px;
+                border-bottom-right-radius : 20px;
+                background-color:$couleur_tertiare;
+                width: 50px;
+                height: 70px;
+                position: absolute;
+                left: 295px;
+                top: 92px;
+                &:hover{
+                    opacity: 1;
+                    padding-top:20px;
+                }
+                i{
+                    text-align: center;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    color: $couleur_tertiare;
+                    background-color: white;
+                  
+                }
+        }
+           
+    }
+    &__plats{
+        padding-left: 30px;
+        padding-bottom: 20px;
+        .card__heading{
+            font-size: 14px;
+            width: 30%;            
+        }
+        .card__trait{
+            border-bottom:$couleur_tertiare solid 2px ;
+            width: 35%;
+        }
+       
+        .container{
+            width: 90%;
+            height: 70px;
+            border-radius: 16px;
+            border: none;
+            margin-bottom: 10px;
+            margin-top: 10px;           
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: white; 
+        }
+        .choix {
+            p{
+              font-weight: bold;
+              text-align: left;
+              padding-left: 5px;
+              font-size: 14px;  
+              width: 70%;                
+            }
+                   
+        }
+        .prix{
+            display: flex;      
+            padding-top: 10px;
+            p{
+                text-align: left;
+                width: 70%;
+                padding-left: 5px;
+                font-size: 12px;
+            }
+        }
+        .euro{
+                display: flex;
+                padding-left: 30px;
+                width: 30%;
+                
+        }
+        .check{
+                opacity: 0;
+                border-top-right-radius : 20px;
+                border-bottom-right-radius : 20px;
+                background-color:$couleur_tertiare;
+                width: 50px;
+                height: 70px;
+                position: absolute;
+                left: 295px;
+                top: 92px;
+                &:hover{
+                    opacity: 1;
+                    padding-top:20px;
+                }
+                i{
+                    text-align: center;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    color: $couleur_tertiare;
+                    background-color: white;
+                  
+                }
+        }
+           
+    }
+    &__desserts{
         padding-left: 30px;
         padding-bottom: 20px;
         .card__heading{
@@ -119,158 +269,7 @@ section{
            
     }
     
-   /* &__plats{
-        padding-left: 30px;
-        padding-bottom: 20px;
-        .card__heading{
-            font-size: 14px;
-            width: 30%;            
-        }
-        .card__trait{
-            border-bottom:$couleur_tertiare solid 2px ;
-            width: 35%;
-        }
-       
-        button{
-            width: 90%;
-            height: 70px;
-            border-radius: 16px;
-            border: none;
-            margin-bottom: 10px;
-            margin-top: 10px;           
-            padding-top: 10px;
-            padding-bottom: 10px;
-            background-color: white; 
-        }
-        .button__choix {
-            p{
-              font-weight: bold;
-              text-align: left;
-              padding-left: 5px;
-              font-size: 14px;
-              width: 70%;                      
-            }
-                   
-        }
-        .button__prix{
-            display: flex;      
-            padding-top: 10px;
-            p{
-                text-align: left;
-                width: 70%;
-                padding-left: 5px;
-                font-size: 12px;
-            }
-        }
-        .button__euro{
-                display: flex;
-              
-                padding-left: 30px;
-                width: 30%;
-                
-        }
-        .button__ckeck{
-                opacity: 0;
-                border-top-right-radius : 20px;
-                border-bottom-right-radius : 20px;
-                background-color:$couleur_tertiare;
-                width: 50px;
-                height: 70px;
-                position: absolute;
-                left: 295px;
-                top: 92px;
-                &:hover{
-                    opacity: 1;
-                    padding-top:20px;
-                }
-                i{
-                    text-align: center;
-                    border-radius: 50%;
-                    width: 20px;
-                    height: 20px;
-                    color: $couleur_tertiare;
-                    background-color: white;
-                  
-                }
-        }
-           
-    }
-    &__desserts{
-        padding-left: 30px;
-        padding-bottom: 20px;
-        .card__heading{
-            font-size: 14px;
-            width: 30%;            
-        }
-        .card__trait{
-            border-bottom:$couleur_tertiare solid 2px ;
-            width: 35%;
-        }
-       
-        button{
-            width: 90%;
-            height: 70px;
-            border-radius: 16px;
-            border: none;
-            margin-bottom: 10px;
-            margin-top: 10px;           
-            padding-top: 10px;
-            padding-bottom: 10px;
-            background-color: white; 
-        }
-        .button__choix {
-            p{
-              font-weight: bold;
-              text-align: left;
-              padding-left: 5px;
-              font-size: 14px; 
-              width: 70%;                     
-            }
-                   
-        }
-        .button__prix{
-            display: flex;      
-            padding-top: 10px;
-            p{
-                text-align: left;
-                width: 70%;
-                padding-left: 5px;
-                font-size: 12px;
-            }
-        }
-        .button__euro{
-                display: flex;
-              
-                padding-left: 30px;
-                width: 30%;
-                
-        }
-        .button__ckeck{
-                opacity: 0;
-                border-top-right-radius : 20px;
-                border-bottom-right-radius : 20px;
-                background-color:$couleur_tertiare;
-                width: 50px;
-                height: 70px;
-                position: absolute;
-                left: 295px;
-                top: 92px;
-                &:hover{
-                    opacity: 1;
-                    padding-top:20px;
-                }
-                i{
-                    text-align: center;
-                    border-radius: 50%;
-                    width: 20px;
-                    height: 20px;
-                    color: $couleur_tertiare;
-                    background-color: white;
-                  
-                }
-        }
-           
-    }*/
+   
     &__button{
         width: 35%;
         height: 30px; 
