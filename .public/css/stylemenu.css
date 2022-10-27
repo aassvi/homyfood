@@ -567,6 +567,17 @@ section {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
+  transition: width 500ms ease-out;
+  position: relative;
+  animation: mymove 3s;
+}
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 200px;
+  }
 }
 .menu__entrees .menu__container__choix p {
   font-weight: bold;
@@ -593,18 +604,34 @@ section {
 .menu__entrees .menu__container__prix__euro i {
   opacity: 1;
 }
-.menu__entrees .menu__container__check i {
+.menu__entrees .menu__container__check {
   opacity: 0;
-}
-.menu__entrees .menu__container:hover .menu__container__check {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #99E2D0;
   width: 50px;
   height: 70px;
   position: relative;
-  margin-left: 300px;
+  margin-left: 90%;
   margin-top: -50px;
+}
+.menu__entrees .menu__container__check i {
+  opacity: 0;
+  transform: rotate(0deg);
+}
+.menu__entrees .menu__container__hand i {
+  opacity: 0;
+  margin-left: 200px;
+  transform: translateY(0);
+}
+.menu__entrees .menu__container:hover {
+  width: 80%;
+}
+.menu__entrees .menu__container:hover .menu__container__check {
+  opacity: 1;
+  transform: translate(-40%, 0);
+  transition-delay: 500ms;
+  transition: transform 500ms ease-in-out;
 }
 .menu__entrees .menu__container:hover .menu__container__check i {
   opacity: 1;
@@ -616,6 +643,41 @@ section {
   background-color: white;
   margin-top: 20px;
   margin-left: 10px;
+  transform: rotate(360deg);
+  transition-delay: 500ms;
+  transition: transform 500ms ease-in-out;
+}
+.menu__entrees .menu__container:hover .menu__container__prix {
+  display: flex;
+  padding-top: 10px;
+}
+.menu__entrees .menu__container:hover .menu__container__prix p {
+  text-align: left;
+  width: 70%;
+  padding-left: 5px;
+  font-size: 12px;
+  text-overflow: ellipsis;
+}
+.menu__entrees .menu__container:hover .menu__container__prix__euro {
+  display: flex;
+  padding-left: 10px;
+  width: 30%;
+}
+.menu__entrees .menu__container:hover .menu__container__prix__euro i {
+  opacity: 1;
+}
+.menu__entrees .menu__container:hover .menu__container__hand i {
+  opacity: 1;
+  transform: translateY(-100%);
+  transition-duration: 500ms;
+}
+@keyframes hand {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 .menu__button {
   width: 35%;

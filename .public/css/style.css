@@ -610,20 +610,35 @@ section {
   padding-top: 10px;
   font-weight: normal;
 }
-.card__coeurVide {
+.card__coeur {
   width: 20%;
   margin-left: 40px;
   display: inline-block;
 }
-.card__coeurVide i {
+.card__coeur i {
   font-size: 20px;
+  opacity: 1;
 }
-.card__coeurVide:hover {
+.card__coeur .card__coeur__plein {
+  width: 20%;
+  display: inline-block;
+  position: relative;
+}
+.card__coeur .card__coeur__plein i {
+  font-size: 0px;
+  opacity: 0;
+}
+.card__coeur:hover i {
+  font-size: 0px;
+  opacity: 0;
+}
+.card__coeur:hover .card__coeur__plein {
   -webkit-background-clip: text;
   background-clip: text;
 }
-.card__coeurVide:hover i {
+.card__coeur:hover .card__coeur__plein i {
   font-size: 20px;
+  opacity: 1;
   background-image: linear-gradient(to right, #FF79DA, #9356DC);
 }
 

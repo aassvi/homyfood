@@ -86,27 +86,44 @@ section{
     padding-top: 10px;
     font-weight: normal;
   }
-  &__coeurVide{
+  &__coeur{
     width: 20%;
     margin-left: 40px;
     display: inline-block;
    
     i{
       font-size: 20px;
+      opacity: 1;
+    }
+    .card__coeur__plein{
+      width: 20%;
+      
+      display: inline-block;
+      position: relative;
+      
+      i{
+        font-size: 0px;
+        opacity: 0;
+      }
     } 
     &:hover{
-     
-      -webkit-background-clip: text ; 
-      background-clip: text ; 
-      //-webkit-text-fill-color: transparent;
-      //color: transparent;
-    
       i{
+        font-size: 0px;
+        opacity: 0;
+      } 
+      .card__coeur__plein{
+        -webkit-background-clip: text ; 
+        background-clip: text ; 
+        //-webkit-text-fill-color: transparent;
+        //color: transparent;
+        i{
         font-size: 20px;
+        opacity: 1;
         background-image:linear-gradient(to right, $couleur_secondaire, $couleur_primaire ) ;
       }
      }
-    }    
+    }     
+  }
 }
 
  
