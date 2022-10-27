@@ -335,9 +335,12 @@ header {
 .header__logo {
   width: 100%;
   height: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 80px;
 }
 .header__logo img {
-  padding-left: 20px;
+  padding-left: 100px;
 }
 
 .photo {
@@ -360,6 +363,7 @@ section {
   width: 100%;
   height: 1250px;
   display: block;
+  margin-top: 10px;
   /* &__plats{
        padding-left: 30px;
        padding-bottom: 20px;
@@ -516,7 +520,8 @@ section {
   width: 100%; /* image responsive */
   height: 300px;
   overflow: hidden;
-  object-fit: cover; /* rempli la card partie image*/
+  object-fit: cover;
+  /* rempli la card partie image*/
 }
 .menu__body {
   padding-top: 10px;
@@ -567,17 +572,14 @@ section {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
-  transition: width 500ms ease-out;
-  position: relative;
-  animation: mymove 3s;
-}
-@keyframes mymove {
-  from {
-    top: 0px;
-  }
-  to {
-    top: 200px;
-  }
+  /* animation en entree de page 
+  //position: relative;
+  //animation: mymove 3s;
+  //@keyframes mymove {
+      from {top: 0px;}
+      to {top: 200px;}
+    }
+    */
 }
 .menu__entrees .menu__container__choix p {
   font-weight: bold;
@@ -606,8 +608,8 @@ section {
 }
 .menu__entrees .menu__container__check {
   opacity: 0;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
   background-color: #99E2D0;
   width: 50px;
   height: 70px;
@@ -619,13 +621,16 @@ section {
   opacity: 0;
   transform: rotate(0deg);
 }
-.menu__entrees .menu__container__hand i {
-  opacity: 0;
-  margin-left: 200px;
-  transform: translateY(0);
+@keyframes check {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .menu__entrees .menu__container:hover {
-  width: 80%;
+  width: 90%;
 }
 .menu__entrees .menu__container:hover .menu__container__check {
   opacity: 1;
@@ -642,10 +647,9 @@ section {
   color: #99E2D0;
   background-color: white;
   margin-top: 20px;
-  margin-left: 10px;
-  transform: rotate(360deg);
-  transition-delay: 500ms;
-  transition: transform 500ms ease-in-out;
+  margin-left: 15px;
+  padding-top: 2px;
+  animation: check 1s ease-out forwards;
 }
 .menu__entrees .menu__container:hover .menu__container__prix {
   display: flex;
@@ -660,24 +664,15 @@ section {
 }
 .menu__entrees .menu__container:hover .menu__container__prix__euro {
   display: flex;
-  padding-left: 10px;
+  padding-left: 5px;
+  padding-right: 10px;
   width: 30%;
+}
+.menu__entrees .menu__container:hover .menu__container__prix__euro p {
+  text-align: left;
 }
 .menu__entrees .menu__container:hover .menu__container__prix__euro i {
   opacity: 1;
-}
-.menu__entrees .menu__container:hover .menu__container__hand i {
-  opacity: 1;
-  transform: translateY(-100%);
-  transition-duration: 500ms;
-}
-@keyframes hand {
-  0% {
-    transform: translateY(-50%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
 }
 .menu__button {
   width: 35%;
