@@ -39,30 +39,41 @@ section{
     position: relative;
                                 /* rempli la card partie image*/
     }
-  .text-over{
-    position: absolute;
-    width:25%;
-    max-width: 70px;
-    left:67%;
-    top:770px;
-    font-size: 14px;
+  
+.container{
+  position: relative;
+  overflow: hidden;
+}
+.container > img{
+display: block;
+object-fit: cover;
+width: 100%;
+object-position: center;
+}
+
+.container > .content{
+position: absolute;
+inset: 0;
+left: 230px;
+top: 10px;
+
+p{
+  
+  width: fit-content;
+  
+  font-size: 14px;
     color:rgb(53, 87, 53);
     background-color:$couleur_tertiare;
     text-align: center;
-    
-  }
-  .text-over2{
-    position: absolute;
-    width:25%;
-    max-width: 70px;
-    left:67%;
-    top:990px;
-    font-size: 14px;
-    color:rgb(53, 87, 53);
-    background-color:$couleur_tertiare;
-    text-align: center;
-    
-  }
+    display: flex;
+    justify-content: right;
+}
+}
+
+
+
+
+  
   &__body {
     display: flex;   
     width: 100%;
@@ -86,45 +97,154 @@ section{
     padding-top: 10px;
     font-weight: normal;
   }
-  &__coeur{
+ 
+  
+  .card__coeur {
+    position: relative;
+    width: 50%;
+    font-size: 20px;
+   
+  }
+  
+ 
+  
+  .card__coeur__rempli {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+   
+   
+    transform:translate(0);
+    transition: all 1s;
+    font-size: 20px;
+    
+  }
+  
+  .card__coeur:hover .card__coeur__rempli {
+    opacity: 1;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient($couleur_primaire, $couleur_secondaire);
+  }
+  /////////////////////////////////button//////
+  
+
+
+
+
+
+
+}// fin card
+/*
+  .fa-solid{
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right,$couleur_primaire, $couleur_secondaire);
+    transform:translate(0);
+    transition: all 1s;
+    opacity: 0;  
+    }  
+    &:hover .fa-solid{
+        transform: translate(1);
+        opacity: 1;
+    }
+
+    .fa-regular{
+        transform: translate(1);
+        transition: all 1s;
+        opacity: 1;
+    }  
+    &:hover .fa-regular{
+    transform: translate(0);
+    opacity: 0;
+    }
+}
+  /*&__coeur{
+    width: 50px;
+    font-size: 20px;
+    display:inline;
+   
+      .fa-regular{
+        transform: translate(1);
+        transition: all 1s;
+          opacity: 1;
+      }  
+      &:hover .fa-regular{
+        transform: translate(0);
+        opacity: 0;
+         .fa-solid{
+
+          transform: translate(1);
+            opacity: 1;
+      
+      }
+    }
+  }
+  .card__coeur__rempli{
+      display: inline;
+      .fa-solid{
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right,$couleur_primaire, $couleur_secondaire);
+        transform:translate(0);
+        transition: all 1s;
+        opacity: 0;  
+        }  
+        &:hover .fa-solid{
+
+          transform: translate(1);
+          opacity: 1;
+          .fa-regular{
+         
+                opacity: 0;
+          }
+        }
+  }*/
+
+  
+  /*&__coeur{
     width: 20%;
     margin-left: 40px;
     display: inline-block;
    
-    i{
+   
       font-size: 20px;
       opacity: 1;
-    }
-    .card__coeur__plein{
-      width: 20%;
       
-      display: inline-block;
-      position: relative;
+    
+    &:hover{
       
-      i{
         font-size: 0px;
         opacity: 0;
+      
+  
+    } 
+  }    
+  .card__coeur__plein{
+      width: 20%;
+     
+        background-clip: text ; 
+        -webkit-background-clip: text ; 
+        color: transparent;
+        background-image:linear-gradient(to right, $couleur_secondaire, $couleur_primaire ) ;
+      
+        opacity: 0;
+      &:hover{
+        opacity: 1;
       }
     } 
-    &:hover{
-      i{
-        font-size: 0px;
-        opacity: 0;
-      } 
-      .card__coeur__plein{
-        -webkit-background-clip: text ; 
-        background-clip: text ; 
-        //-webkit-text-fill-color: transparent;
-        //color: transparent;
-        i{
-        font-size: 20px;
-        opacity: 1;
-        background-image:linear-gradient(to right, $couleur_secondaire, $couleur_primaire ) ;
-      }
-     }
-    }     
-  }
-}
+   */ 
+  
+
 
  
 
