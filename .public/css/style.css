@@ -307,6 +307,14 @@ template {
   display: none;
 }
 
+/*@font-face {
+  font-family: "Shrikhand-Regular";
+  src: url("/policeShrikhand/Shrikhand-Regular.ttf") format("ttf")
+ }
+ @font-face {
+  font-family: "Shrikhand-Regular";
+  src: url("/policeShrikhand/Shrikhand-Regular.otf") format("otf")
+ }*/
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -317,12 +325,12 @@ html, body, main {
   width: 100%;
 }
 
-p, span {
+p, span, ::placeholder {
   font-family: "roboto";
 }
 
 h1, h2 {
-  font-family: "Shrikhand";
+  font-family: "Shrikhand-Regular";
 }
 
 header {
@@ -333,8 +341,9 @@ header {
 
 .header__logo {
   padding-top: 10px;
+  padding-left: 20px;
   width: 100%;
-  height: 40px;
+  height: 60px;
 }
 
 .loader-spin {
@@ -407,18 +416,19 @@ form {
 }
 .form__input i {
   padding-top: 10px;
+  width: 10%;
 }
 .form__input input {
   border: none;
   background-color: #e6e9ea;
-}
-.form__input #ville {
+  text-align: center;
   width: 40%;
 }
 .form__input ::placeholder {
   font-size: 16px;
   background-color: #e6e9ea;
   color: black;
+  font-weight: bold;
   text-align: left;
   padding-left: 10px;
 }
@@ -559,43 +569,45 @@ section {
 }
 .card__restaurant img {
   width: 100%; /* image responsive */
-  height: 119px;
+  height: 150px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
   object-fit: cover;
-  position: relative;
-  /* rempli la card partie image*/
+  position: relative; /* rempli la card partie image*/
 }
-.card .container {
+.card__restaurant__nouveau {
   position: relative;
   overflow: hidden;
 }
-.card .container > img {
+.card__restaurant__nouveau > img {
   display: block;
   object-fit: cover;
   width: 100%;
   object-position: center;
 }
-.card .container > .content {
+.card__restaurant__nouveau > .content {
   position: absolute;
   inset: 0;
-  left: 230px;
+  left: 68%;
   top: 10px;
 }
-.card .container > .content p {
-  width: fit-content;
+.card__restaurant__nouveau > .content p {
+  width: 70px;
+  height: 20px;
   font-size: 14px;
-  color: rgb(53, 87, 53);
+  color: rgb(77, 125, 77);
+  font-weight: bold;
   background-color: #99E2D0;
   text-align: center;
   display: flex;
-  justify-content: right;
+  justify-content: center;
+  align-items: center;
 }
 .card__body {
   display: flex;
   width: 100%;
-  height: 90px;
+  height: 80px;
   padding-top: 10px;
   color: black;
   font-size: 16px;
@@ -611,15 +623,16 @@ section {
 }
 .card__lieu {
   width: 70%;
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-weight: normal;
 }
-.card .card__coeur {
+.card__coeur {
   position: relative;
   width: 50%;
   font-size: 20px;
 }
-.card .card__coeur__rempli {
+.card__coeur__rempli {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -633,113 +646,16 @@ section {
   transition: all 1s;
   font-size: 20px;
 }
-.card .card__coeur:hover .card__coeur__rempli {
+.card__coeur:hover > .card__coeur__rempli {
   opacity: 1;
+}
+.card__coeur:hover > .card__coeur__rempli .fa-solid {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-image: linear-gradient(to right, #FF79DA, #9356DC);
 }
 
-/*
-  .fa-solid{
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(to right,$couleur_primaire, $couleur_secondaire);
-    transform:translate(0);
-    transition: all 1s;
-    opacity: 0;  
-    }  
-    &:hover .fa-solid{
-        transform: translate(1);
-        opacity: 1;
-    }
-
-    .fa-regular{
-        transform: translate(1);
-        transition: all 1s;
-        opacity: 1;
-    }  
-    &:hover .fa-regular{
-    transform: translate(0);
-    opacity: 0;
-    }
-}
-  /*&__coeur{
-    width: 50px;
-    font-size: 20px;
-    display:inline;
-
-      .fa-regular{
-        transform: translate(1);
-        transition: all 1s;
-          opacity: 1;
-      }  
-      &:hover .fa-regular{
-        transform: translate(0);
-        opacity: 0;
-         .fa-solid{
-
-          transform: translate(1);
-            opacity: 1;
-
-      }
-    }
-  }
-  .card__coeur__rempli{
-      display: inline;
-      .fa-solid{
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        background-image: linear-gradient(to right,$couleur_primaire, $couleur_secondaire);
-        transform:translate(0);
-        transition: all 1s;
-        opacity: 0;  
-        }  
-        &:hover .fa-solid{
-
-          transform: translate(1);
-          opacity: 1;
-          .fa-regular{
-
-                opacity: 0;
-          }
-        }
-  }*/
-/*&__coeur{
-  width: 20%;
-  margin-left: 40px;
-  display: inline-block;
-
-
-    font-size: 20px;
-    opacity: 1;
-
-
-  &:hover{
-
-      font-size: 0px;
-      opacity: 0;
-
-
-  } 
-}    
-.card__coeur__plein{
-    width: 20%;
-
-      background-clip: text ; 
-      -webkit-background-clip: text ; 
-      color: transparent;
-      background-image:linear-gradient(to right, $couleur_secondaire, $couleur_primaire ) ;
-
-      opacity: 0;
-    &:hover{
-      opacity: 1;
-    }
-  } 
- */
 footer {
   background-color: #2c3e50;
   color: white;

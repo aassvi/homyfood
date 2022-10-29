@@ -1,3 +1,13 @@
+// font declarée dans le script node npm
+
+/*@font-face {
+  font-family: "Shrikhand-Regular";
+  src: url("/policeShrikhand/Shrikhand-Regular.ttf") format("ttf")
+ }
+ @font-face {
+  font-family: "Shrikhand-Regular";
+  src: url("/policeShrikhand/Shrikhand-Regular.otf") format("otf")
+ }*/
 
 
 * {
@@ -9,13 +19,12 @@ html, body, main{
   width: 100%;
 }
 
-p,span{
+p,span,::placeholder{
   font-family: 'roboto';
 }
 
 h1, h2{
-  font-family: 'Shrikhand';
-  
+  font-family: 'Shrikhand-Regular';  
 }
 
 

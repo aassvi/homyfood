@@ -16,20 +16,23 @@ form{
     
     i{
       padding-top: 10px;
+      width: 10%;
     }
     input {
       border: none;
-      background-color:$coul_backg_inputform;    
-    } 
-    #ville{
+      background-color:$coul_backg_inputform;  
+      text-align: center;  
       width: 40%;
-    }
+    } 
+   
     ::placeholder{
       font-size:16px;
       background-color:$coul_backg_inputform;
       color: black;
+      font-weight: bold;
       text-align: left;
       padding-left: 10px;
+     
     }
   }
   &__heading{

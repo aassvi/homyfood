@@ -1,3 +1,11 @@
+/*@font-face {
+  font-family: "Shrikhand-Regular";
+  src: url("/policeShrikhand/Shrikhand-Regular.ttf") format("ttf")
+ }
+ @font-face {
+  font-family: "Shrikhand-Regular";
+  src: url("/policeShrikhand/Shrikhand-Regular.otf") format("otf")
+ }*/
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -8,12 +16,12 @@ html, body, main {
   width: 100%;
 }
 
-p, span {
+p, span, ::placeholder {
   font-family: "roboto";
 }
 
 h1, h2 {
-  font-family: "Shrikhand";
+  font-family: "Shrikhand-Regular";
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -342,6 +350,30 @@ header {
 .header__logo img {
   padding-left: 100px;
 }
+.header__logo .fa-solid {
+  color: black;
+  background-color: white;
+}
+.header__logofa-solid a {
+  color: black;
+  background-color: white;
+}
+.header__logo header a {
+  color: black;
+  background-color: white;
+}
+.header__logo .header a:link {
+  color: black;
+  background-color: white;
+}
+.header__logo .header a:visited {
+  color: black;
+  background-color: white;
+}
+.header__logo .header a:active {
+  color: black;
+  background-color: white;
+}
 
 .photo {
   width: 100%;
@@ -520,8 +552,8 @@ section {
   width: 100%; /* image responsive */
   height: 300px;
   overflow: hidden;
-  object-fit: cover;
-  /* rempli la card partie image*/
+  object-fit: cover; /* rempli la card partie image*/
+  object-position: center;
 }
 .menu__body {
   padding-top: 10px;
@@ -567,7 +599,7 @@ section {
   position: relative;
   overflow: hidden;
   width: 90%;
-  height: 70px;
+  height: 60px;
   border-radius: 16px;
   border: none;
   margin-bottom: 10px;
@@ -579,15 +611,6 @@ section {
   animation-delay: 2s;
   opacity: 0;
   animation: transition 1s ease-in-out 2s forwards;
-}
-.menu__entrees .menu__container__btn--1 {
-  animation-delay: 0.2s;
-}
-.menu__entrees .menu__container__btn--2 {
-  animation-delay: 0.4s;
-}
-.menu__entrees .menu__container__btn--3 {
-  animation-delay: 0.6s;
 }
 @keyframes transition {
   0% {
@@ -606,6 +629,15 @@ section {
   to {
     bottom: 100%;
   }
+}
+.menu__entrees .menu__container__btn--1 {
+  animation-delay: 0.2s;
+}
+.menu__entrees .menu__container__btn--2 {
+  animation-delay: 0.4s;
+}
+.menu__entrees .menu__container__btn--3 {
+  animation-delay: 0.6s;
 }
 .menu__entrees .menu__container__choix p {
   font-weight: bold;
@@ -638,10 +670,10 @@ section {
   border-bottom-right-radius: 16px;
   background-color: #99E2D0;
   width: 50px;
-  height: 70px;
+  height: 60px;
   position: absolute;
   inset: 0;
-  left: 230px;
+  left: 90%;
   top: 0px;
 }
 .menu__entrees .menu__container__check i {
@@ -653,17 +685,8 @@ section {
 }
 .menu__entrees .menu__container:hover .menu__container__check {
   opacity: 1;
-  animation: check 1s ease-out forwards;
-}
-@keyframes check {
-  from {
-    transform: rotate(0deg);
-    transform: translate(0%);
-  }
-  to {
-    transform: rotate(360deg);
-    transform: translate(-30%);
-  }
+  transform: translate(-30%);
+  transition: transform 500ms ease-in-out;
 }
 .menu__entrees .menu__container:hover .menu__container__check i {
   opacity: 1;
@@ -676,6 +699,15 @@ section {
   margin-top: 25px;
   margin-left: 15px;
   padding-top: 2px;
+  animation: check 1s ease-out forwards;
+}
+@keyframes check {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .menu__entrees .menu__container:hover .menu__container__prix {
   display: flex;
@@ -683,19 +715,20 @@ section {
 }
 .menu__entrees .menu__container:hover .menu__container__prix p {
   text-align: left;
-  width: 60%;
-  padding-left: 5px;
+  width: 40%;
   font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu__entrees .menu__container:hover .menu__container__prix__euro {
   display: flex;
-  padding-left: 15px;
-  padding-right: 10px;
-  width: 30%;
+  width: 50%;
 }
 .menu__entrees .menu__container:hover .menu__container__prix__euro p {
   text-align: left;
+  white-space: none;
+  text-overflow: unset;
 }
 .menu__entrees .menu__container:hover .menu__container__prix__euro i {
   opacity: 1;
