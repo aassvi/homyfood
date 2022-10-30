@@ -31,6 +31,8 @@
 
         button {
             display: flex;
+            align-items: center;
+            gap: 20px;
             width: 90%;
             height: 50px;
             border-radius: 16px;
@@ -47,19 +49,20 @@
                 }
             }
             span{
-                font-size: 14px;
-                padding-top: 15px;
-                padding-left: 20px;
+                font: {
+                    size: 14px;
+                    weight: bold;
+                } 
+                width: 70%;
+                text-align: left;
+
             }
             i{
                 font-size: 18px;
                 color:grey;
-                width: 20px;
+                width: 20%;
                 height: 20px;
-                padding-top: 15px;
-                padding-left: 20px;
-                padding-right:10px;
-    
+                padding-left: 30px;
             }
         }
     }

@@ -3,9 +3,12 @@ header{
     display: block;
     font-family: 'roboto';
     text-align: center;
-  
+    
   }
-  
+  .header a:active{
+    color:black;
+    background-color: white;
+  }
   .header{
     &__logo{
       width:100% ;
@@ -23,7 +26,7 @@ header{
      color: black;
      background-color: white;
     }
-    &fa-solid a{
+    &fa-solid a:active{
       color: black;
       background-color: white;
     }
@@ -39,11 +42,12 @@ header{
       color:black;
       background-color: white;
     }
-    .header a:active{
-      color:black;
-      background-color: white;
-    }
+   
       
   }
    
+  }
+  .header a:active{
+    color:black;
+    background-color: white;
   }

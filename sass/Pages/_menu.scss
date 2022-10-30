@@ -46,13 +46,14 @@ section{
     
                
     &__entrees{
+
         padding-left: 30px;
         padding-bottom: 20px;
-        .menu__heading{
+        &__heading{
             font-size: 14px;
             width: 30%;            
         }
-        .menu__trait{
+        &__trait{
             border-bottom:$couleur_tertiare solid 2px ;
             width: 35%;
             margin-bottom: 10px;
@@ -88,6 +89,8 @@ section{
             &__btn--1{animation-delay: 0.2s}
             &__btn--2{animation-delay: 0.4s}
             &__btn--3{animation-delay: 0.6s}
+
+
 
             &__choix {
                 p{
@@ -137,16 +140,16 @@ section{
              
             }
            
-            &:hover{
+            &:hover {
                 width: 90%;
                 .menu__container__check{ // au sur vol la case check apparait de droit à gauche 
                     opacity: 1;
-                    //animation           
+                    //animation conteneur check se déplace vers la gauche          
                     transform: translate(-30%);
                     transition: transform 500ms ease-in-out;
                    
                    
-                   i{               // le symbole de check tourne au sur vol hover
+                   i{              
                      opacity: 1;
                      text-align: center;
                      border-radius: 50%;
@@ -154,9 +157,10 @@ section{
                      height: 20px;
                      color: $couleur_tertiare;
                      background-color: white;
-                     margin-top: 25px;
+                     margin-top: 18px;
                      margin-left: 15px;
                      padding-top: 2px;
+                     // animation - le symbole de check tourne au sur vol hover
                      animation: check 1s ease-out  forwards;
                      @keyframes check {
                         from {transform: rotate(0deg); 
@@ -201,21 +205,25 @@ section{
         
     }
     
-   /* &__plats{
+    &__plats{
+
         padding-left: 30px;
         padding-bottom: 20px;
-        .menu__heading{
+        &__heading{
             font-size: 14px;
             width: 30%;            
         }
-        .menu__trait{
+        &__trait{
             border-bottom:$couleur_tertiare solid 2px ;
             width: 35%;
+            margin-bottom: 10px;
         }
        
         .menu__container{
+            position: relative; // parent en position qui permet la animation du check en position relative 
+            overflow: hidden;
             width: 90%;
-            height: 70px;
+            height: 60px;
             border-radius: 16px;
             border: none;
             margin-bottom: 10px;
@@ -223,6 +231,25 @@ section{
             padding-top: 10px;
             padding-bottom: 10px;
             background-color: white; 
+            // animations
+            animation: mymove 5s ;
+           
+            animation-delay: 2s;
+            @keyframes transition {
+                0%   { margin-top: -80px;opacity:0; }
+                100% { margin-top: 0;opacity:1; }
+                }
+            opacity:0;
+            animation: transition 1s ease-in-out 2s forwards;
+            @keyframes mymove {
+                from {bottom:0%;}
+                to {bottom: 100%;}
+               }
+            
+            &__btn--4{animation-delay: 1s}
+            &__btn--5{animation-delay: 1.2s}
+            &__btn--6{animation-delay: 1.4s}
+
             &__choix {
                 p{
                   font-weight: bold;
@@ -244,53 +271,116 @@ section{
                 }
                 &__euro{
                     display: flex;
-                    padding-left: 30px;
+                    padding-left: 20px;
                     width: 30%;
+                    i{
+                        opacity: 1;
+                    }
+                    
                 }
             }
-           
             &__check{
-                    opacity: 0;
-                    border-top-right-radius : 20px;
-                    border-bottom-right-radius : 20px;
-                    background-color:$couleur_tertiare;
-                    width: 50px;
-                    height: 70px;
-                    position: absolute;
-                    left: 295px;
-                    top: 92px;
-                    &:hover{
-                        opacity: 1;
-                        padding-top:20px;
-                    }
-                    i{
-                        text-align: center;
-                        border-radius: 50%;
-                        width: 20px;
-                        height: 20px;
-                        color: $couleur_tertiare;
-                        background-color: white;
-                      
-                    }
+                opacity: 0;
+                border-top-right-radius : 16px;
+                border-bottom-right-radius : 16px;
+                background-color:$couleur_tertiare;
+                width: 50px;
+                height: 60px;
+                position: absolute;
+                inset: 0; 
+                left: 90%;
+                top: 0px;
+
+              i{
+                opacity: 0;
+                transform: rotate(0deg);
+              }
+             
             }
-        }
            
+            &:hover {
+                width: 90%;
+                .menu__container__check{ // au sur vol la case check apparait de droit à gauche 
+                    opacity: 1;
+                    //animation conteneur check se déplace vers la gauche          
+                    transform: translate(-30%);
+                    transition: transform 500ms ease-in-out;
+                   
+                   
+                   i{              
+                     opacity: 1;
+                     text-align: center;
+                     border-radius: 50%;
+                     width: 20px;
+                     height: 20px;
+                     color: $couleur_tertiare;
+                     background-color: white;
+                     margin-top: 18px;
+                     margin-left: 15px;
+                     padding-top: 2px;
+                     // animation - le symbole de check tourne au sur vol hover
+                     animation: check 1s ease-out  forwards;
+                     @keyframes check {
+                        from {transform: rotate(0deg); 
+                        }
+                        to { transform: rotate(360deg); 
+                        }
+                    }
+                    }
+                   
+                } 
+                .menu__container__prix{  //decalage de la ligne prix vers la gauche hover
+                    display: flex;      
+                     padding-top: 10px;
+                     p{
+                        text-align: left;
+                        width: 40%;
+                        font-size: 12px;
+                        white-space: nowrap;    // no wrap à la ligne quand il n'y a plus d'espace
+                        overflow: hidden;          // cacher ce que dépasse
+                        text-overflow: ellipsis;  // met les trois points de suspension
+                      
+                        
+                    }
+                    &__euro{
+                        display: flex;
+                        width: 50%;
+                        p{
+                          text-align: left;
+                          white-space: none;    // no wrap à la ligne quand il n'y a plus d'espace
+                          // cacher ce que dépasse
+                          text-overflow: unset; 
+                        }
+                        i{
+                           opacity: 1;
+                       }
+                    }
+                }
+                     
+                
+            }     
+        }
+        
     }
     &__desserts{
+
         padding-left: 30px;
         padding-bottom: 20px;
-        .card__heading{
+        &__heading{
             font-size: 14px;
             width: 30%;            
         }
-        .menu__trait{
+        &__trait{
             border-bottom:$couleur_tertiare solid 2px ;
             width: 35%;
+            margin-bottom: 10px;
         }
        
         .menu__container{
+            position: relative; // parent en position qui permet la animation du check en position relative 
+            overflow: hidden;
             width: 90%;
-            height: 70px;
+            height: 60px;
             border-radius: 16px;
             border: none;
             margin-bottom: 10px;
@@ -298,6 +388,25 @@ section{
             padding-top: 10px;
             padding-bottom: 10px;
             background-color: white; 
+            // animations
+            animation: mymove 5s ;
+           
+            animation-delay: 2s;
+            @keyframes transition {
+                0%   { margin-top: -80px;opacity:0; }
+                100% { margin-top: 0;opacity:1; }
+                }
+            opacity:0;
+            animation: transition 1s ease-in-out 2s forwards;
+            @keyframes mymove {
+                from {bottom:0%;}
+                to {bottom: 100%;}
+               }
+            
+            &__btn--7{animation-delay: 2.2s}
+            &__btn--8{animation-delay: 2.4s}
+            &__btn--9{animation-delay: 2.6s}
+
             &__choix {
                 p{
                   font-weight: bold;
@@ -317,41 +426,100 @@ section{
                     padding-left: 5px;
                     font-size: 12px;
                 }
-            &__euro{
+                &__euro{
                     display: flex;
-                    padding-left: 30px;
+                    padding-left: 20px;
                     width: 30%;
+                    i{
+                        opacity: 1;
+                    }
+                    
                 }
             }
-          
             &__check{
-                    opacity: 0;
-                    border-top-right-radius : 20px;
-                    border-bottom-right-radius : 20px;
-                    background-color:$couleur_tertiare;
-                    width: 50px;
-                    height: 70px;
-                    position: absolute;
-                    left: 295px;
-                    top: 92px;
-                    &:hover{
-                        opacity: 1;
-                        padding-top:20px;
-                    }
-                    i{
-                        text-align: center;
-                        border-radius: 50%;
-                        width: 20px;
-                        height: 20px;
-                        color: $couleur_tertiare;
-                        background-color: white;
-                      
-                    }
+                opacity: 0;
+                border-top-right-radius : 16px;
+                border-bottom-right-radius : 16px;
+                background-color:$couleur_tertiare;
+                width: 50px;
+                height: 60px;
+                position: absolute;
+                inset: 0; 
+                left: 90%;
+                top: 0px;
+
+              i{
+                opacity: 0;
+                transform: rotate(0deg);
+              }
+             
             }
+           
+            &:hover {
+                width: 90%;
+                .menu__container__check{ // au sur vol la case check apparait de droit à gauche 
+                    opacity: 1;
+                    //animation conteneur check se déplace vers la gauche          
+                    transform: translate(-30%);
+                    transition: transform 500ms ease-in-out;
+                   
+                   
+                   i{              
+                     opacity: 1;
+                     text-align: center;
+                     border-radius: 50%;
+                     width: 20px;
+                     height: 20px;
+                     color: $couleur_tertiare;
+                     background-color: white;
+                     margin-top: 18px;
+                     margin-left: 15px;
+                     padding-top: 2px;
+                     // animation - le symbole de check tourne au sur vol hover
+                     animation: check 1s ease-out  forwards;
+                     @keyframes check {
+                        from {transform: rotate(0deg); 
+                        }
+                        to { transform: rotate(360deg); 
+                        }
+                    }
+                    }
+                   
+                } 
+                .menu__container__prix{  //decalage de la ligne prix vers la gauche hover
+                    display: flex;      
+                     padding-top: 10px;
+                     p{
+                        text-align: left;
+                        width: 40%;
+                        font-size: 12px;
+                        white-space: nowrap;    // no wrap à la ligne quand il n'y a plus d'espace
+                        overflow: hidden;          // cacher ce que dépasse
+                        text-overflow: ellipsis;  // met les trois points de suspension
+                      
+                        
+                    }
+                    &__euro{
+                        display: flex;
+                        width: 50%;
+                        p{
+                          text-align: left;
+                          white-space: none;    // no wrap à la ligne quand il n'y a plus d'espace
+                          // cacher ce que dépasse
+                          text-overflow: unset; 
+                        }
+                        i{
+                           opacity: 1;
+                       }
+                    }
+                }
+                     
+                
+            }     
         }
         
-           
-    }*/
+    }
+       
     
    
     &__button{
