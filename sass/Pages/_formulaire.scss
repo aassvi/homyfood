@@ -10,8 +10,11 @@ form{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 5px;
     width: 100%;
     height: 40px;
+    padding-left: 8%;
+    padding-right: 4%;
     background-color:$coul_backg_inputform;
     border: 1px solid $coul_backg_inputform;
    // box-shadow: 0 5px -8px -5px $coul_backg_inputform;
@@ -21,12 +24,14 @@ form{
      
       width: 10%;
       text-align: right;
+      
   
     }
     input {
       border: none;
       background-color:$coul_backg_inputform;  
-      width: 150px;
+      width: fit-content;
+   
     } 
    
     ::placeholder{
@@ -34,7 +39,10 @@ form{
       background-color:$coul_backg_inputform;
       color: black;
       font-weight: bold;
-      text-align: center;
+      text-align: left;
+      padding-left: 15px;
+      
+     
     
      
     }

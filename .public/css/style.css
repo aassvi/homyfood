@@ -410,8 +410,11 @@ form {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 5px;
   width: 100%;
   height: 40px;
+  padding-left: 8%;
+  padding-right: 4%;
   background-color: #e6e9ea;
   border: 1px solid #e6e9ea;
   box-shadow: inset 0px 2px 3px -3px rgba(50, 50, 50, 0.75);
@@ -423,14 +426,15 @@ form {
 .form__input input {
   border: none;
   background-color: #e6e9ea;
-  width: 150px;
+  width: fit-content;
 }
 .form__input ::placeholder {
   font-size: 16px;
   background-color: #e6e9ea;
   color: black;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
+  padding-left: 15px;
 }
 .form__heading {
   display: flex;
@@ -633,12 +637,16 @@ section {
   padding-bottom: 5px;
   font-weight: normal;
 }
-.card__coeur {
+.card__button {
   position: relative;
-  width: 50%;
+  width: 2%;
+  margin-left: 40px;
+  height: fit-content;
   font-size: 20px;
+  border: none;
+  background-color: white;
 }
-.card__coeur__rempli {
+.card__button__rempli {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -652,10 +660,10 @@ section {
   transition: all 1s;
   font-size: 20px;
 }
-.card__coeur:hover > .card__coeur__rempli {
+.card__button:hover > .card__button__rempli {
   opacity: 1;
 }
-.card__coeur:hover > .card__coeur__rempli .fa-solid {
+.card__button:hover > .card__button__rempli .fa-solid {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

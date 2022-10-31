@@ -98,44 +98,43 @@ section{
     font-weight: normal;
   }
 
- ///// coeur animation
+ ///// coeur animation  /////////////////////////////////button//////
+ &__button {
+  position: relative;
+  width: 2%;
+  margin-left: 40px;
+  height: fit-content;
 
-  &__coeur {
-    position: relative;
-    width: 50%;
+  font-size: 20px;
+  border: none;
+  background-color: white;
+  &__rempli {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    transform:translate(0);
+    transition: all 1s;
     font-size: 20px;
-    &__rempli {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      width: 100%;
-      opacity: 0;
-      transition: .5s ease;
-      transform:translate(0);
-      transition: all 1s;
-      font-size: 20px;
-    }
-    &:hover > &__rempli {
-  
-      opacity: 1;
-      .fa-solid{
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        background-image: linear-gradient(to right, $couleur_secondaire,$couleur_primaire);
-      }  
-    }
+  }
+  &:hover > &__rempli {
 
- }
- 
+    opacity: 1;
+    .fa-solid{
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(to right, $couleur_secondaire,$couleur_primaire);
+    }  
+  }
 
-  
+}
 
- /////////////////////////////////button//////
-  
  //////buton /////
 
  
