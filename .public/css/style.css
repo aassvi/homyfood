@@ -325,7 +325,7 @@ html, body, main {
   width: 100%;
 }
 
-p, span, ::placeholder {
+p, span, ::placeholder, button {
   font-family: "roboto";
 }
 
@@ -344,6 +344,20 @@ header {
   padding-left: 20px;
   width: 100%;
   height: 60px;
+}
+.header__logo--menu {
+  height: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 80px;
+}
+.header__logo--menu img {
+  padding-left: 90px;
+}
+.header__logo--menu .fa-solid {
+  color: black;
+  background-color: none;
+  padding-left: 10px;
 }
 
 .loader-spin {
@@ -668,6 +682,531 @@ section {
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to right, #FF79DA, #9356DC);
+}
+
+section {
+  width: 100%;
+  height: 1200px;
+  background-color: #eff2f3;
+  font-family: "roboto";
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  width: 100%;
+  height: 1100px;
+  display: block;
+  margin-top: 10px;
+}
+.menu img {
+  width: 100%; /* image responsive */
+  height: 300px;
+  overflow: hidden;
+  object-fit: cover; /* rempli la card partie image*/
+  object-position: center;
+}
+.menu__body {
+  padding-top: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #eff2f3;
+  position: absolute;
+  top: 320px;
+  width: 100%;
+  height: 700px;
+}
+.menu__restaurant {
+  display: flex;
+  flex-direction: row;
+}
+.menu__restaurant h1 {
+  padding-left: 30px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 22px;
+  width: 70%;
+}
+.menu__restaurant i {
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 22px;
+  width: 10%;
+}
+.menu__entrees {
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+.menu__entrees__heading {
+  font-size: 14px;
+  width: 30%;
+}
+.menu__entrees__trait {
+  border-bottom: #99E2D0 solid 2px;
+  width: 35%;
+  margin-bottom: 10px;
+}
+.menu__entrees .menu__container {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  height: 60px;
+  border-radius: 16px;
+  border: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  animation: mymove 5s;
+  animation-delay: 2s;
+  opacity: 0;
+  animation: transition 1s ease-in-out 2s forwards;
+}
+@keyframes transition {
+  0% {
+    margin-top: -80px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes mymove {
+  from {
+    bottom: 0%;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+.menu__entrees .menu__container__btn--1 {
+  animation-delay: 0.2s;
+}
+.menu__entrees .menu__container__btn--2 {
+  animation-delay: 0.4s;
+}
+.menu__entrees .menu__container__btn--3 {
+  animation-delay: 0.6s;
+}
+.menu__entrees .menu__container__choix p {
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 14px;
+  width: 75%;
+}
+.menu__entrees .menu__container__prix {
+  display: flex;
+  padding-top: 10px;
+}
+.menu__entrees .menu__container__prix p {
+  text-align: left;
+  width: 85%;
+  padding-left: 10px;
+  font-size: 12px;
+}
+.menu__entrees .menu__container__prix__euro {
+  display: flex;
+  width: 15%;
+}
+.menu__entrees .menu__container__prix__euro i {
+  opacity: 1;
+}
+.menu__entrees .menu__container__check {
+  opacity: 0;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  inset: 0;
+  left: 90%;
+  top: 0px;
+}
+.menu__entrees .menu__container__check i {
+  opacity: 0;
+  transform: rotate(0deg);
+}
+.menu__entrees .menu__container:hover {
+  width: 90%;
+}
+.menu__entrees .menu__container:hover .menu__container__check {
+  opacity: 1;
+  transform: translate(-30%);
+  transition: transform 500ms ease-in-out;
+}
+.menu__entrees .menu__container:hover .menu__container__check i {
+  opacity: 1;
+  text-align: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #99E2D0;
+  background-color: white;
+  margin-top: 18px;
+  margin-left: 15px;
+  padding-top: 2px;
+  animation: check 1s ease-out forwards;
+}
+@keyframes check {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.menu__entrees .menu__container:hover .menu__container__prix {
+  display: flex;
+  padding-top: 10px;
+}
+.menu__entrees .menu__container:hover .menu__container__prix p {
+  text-align: left;
+  width: 40%;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__entrees .menu__container:hover .menu__container__prix__euro {
+  display: flex;
+  width: 50%;
+}
+.menu__entrees .menu__container:hover .menu__container__prix__euro p {
+  text-align: left;
+  white-space: none;
+  text-overflow: unset;
+}
+.menu__entrees .menu__container:hover .menu__container__prix__euro i {
+  opacity: 1;
+}
+.menu__plats {
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+.menu__plats__heading {
+  font-size: 14px;
+  width: 30%;
+}
+.menu__plats__trait {
+  border-bottom: #99E2D0 solid 2px;
+  width: 35%;
+  margin-bottom: 10px;
+}
+.menu__plats .menu__container {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  height: 60px;
+  border-radius: 16px;
+  border: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  animation: mymove 5s;
+  animation-delay: 2s;
+  opacity: 0;
+  animation: transition 1s ease-in-out 2s forwards;
+}
+@keyframes transition {
+  0% {
+    margin-top: -80px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes mymove {
+  from {
+    bottom: 0%;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+.menu__plats .menu__container__btn--4 {
+  animation-delay: 1s;
+}
+.menu__plats .menu__container__btn--5 {
+  animation-delay: 1.2s;
+}
+.menu__plats .menu__container__btn--6 {
+  animation-delay: 1.4s;
+}
+.menu__plats .menu__container__choix p {
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 14px;
+  width: 75%;
+}
+.menu__plats .menu__container__prix {
+  display: flex;
+  padding-top: 10px;
+}
+.menu__plats .menu__container__prix p {
+  text-align: left;
+  width: 85%;
+  padding-left: 10px;
+  font-size: 12px;
+}
+.menu__plats .menu__container__prix__euro {
+  display: flex;
+  width: 15%;
+}
+.menu__plats .menu__container__prix__euro i {
+  opacity: 1;
+}
+.menu__plats .menu__container__check {
+  opacity: 0;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  inset: 0;
+  left: 90%;
+  top: 0px;
+}
+.menu__plats .menu__container__check i {
+  opacity: 0;
+  transform: rotate(0deg);
+}
+.menu__plats .menu__container:hover {
+  width: 90%;
+}
+.menu__plats .menu__container:hover .menu__container__check {
+  opacity: 1;
+  transform: translate(-30%);
+  transition: transform 500ms ease-in-out;
+}
+.menu__plats .menu__container:hover .menu__container__check i {
+  opacity: 1;
+  text-align: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #99E2D0;
+  background-color: white;
+  margin-top: 18px;
+  margin-left: 15px;
+  padding-top: 2px;
+  animation: check 1s ease-out forwards;
+}
+@keyframes check {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.menu__plats .menu__container:hover .menu__container__prix {
+  display: flex;
+  padding-top: 10px;
+}
+.menu__plats .menu__container:hover .menu__container__prix p {
+  text-align: left;
+  width: 40%;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__plats .menu__container:hover .menu__container__prix__euro {
+  display: flex;
+  width: 50%;
+}
+.menu__plats .menu__container:hover .menu__container__prix__euro p {
+  text-align: left;
+  white-space: none;
+  text-overflow: unset;
+}
+.menu__plats .menu__container:hover .menu__container__prix__euro i {
+  opacity: 1;
+}
+.menu__desserts {
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
+.menu__desserts__heading {
+  font-size: 14px;
+  width: 30%;
+}
+.menu__desserts__trait {
+  border-bottom: #99E2D0 solid 2px;
+  width: 35%;
+  margin-bottom: 10px;
+}
+.menu__desserts .menu__container {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  height: 60px;
+  border-radius: 16px;
+  border: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  animation: mymove 5s;
+  animation-delay: 2s;
+  opacity: 0;
+  animation: transition 1s ease-in-out 2s forwards;
+}
+@keyframes transition {
+  0% {
+    margin-top: -80px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes mymove {
+  from {
+    bottom: 0%;
+  }
+  to {
+    bottom: 100%;
+  }
+}
+.menu__desserts .menu__container__btn--7 {
+  animation-delay: 2.2s;
+}
+.menu__desserts .menu__container__btn--8 {
+  animation-delay: 2.4s;
+}
+.menu__desserts .menu__container__btn--9 {
+  animation-delay: 2.6s;
+}
+.menu__desserts .menu__container__choix p {
+  font-weight: bold;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 14px;
+  width: 75%;
+}
+.menu__desserts .menu__container__prix {
+  display: flex;
+  padding-top: 10px;
+}
+.menu__desserts .menu__container__prix p {
+  text-align: left;
+  width: 85%;
+  padding-left: 10px;
+  font-size: 12px;
+}
+.menu__desserts .menu__container__prix__euro {
+  display: flex;
+  width: 15%;
+}
+.menu__desserts .menu__container__prix__euro i {
+  opacity: 1;
+}
+.menu__desserts .menu__container__check {
+  opacity: 0;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  inset: 0;
+  left: 90%;
+  top: 0px;
+}
+.menu__desserts .menu__container__check i {
+  opacity: 0;
+  transform: rotate(0deg);
+}
+.menu__desserts .menu__container:hover {
+  width: 90%;
+}
+.menu__desserts .menu__container:hover .menu__container__check {
+  opacity: 1;
+  transform: translate(-30%);
+  transition: transform 500ms ease-in-out;
+}
+.menu__desserts .menu__container:hover .menu__container__check i {
+  opacity: 1;
+  text-align: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #99E2D0;
+  background-color: white;
+  margin-top: 18px;
+  margin-left: 15px;
+  padding-top: 2px;
+  animation: check 1s ease-out forwards;
+}
+@keyframes check {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.menu__desserts .menu__container:hover .menu__container__prix {
+  display: flex;
+  padding-top: 10px;
+}
+.menu__desserts .menu__container:hover .menu__container__prix p {
+  text-align: left;
+  width: 40%;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__desserts .menu__container:hover .menu__container__prix__euro {
+  display: flex;
+  width: 50%;
+}
+.menu__desserts .menu__container:hover .menu__container__prix__euro p {
+  text-align: left;
+  white-space: none;
+  text-overflow: unset;
+}
+.menu__desserts .menu__container:hover .menu__container__prix__euro i {
+  opacity: 1;
+}
+.menu__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 30px;
+  margin-left: 120px;
+  border-radius: 16px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  box-shadow: 0 5px 5px -5px #333;
+  color: #F2F2F2;
+  font-size: 12px;
+  font-weight: 0px;
+  margin-top: 20px;
+}
+.menu__button p {
+  width: 100%;
+}
+.menu__button:hover {
+  box-shadow: 0 5px 5px -5px black;
+  background-image: linear-gradient(#fface8, #c9abee);
 }
 
 footer {

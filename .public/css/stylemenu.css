@@ -16,7 +16,7 @@ html, body, main {
   width: 100%;
 }
 
-p, span, ::placeholder {
+p, span, ::placeholder, button {
   font-family: "roboto";
 }
 
@@ -336,65 +336,39 @@ template {
 header {
   width: 100%;
   display: block;
-  font-family: "roboto";
   text-align: center;
 }
 
-.header a:active {
-  color: black;
-  background-color: white;
-}
-
 .header__logo {
+  padding-top: 10px;
+  padding-left: 20px;
   width: 100%;
+  height: 60px;
+}
+.header__logo--menu {
   height: 40px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 80px;
 }
-.header__logo img {
-  padding-left: 100px;
+.header__logo--menu img {
+  padding-left: 90px;
 }
-.header__logo .fa-solid {
+.header__logo--menu .fa-solid {
   color: black;
-  background-color: white;
-}
-.header__logofa-solid a:active {
-  color: black;
-  background-color: white;
-}
-.header__logo header a {
-  color: black;
-  background-color: white;
-}
-.header__logo .header a:link {
-  color: black;
-  background-color: white;
-}
-.header__logo .header a:visited {
-  color: black;
-  background-color: white;
-}
-
-.header a:active {
-  color: black;
-  background-color: white;
-}
-
-.photo {
-  width: 100%;
-}
-.photo img {
-  width: 100%; /* image responsive */
-  height: 200px;
-  overflow: hidden;
-  object-fit: cover; /* rempli la card partie image*/
+  background-color: none;
+  padding-left: 10px;
 }
 
 section {
   width: 100%;
   height: 1200px;
   background-color: #eff2f3;
+  font-family: "roboto";
+}
+
+a {
+  text-decoration: none;
 }
 
 .menu {

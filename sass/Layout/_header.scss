@@ -13,4 +13,23 @@ header{
     width:100% ;
     height: 60px;
   }
+  &__logo--menu{    /// modificateur 
+    
+    height: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 80px;
+    
+  img{
+    
+    padding-left:90px;
+
+  }
+  .fa-solid{
+   color: black;
+   background-color:none;
+   padding-left: 10px;
+  
+  }
+  }
 }
