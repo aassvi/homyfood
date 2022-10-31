@@ -349,11 +349,11 @@ header {
 .loader-spin {
   position: absolute;
   overflow: hidden;
+  z-index: 1;
   left: 50%;
   top: 50%;
-  z-index: -1;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   margin: -76px 0 0 -76px;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
@@ -386,7 +386,7 @@ header {
   }
 }
 .page {
-  animation: page 0ms 3s both;
+  animation: page 1s 1s both;
 }
 
 @keyframes page {
