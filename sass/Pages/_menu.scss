@@ -12,7 +12,7 @@ a{
     width: 100%;
     height: 1100px;
     display: block;
-    margin-top: 10px; 
+  
 
     img {
         width: 100%;                    /* image responsive */
@@ -36,14 +36,12 @@ a{
         flex-direction: row;
         h1{
             padding-left: 30px;
-            font-style: italic;
             font-weight: bold;
             font-size: 22px;
             width: 70%;
         }
         i{
-            padding-top: 20px;
-            padding-left: 20px;
+            padding: 20px 0px 0px 20px;   // padding : top right bottom left
             font-size: 22px;
             width: 10%;
         }
@@ -53,8 +51,8 @@ a{
                
     &__entrees{
 
-        padding-left: 30px;
-        padding-bottom: 20px;
+        padding: 0px 0px 20px 30px;
+
         &__heading{
             font-size: 14px;
             width: 30%;            
@@ -72,10 +70,8 @@ a{
             height: 60px;
             border-radius: 16px;
             border: none;
-            margin-bottom: 10px;
-            margin-top: 10px;           
-            padding-top: 10px;
-            padding-bottom: 10px;
+            margin: 10px 0px 10px 0px;
+            padding:10px 0px 10px 0px;
             background-color: white; 
             // animations
             animation: mymove 5s ;
@@ -100,10 +96,12 @@ a{
 
             &__choix {
                 p{
-                  font-weight: bold;
+                  font: {
+                    weight: bold;
+                    size: 14px;  
+                  }
                   text-align: left;
                   padding-left: 10px;
-                  font-size: 14px;  
                   width: 75%;                
                 }
                        
@@ -119,7 +117,6 @@ a{
                 }
                 &__euro{
                     display: flex;
-                
                     width: 15%;
                     i{
                         opacity: 1;
@@ -163,9 +160,9 @@ a{
                      height: 20px;
                      color: $couleur_tertiare;
                      background-color: white;
-                     margin-top: 18px;
-                     margin-left: 15px;
+                     margin: 18px 0px 0px 15px;  // padding : top right bottom left
                      padding-top: 2px;
+
                      // animation - le symbole de check tourne au sur vol hover
                      animation: check 1s ease-out  forwards;
                      @keyframes check {
@@ -179,16 +176,14 @@ a{
                 } 
                 .menu__container__prix{  //decalage de la ligne prix vers la gauche hover
                     display: flex;      
-                     padding-top: 10px;
-                     p{
+                    padding-top: 10px;
+                    p{
                         text-align: left;
                         width: 40%;
                         font-size: 12px;
                         white-space: nowrap;    // no wrap à la ligne quand il n'y a plus d'espace
                         overflow: hidden;          // cacher ce que dépasse
                         text-overflow: ellipsis;  // met les trois points de suspension
-                      
-                        
                     }
                     &__euro{
                         display: flex;
@@ -212,13 +207,17 @@ a{
     }
     
     &__plats{
-
         padding-left: 30px;
         padding-bottom: 20px;
+        &__plats--tmps1{animation-delay: 8s} 
         &__heading{
             font-size: 14px;
-            width: 30%;            
+            width: 30%;
+            &__heading--tmps1{animation-delay: 8s} 
         }
+       
+
+    
         &__trait{
             border-bottom:$couleur_tertiare solid 2px ;
             width: 35%;
@@ -232,11 +231,10 @@ a{
             height: 60px;
             border-radius: 16px;
             border: none;
-            margin-bottom: 10px;
-            margin-top: 10px;           
-            padding-top: 10px;
-            padding-bottom: 10px;
+            margin: 10px 0px 10px 0px;
+            padding:10px 0px 10px 0px;
             background-color: white; 
+            
             // animations
             animation: mymove 5s ;
            
@@ -258,10 +256,12 @@ a{
 
             &__choix {
                 p{
-                  font-weight: bold;
+                  font: {
+                    weight: bold;
+                    size: 14px;
+                  }  
                   text-align: left;
                   padding-left: 10px;
-                  font-size: 14px;  
                   width: 75%;                
                 }
                        
@@ -277,12 +277,10 @@ a{
                 }
                 &__euro{
                     display: flex;
-                  
                     width: 15%;
                     i{
                         opacity: 1;
                     }
-                    
                 }
             }
             &__check{
@@ -321,9 +319,9 @@ a{
                      height: 20px;
                      color: $couleur_tertiare;
                      background-color: white;
-                     margin-top: 18px;
-                     margin-left: 15px;
+                     margin: 18px 0px 0px 15px;
                      padding-top: 2px;
+
                      // animation - le symbole de check tourne au sur vol hover
                      animation: check 1s ease-out  forwards;
                      @keyframes check {
@@ -343,10 +341,8 @@ a{
                         width: 40%;
                         font-size: 12px;
                         white-space: nowrap;    // no wrap à la ligne quand il n'y a plus d'espace
-                        overflow: hidden;          // cacher ce que dépasse
+                        overflow: hidden;          // cacher ce qui dépasse
                         text-overflow: ellipsis;  // met les trois points de suspension
-                      
-                        
                     }
                     &__euro{
                         display: flex;
@@ -389,10 +385,8 @@ a{
             height: 60px;
             border-radius: 16px;
             border: none;
-            margin-bottom: 10px;
-            margin-top: 10px;           
-            padding-top: 10px;
-            padding-bottom: 10px;
+            margin:  10px 0px 10px 0px;
+            padding: 10px 0px 10px 0px;
             background-color: white; 
             // animations
             animation: mymove 5s ;
@@ -415,10 +409,12 @@ a{
 
             &__choix {
                 p{
-                  font-weight: bold;
+                  font: {
+                    weight: bold;
+                    size: 14px;  
+                 }
                   text-align: left;
                   padding-left: 10px;
-                  font-size: 14px;  
                   width: 75%;                
                 }
                        
@@ -434,7 +430,6 @@ a{
                 }
                 &__euro{
                     display: flex;
-                  
                     width: 15%;
                     i{
                         opacity: 1;
@@ -478,9 +473,9 @@ a{
                      height: 20px;
                      color: $couleur_tertiare;
                      background-color: white;
-                     margin-top: 18px;
-                     margin-left: 15px;
+                     margin: 18px 0px 0px 15px;
                      padding-top: 2px;
+
                      // animation - le symbole de check tourne au sur vol hover
                      animation: check 1s ease-out  forwards;
                      @keyframes check {
@@ -501,9 +496,7 @@ a{
                         font-size: 12px;
                         white-space: nowrap;    // no wrap à la ligne quand il n'y a plus d'espace
                         overflow: hidden;          // cacher ce que dépasse
-                        text-overflow: ellipsis;  // met les trois points de suspension
-                      
-                        
+                        text-overflow: ellipsis;  // met les trois points de suspension 
                     }
                     &__euro{
                         display: flex;
@@ -534,16 +527,15 @@ a{
         align-items: center;
         width: 35%;
         height: 30px; 
-        margin-left: 120px;
+        margin:20px 0px 0px 120px ;
         border-radius: 16px;
+        
         // melange des trois couleurs de la chartre graphique du site//
         @include couleur-button;
         border: none;
         box-shadow: $box-shadow-btn;
         color: #F2F2F2;
         font-size: 12px;
-        font-weight: 0px;
-        margin-top: 20px;
         p{
           width: 100%;
         }

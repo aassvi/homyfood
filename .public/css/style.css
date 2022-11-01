@@ -339,25 +339,27 @@ header {
   text-align: center;
 }
 
+a:active {
+  color: black;
+  background-color: none;
+}
+
 .header__logo {
-  padding-top: 10px;
-  padding-left: 20px;
+  padding: 10px 0px 0px 20px;
   width: 100%;
   height: 60px;
 }
 .header__logo--menu {
-  height: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 80px;
+  height: 20px;
+  padding: 20px 90px 0px 10px;
 }
 .header__logo--menu img {
-  padding-left: 90px;
+  width: 150px;
 }
 .header__logo--menu .fa-solid {
   color: black;
-  background-color: none;
-  padding-left: 10px;
+  width: 30%;
+  text-align: left;
 }
 
 .loader-spin {
@@ -572,8 +574,7 @@ section {
   flex-direction: column;
   gap: 20px;
   width: 90%;
-  padding-top: 20px;
-  padding-left: 40px;
+  padding: 20px 0px 0px 40px;
   font-family: "roboto";
 }
 .card a {
@@ -581,8 +582,7 @@ section {
 }
 .card__heading h2 {
   font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding: 20px 0px 10px 0px;
 }
 .card__restaurant {
   width: 100%; /* card responsive */
@@ -617,16 +617,16 @@ section {
   top: 10px;
 }
 .card__restaurant__nouveau > .content p {
-  width: 70px;
-  height: 20px;
-  font-size: 14px;
-  color: rgb(77, 125, 77);
-  font-weight: bold;
-  background-color: #99E2D0;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  width: 70px;
+  height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(77, 125, 77);
+  background-color: #99E2D0;
 }
 .card__body {
   display: flex;
@@ -638,8 +638,7 @@ section {
 }
 .card__nom {
   width: 70%;
-  padding-left: 10px;
-  padding-right: 50px;
+  padding: 0px 50px 0px 10px;
   font-weight: bold;
 }
 .card__nom p {
@@ -647,15 +646,14 @@ section {
 }
 .card__lieu {
   width: 70%;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 0px 5px 0px;
   font-weight: normal;
 }
 .card__button {
   position: relative;
   width: 2%;
-  margin-left: 40px;
   height: fit-content;
+  margin-left: 40px;
   font-size: 20px;
   border: none;
   background-color: white;
@@ -699,7 +697,6 @@ a {
   width: 100%;
   height: 1100px;
   display: block;
-  margin-top: 10px;
 }
 .menu img {
   width: 100%; /* image responsive */
@@ -724,20 +721,17 @@ a {
 }
 .menu__restaurant h1 {
   padding-left: 30px;
-  font-style: italic;
   font-weight: bold;
   font-size: 22px;
   width: 70%;
 }
 .menu__restaurant i {
-  padding-top: 20px;
-  padding-left: 20px;
+  padding: 20px 0px 0px 20px;
   font-size: 22px;
   width: 10%;
 }
 .menu__entrees {
-  padding-left: 30px;
-  padding-bottom: 20px;
+  padding: 0px 0px 20px 30px;
 }
 .menu__entrees__heading {
   font-size: 14px;
@@ -755,10 +749,8 @@ a {
   height: 60px;
   border-radius: 16px;
   border: none;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
   background-color: white;
   animation: mymove 5s;
   animation-delay: 2s;
@@ -794,9 +786,9 @@ a {
 }
 .menu__entrees .menu__container__choix p {
   font-weight: bold;
+  font-size: 14px;
   text-align: left;
   padding-left: 10px;
-  font-size: 14px;
   width: 75%;
 }
 .menu__entrees .menu__container__prix {
@@ -848,8 +840,7 @@ a {
   height: 20px;
   color: #99E2D0;
   background-color: white;
-  margin-top: 18px;
-  margin-left: 15px;
+  margin: 18px 0px 0px 15px;
   padding-top: 2px;
   animation: check 1s ease-out forwards;
 }
@@ -889,9 +880,15 @@ a {
   padding-left: 30px;
   padding-bottom: 20px;
 }
+.menu__plats__plats--tmps1 {
+  animation-delay: 8s;
+}
 .menu__plats__heading {
   font-size: 14px;
   width: 30%;
+}
+.menu__plats__heading__heading--tmps1 {
+  animation-delay: 8s;
 }
 .menu__plats__trait {
   border-bottom: #99E2D0 solid 2px;
@@ -905,10 +902,8 @@ a {
   height: 60px;
   border-radius: 16px;
   border: none;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
   background-color: white;
   animation: mymove 5s;
   animation-delay: 2s;
@@ -944,9 +939,9 @@ a {
 }
 .menu__plats .menu__container__choix p {
   font-weight: bold;
+  font-size: 14px;
   text-align: left;
   padding-left: 10px;
-  font-size: 14px;
   width: 75%;
 }
 .menu__plats .menu__container__prix {
@@ -998,8 +993,7 @@ a {
   height: 20px;
   color: #99E2D0;
   background-color: white;
-  margin-top: 18px;
-  margin-left: 15px;
+  margin: 18px 0px 0px 15px;
   padding-top: 2px;
   animation: check 1s ease-out forwards;
 }
@@ -1055,10 +1049,8 @@ a {
   height: 60px;
   border-radius: 16px;
   border: none;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
   background-color: white;
   animation: mymove 5s;
   animation-delay: 2s;
@@ -1094,9 +1086,9 @@ a {
 }
 .menu__desserts .menu__container__choix p {
   font-weight: bold;
+  font-size: 14px;
   text-align: left;
   padding-left: 10px;
-  font-size: 14px;
   width: 75%;
 }
 .menu__desserts .menu__container__prix {
@@ -1148,8 +1140,7 @@ a {
   height: 20px;
   color: #99E2D0;
   background-color: white;
-  margin-top: 18px;
-  margin-left: 15px;
+  margin: 18px 0px 0px 15px;
   padding-top: 2px;
   animation: check 1s ease-out forwards;
 }
@@ -1191,15 +1182,13 @@ a {
   align-items: center;
   width: 35%;
   height: 30px;
-  margin-left: 120px;
+  margin: 20px 0px 0px 120px;
   border-radius: 16px;
   background-image: linear-gradient(#FF79DA, #9356DC);
   border: none;
   box-shadow: 0 5px 5px -5px #333;
   color: #F2F2F2;
   font-size: 12px;
-  font-weight: 0px;
-  margin-top: 20px;
 }
 .menu__button p {
   width: 100%;
@@ -1250,6 +1239,9 @@ footer a:visited {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 20px;
+}
+.footer__iconTextRight-- p {
+  padding-left: 5px;
 }
 .footer__iconText i {
   margin-right: 10px;
