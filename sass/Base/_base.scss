@@ -19,7 +19,7 @@ html, body, main{
   width: 100%;
 }
 
-p,span,::placeholder,button{
+p,span,::placeholder,button,section,div{
   font-family: 'roboto';
 }
 
@@ -27,4 +27,6 @@ h1, h2{
   font-family: 'Shrikhand-Regular';  
 }
 
-
+a{
+  text-decoration: none;
+}
