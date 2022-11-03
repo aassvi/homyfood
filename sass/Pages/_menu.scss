@@ -179,7 +179,7 @@
                         width: 50%;
                         p{
                           text-align:left;
-                          white-space: none;    // no wrap à la ligne quand il n'y a plus d'espace
+                          white-space: unset;    // no wrap à la ligne quand il n'y a plus d'espace
                           // cacher ce que dépasse
                           text-overflow: unset; 
                         }
@@ -338,7 +338,7 @@
                         width: 50%;
                         p{
                           text-align: left;
-                          white-space: none;    // no wrap à la ligne quand il n'y a plus d'espace
+                          white-space: unset;    // no wrap à la ligne quand il n'y a plus d'espace
                           // cacher ce que dépasse
                           text-overflow: unset; 
                         }
@@ -492,7 +492,7 @@
                         width: 50%;
                         p{
                           text-align: left;
-                          white-space: none;    // no wrap à la ligne quand il n'y a plus d'espace
+                          white-space:unset;    // no wrap à la ligne quand il n'y a plus d'espace
                           // cacher ce que dépasse
                           text-overflow: unset; 
                         }

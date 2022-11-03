@@ -321,19 +321,43 @@ template {
   padding: 0px;
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html, body, main {
   width: 100%;
 }
 
 p, span, ::placeholder, button, section, div {
-  font-family: "roboto";
+  font-family: "roboto", Arial, sans-serif;
 }
 
 h1, h2 {
-  font-family: "Shrikhand-Regular";
+  font-family: "Shrikhand-Regular", Arial, Helvetica, sans-serif;
 }
 
 a {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  color: black;
+  background-color: white;
+}
+
+a:visited {
+  color: black;
+  background-color: white;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a::before {
   text-decoration: none;
 }
 
@@ -343,11 +367,10 @@ header {
   text-align: center;
 }
 
-a:active {
-  color: black;
-  background-color: none;
+.header a:active {
+  text-decoration: none;
+  background-color: red;
 }
-
 .header__logo {
   padding: 10px 0px 0px 20px;
   width: 100%;
@@ -406,7 +429,7 @@ a:active {
   }
 }
 .page {
-  animation: page 1s 1s both;
+  animation: page 1s 3s both;
 }
 
 @keyframes page {
@@ -421,14 +444,14 @@ a:active {
   width: 100%;
   height: 1060px;
   margin-top: 40px;
-  background-color: #eff2f3;
+  background-color: #f5f7f7;
 }
 .section__width-- {
   height: 1200px;
 }
 
 form {
-  background-color: #eff2f3;
+  background-color: #f5f7f7;
 }
 
 .form {
@@ -445,8 +468,8 @@ form {
   height: 40px;
   padding-left: 8%;
   padding-right: 4%;
-  background-color: #e6e9ea;
-  border: 1px solid #e6e9ea;
+  background-color: #e4e6e8;
+  border: 1px solid #e4e6e8;
   box-shadow: inset 0px 2px 3px -3px rgba(50, 50, 50, 0.75);
 }
 .form__input i {
@@ -455,12 +478,12 @@ form {
 }
 .form__input input {
   border: none;
-  background-color: #e6e9ea;
+  background-color: #e4e6e8;
   width: fit-content;
 }
 .form__input ::placeholder {
   font-size: 16px;
-  background-color: #e6e9ea;
+  background-color: #e4e6e8;
   color: black;
   font-weight: bold;
   text-align: left;
@@ -474,8 +497,8 @@ form {
   width: 100%;
 }
 .form__heading p {
-  width: 80%;
-  font-size: 16px;
+  width: 90%;
+  font-size: 18px;
 }
 .form__titre {
   display: flex;
@@ -485,8 +508,8 @@ form {
   padding-bottom: 10px;
 }
 .form__titre p {
-  width: 50%;
-  font-size: 18px;
+  width: 60%;
+  font-size: 20px;
   font-weight: bold;
 }
 .form__button {
@@ -500,7 +523,6 @@ form {
   box-shadow: 0 5px 5px -5px #333;
   color: #F2F2F2;
   font-size: 14px;
-  font-weight: 0px;
   font-family: "roboto";
   margin-top: 30px;
   margin-bottom: 40px;
@@ -550,8 +572,8 @@ form {
   border-radius: 16px;
   border: none;
   margin-bottom: 10px;
-  box-shadow: 0 0 4px 4px #e9eeef;
-  background-color: #eff2f3;
+  box-shadow: 0 2px 6px 0 rgba(84, 78, 78, 0.2), 0 4px 10px 0 rgba(142, 134, 134, 0.19);
+  background-color: #f5f7f7;
 }
 .nav__etape button:hover {
   background-color: #f2eafb;
@@ -572,6 +594,11 @@ form {
   width: 20%;
   height: 20px;
   padding-left: 30px;
+}
+
+.card a {
+  color: black;
+  background-color: transparent;
 }
 
 .card {
@@ -600,8 +627,8 @@ form {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
-  object-fit: cover;
-  position: relative; /* rempli la card partie image*/
+  object-fit: cover; /* rempli la card partie image*/
+  object-position: center;
 }
 .card__restaurant__nouveau {
   position: relative;
@@ -640,7 +667,7 @@ form {
   font-size: 16px;
 }
 .card__nom {
-  width: 70%;
+  width: 80%;
   padding: 0px 50px 0px 10px;
   font-weight: bold;
 }
@@ -648,20 +675,26 @@ form {
   width: 200px;
 }
 .card__lieu {
-  width: 70%;
+  width: 80%;
   padding: 5px 0px 5px 0px;
   font-weight: normal;
 }
-.card__button {
+.card form {
+  width: 2%;
+  height: fit-content;
+  display: block;
+  background-color: white;
+}
+.card .form__btn {
   position: relative;
   width: 2%;
   height: fit-content;
-  margin-left: 40px;
+  margin-left: 95%;
   font-size: 20px;
   border: none;
   background-color: white;
 }
-.card__button__rempli {
+.card .form__btn span {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -675,10 +708,38 @@ form {
   transition: all 1s;
   font-size: 20px;
 }
-.card__button:hover > .card__button__rempli {
+.card .form__btn:hover > span {
   opacity: 1;
 }
-.card__button:hover > .card__button__rempli .fa-solid {
+.card .form__btn:hover > span .fa-solid {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #FF79DA, #9356DC);
+}
+.card__coeur {
+  position: relative;
+  width: 50%;
+  font-size: 20px;
+}
+.card__coeur__rempli {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  transform: translate(0);
+  transition: all 1s;
+  font-size: 20px;
+}
+.card__coeur:hover > .card__coeur__rempli {
+  opacity: 1;
+}
+.card__coeur:hover > .card__coeur__rempli .fa-solid {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -701,7 +762,7 @@ form {
   padding-top: 10px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  background-color: #eff2f3;
+  background-color: #f5f7f7;
   position: absolute;
   top: 320px;
   width: 100%;
@@ -862,7 +923,7 @@ form {
 }
 .menu__entrees .menu__container:hover .menu__container__prix__euro p {
   text-align: left;
-  white-space: none;
+  white-space: unset;
   text-overflow: unset;
 }
 .menu__entrees .menu__container:hover .menu__container__prix__euro i {
@@ -1015,7 +1076,7 @@ form {
 }
 .menu__plats .menu__container:hover .menu__container__prix__euro p {
   text-align: left;
-  white-space: none;
+  white-space: unset;
   text-overflow: unset;
 }
 .menu__plats .menu__container:hover .menu__container__prix__euro i {
@@ -1162,7 +1223,7 @@ form {
 }
 .menu__desserts .menu__container:hover .menu__container__prix__euro p {
   text-align: left;
-  white-space: none;
+  white-space: unset;
   text-overflow: unset;
 }
 .menu__desserts .menu__container:hover .menu__container__prix__euro i {
@@ -1191,7 +1252,7 @@ form {
 }
 
 footer {
-  background-color: #2c3e50;
+  background-color: #404040;
   color: white;
   font-family: "roboto";
   font-size: 12px;

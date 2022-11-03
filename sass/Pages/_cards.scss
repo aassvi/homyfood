@@ -1,4 +1,7 @@
-
+.card a{
+  color: black;
+  background-color:transparent;
+}
 .card{
   display: block;
   display: flex;
@@ -12,20 +15,21 @@
     padding: 20px 0px 10px 0px;          // padding : top right bottom left
     }
   &__restaurant{ 
-    width: 100%;                       /* card responsive */
-    height: 210px;
-    background-color: white; 
-    border-radius : 20px;  
-    box-shadow: $box-shadow-card;
-    img {
+      width: 100%;                       /* card responsive */
+      height: 210px;
+      background-color: white; 
+      border-radius : 20px;  
+      box-shadow: $box-shadow-card;
+      img {
       width: 100%;                    /* image responsive */
       height: 150px;
       border-top-left-radius : 20px;
       border-top-right-radius : 20px;   
       overflow: hidden;
-      object-fit: cover; 
-      position: relative;               /* rempli la card partie image*/
-      }
+      object-fit: cover;                     /* rempli la card partie image*/
+      object-position: center;
+    
+    }
       &__nouveau{
         position: relative;
         overflow: hidden;
@@ -58,11 +62,10 @@
          background-color:$couleur_tertiare;
         }
       }
+     
+      
+    
   }
- 
-  
-  
-  
   &__body {
     display: flex;   
     width: 100%;
@@ -70,9 +73,10 @@
     padding-top: 10px;
     color: black; 
     font-size: 16px;  
-  } 
+  }
+  
   &__nom{
-    width: 70%;
+    width: 80%;
     padding: 0px 50px 0px 10px ;
     font-weight: bold; 
     p{
@@ -80,20 +84,63 @@
     }
   }
   &__lieu{
-    width: 70%;
+    width: 80%;
     padding: 5px 0px 5px 0px;           // padding : top right bottom left
     font-weight: normal;
   }
 
  ///// coeur animation  /////////////////////////////////button//////
- &__button {
+
+ //////buton /////
+
+ form{
+  width: 2%;
+  height: fit-content;
+  display: block;
+  background-color:white;
+
+ }
+ .form__btn {
   position: relative;
   width: 2%;
   height: fit-content;
-  margin-left: 40px;
+  margin-left:95%;
+
   font-size: 20px;
   border: none;
   background-color: white;
+  span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    transform:translate(0);
+    transition: all 1s;
+    font-size: 20px;
+   }
+   &:hover > span {
+
+    opacity: 1;
+    .fa-solid{
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(to right, $couleur_secondaire,$couleur_primaire);
+    }  
+  }
+ }
+ 
+  ///// coeur animation
+
+  &__coeur {
+  position: relative;
+  width: 50%;
+  font-size: 20px;
   &__rempli {
     position: absolute;
     top: 0;
@@ -120,12 +167,7 @@
   }
 
 }
-
- //////buton /////
-
- 
 }
-
 
 
  

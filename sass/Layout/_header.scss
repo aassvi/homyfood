@@ -5,12 +5,12 @@ header{
   text-align: center;
   
 }
-a:active{
-  color: black;
-  background-color:none;
-}
+
 .header{
- 
+  a:active{
+    text-decoration: none;
+    background-color: red;
+  }
   &__logo{
     padding: 10px 0px 0px 20px ;
     width:100% ;

@@ -33,7 +33,7 @@
 
 
 .page {
-    animation: page 1s 1s both;
+    animation: page 1s 3s both;
 }
 @keyframes page{
     0% {
@@ -43,5 +43,4 @@
         transform:scalex(1);
     }
 }
-
 
