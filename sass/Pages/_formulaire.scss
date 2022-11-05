@@ -15,6 +15,16 @@ form{
     height: 40px;
     padding-left: 8%;
     padding-right: 4%;
+    @include laptopL{                           // centrage du input sur la page dans la version desktop 
+      padding-left: 4%;
+      padding-right: 8%;
+    
+    }
+    @include laptop{                           // centrage du input sur la page dans la version desktop 
+      padding-left: 4%;
+      padding-right: 8%;
+    
+    }
     background-color:$coul_backg_inputform;
     border: 1px solid $coul_backg_inputform;
    // box-shadow: 0 5px -8px -5px $coul_backg_inputform;
@@ -43,6 +53,7 @@ form{
       padding-left: 15px;
     }
   }
+ 
   &__heading{
     display: flex;
     flex-direction: column;
@@ -72,6 +83,15 @@ form{
     justify-content: center;
     align-items: center;
     width: 50%;
+    @include laptopL{                           // centrage du input sur la page dans la version desktop 
+      width: 20%;
+    }
+    @include laptop{                           // centrage du input sur la page dans la version desktop 
+      width: 20%;
+    }
+    @include tablette{                           // centrage du input sur la page dans la version desktop 
+      width: 30%;
+    }
     height: 40px;   
     border-radius: 16px;
     // melange des trois couleurs de la chartre graphique du site//

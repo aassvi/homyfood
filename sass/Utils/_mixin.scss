@@ -22,4 +22,31 @@
    
  }
 
+// mixin breakpoints  
 
+// laptop L grand ecran
+$breakpoints: (
+    laptopL: 1400px
+);
+        
+@mixin laptopL {
+    @media screen and (min-width: map-get($breakpoints, laptopL)){
+        @content;
+    }
+}
+// laptop
+@mixin laptop {
+    @media screen and (min-width: 991px) and (max-width: 1399px) {
+        @content;
+    }
+    }
+
+
+//tablette
+
+
+@mixin tablette {
+    @media screen and (min-width: 426px) and (max-width: 991px) {
+        @content;
+    }
+    }

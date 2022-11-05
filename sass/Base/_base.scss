@@ -24,11 +24,12 @@ html, body, main{
 }
 
 p,span,::placeholder,button,section,div{
-  font-family: 'roboto',Arial, sans-serif;
+  font-family: 'roboto';
 }
 
 h1, h2{
-  font-family: 'Shrikhand-Regular', Arial, Helvetica, sans-serif;  
+  font-family: 'Shrikhand-Regular';
+  font-weight: bold;
 }
 
 a{
@@ -51,5 +52,6 @@ a:link {
 }
 a::before{
   text-decoration: none;
+  background-color: white;
 }
 

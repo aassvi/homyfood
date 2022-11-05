@@ -25,14 +25,35 @@
         flex-direction: row;
         h1{
             padding-left: 30px;
+            @include laptopL{
+                padding-left: 100px;
+                font-size: 24px;
+            }
+            @include laptop{
+                padding-left: 70px;
+                font-size: 24px;
+            }
+            @include tablette{
+                padding-left: 70px;
+            }
             font-weight: bold;
+            font-style: italic;
             font-size: 22px;
             width: 70%;
         }
         i{
-            padding: 20px 0px 0px 20px;   // padding : top right bottom left
+            padding: 20px 0px 0px 12%;   // padding : top right bottom left
+            @include laptopL{
+                padding: 20px 0px 0px 18%;
+            }
+            @include laptop{
+                padding: 20px 0px 0px 18%;
+            }
+            @include tablette{
+                padding: 20px 0px 0px 15%;
+            }
             font-size: 22px;
-            width: 10%;
+            width: 20%;
         }
        
     }
@@ -40,15 +61,39 @@
                
     &__entrees{
 
-        padding: 0px 0px 20px 30px;
+        padding: 0px 0px 20px 33px;
+        @include laptopL{
+            padding: 0px 0px 20px 100px;
+            font-size: 16px;
+        }
+        @include laptop{
+            padding: 0px 0px 20px 70px;
+            font-size: 16px;
+        }
+        @include tablette{
+            padding: 0px 0px 20px 70px;
+        }
+             
+      
 
         &__heading{
             font-size: 14px;
-            width: 30%;            
+            width: 30%;
         }
         &__trait{
             border-bottom:$couleur_tertiare solid 2px ;
             width: 35%;
+            font-weight: bold;
+
+            @include laptopL{
+                width: 10%;
+            }
+            @include laptop{
+                width: 15%;
+            }
+            @include tablette{
+                width: 18%;
+            }
             margin-bottom: 10px;
         }
        
@@ -61,6 +106,244 @@
             border: none;
             margin: 10px 0px 10px 0px;
             padding:10px 0px 10px 0px;
+            @include laptopL{
+                margin: 10px 0px 10px 0px;  
+            }
+            @include laptop{
+                margin: 10px 0px 10px 5px;
+
+            }
+            @include tablette{
+                margin: 10px 0px 10px 5px;
+                padding:10px 0px 10px 5px;
+            }
+
+
+            background-color: white; 
+            // animations
+            animation: mymove 5s ;
+           
+            animation-delay: 2s;
+            @keyframes transition {
+                0%   { margin-top: -80px;opacity:0; }
+                100% { margin-top: 0;opacity:1; }
+                }
+            opacity:0;
+            animation: transition 1s ease-in-out 2s forwards;
+            @keyframes mymove {
+                from {bottom:0%;}
+                to {bottom: 100%;}
+               }
+            
+            // animation chargement page 
+            
+            &__btn--1{animation-delay: 0.2s}
+            &__btn--2{animation-delay: 0.4s}
+            &__btn--3{animation-delay: 0.6s}
+
+            &__choix {
+                p{
+                  font: {
+                    weight: bold;
+                    size: 14px;  
+                  }
+                  text-align: left;
+                  padding-left: 10px;
+                  width: 75%;                
+                }
+                       
+            }
+            &__prix{
+                display: flex;      
+                padding-top: 10px;
+                p{
+                    text-align: left;
+                    width: 85%;
+                    padding-left: 10px;
+                    font-size: 12px;
+                }
+                &__euro{
+                    display: flex;
+                    width: 15%;
+                    i{
+                        opacity: 1;
+                    }
+                    
+                }
+            }
+            &__check{
+                opacity: 0;
+                border-top-right-radius : 16px;
+                border-bottom-right-radius : 16px;
+                background-color:$couleur_tertiare;
+                width: 50px;
+                height: 60px;
+                position: absolute;
+                inset: 0; 
+                left: 90%;
+                top: 0px;
+               
+              i{
+                opacity: 0;
+                transform: rotate(0deg);
+              }
+             
+            }
+           
+            &:hover {
+                width: 90%;
+                .menu__container__check{ // au sur vol la case check apparait de droit à gauche 
+                    opacity: 1;
+                    //animation conteneur check se déplace vers la gauche          
+                    transform: translate(-30%);
+                    @include laptopL{
+                        transform: translate(-4%);
+                        width: 40%;
+                    }
+                    @include laptop{
+                        transform: translate(-4%);
+                        width: 50%;
+                    }
+                    @include tablette{
+                        transform: translate(-4%);
+                        width: 80%;
+                    }
+                    transition: transform 500ms ease-in-out;
+                   
+                   
+                   i{              
+                     opacity: 1;
+                     text-align: center;
+                     border-radius: 50%;
+                     width: 20px;
+                     height: 20px;
+                     color: $couleur_tertiare;
+                     background-color: white;
+                     margin: 18px 0px 0px 15px;  // padding : top right bottom left
+                     padding-top: 2px;
+
+                     // animation - le symbole de check tourne au sur vol hover
+                     animation: check 1s ease-out  forwards;
+                     @keyframes check {
+                        from {transform: rotate(0deg); 
+                        }
+                        to { transform: rotate(360deg); 
+                        }
+                    }
+                    }
+                   
+                } 
+                .menu__container__prix{  //decalage de la ligne prix vers la gauche hover
+                    display: flex;      
+                    padding-top: 10px;
+                    p{
+                        text-align: left;
+                        width: 40%;
+                        @include laptopL{
+                            width: 100%;
+                        }
+                        @include laptop{
+                            width: 80%;
+                        }
+                        @include tablette{
+                            width: 60%;
+                        }
+                        font-size: 12px;
+                        white-space: nowrap;    // no wrap à la ligne quand il n'y a plus d'espace
+                        overflow: hidden;          // cacher ce que dépasse
+                        text-overflow: ellipsis;  // met les trois points de suspension
+                    }
+                    &__euro{
+                        display: flex;
+                        width: 50%;
+                        @include laptopL{
+                            width: 100%;
+                        }
+                        @include laptop{
+                            width: 80%;
+                        }
+                        @include tablette{
+                            width: 60%;
+                        }
+                        p{
+                          text-align:left;
+                          white-space: unset;    // no wrap à la ligne quand il n'y a plus d'espace
+                          // cacher ce que dépasse
+                          text-overflow: unset; 
+                        }
+                        i{
+                           opacity: 1;
+                       }
+                    }
+                }
+                     
+                
+            }     
+        }
+      
+    }
+    
+    &__plats{
+        padding: 0px 0px 20px 30px;
+        @include laptopL{
+            padding: 0px 0px 20px 100px;
+            font-size: 16px;
+        }
+        @include laptop{
+            padding: 0px 0px 20px 70px;
+            font-size: 16px;
+        }
+        @include tablette{
+            padding: 0px 0px 20px 70px;
+        }
+        &__plats--tmps1{animation-delay: 8s}      
+      
+
+        &__heading{
+            font-size: 14px;
+            width: 30%;
+           
+            
+        }
+        &__trait{
+            border-bottom:$couleur_tertiare solid 2px ;
+            width: 35%;
+            font-weight: bold;
+
+            @include laptopL{
+                width: 8%;
+            }
+            @include laptop{
+                width: 10%;
+            }
+            @include tablette{
+                width: 18%;
+            }
+            margin-bottom: 10px;
+        }
+       
+        .menu__container{
+            position: relative; // parent en position qui permet la animation du check en position relative 
+            overflow: hidden;
+            width: 90%;
+            height: 60px;
+            border-radius: 16px;
+            border: none;
+            margin: 10px 0px 10px 0px;
+            padding:10px 0px 10px 0px;
+            @include laptopL{
+                margin: 10px 0px 10px 0px;  
+            }
+            @include laptop{
+                margin: 10px 0px 10px 5px;
+
+            }
+            @include tablette{
+                margin: 10px 0px 10px 5px;
+                padding:10px 0px 10px 5px;
+            }
+
+
             background-color: white; 
             // animations
             animation: mymove 5s ;
@@ -138,6 +421,18 @@
                     opacity: 1;
                     //animation conteneur check se déplace vers la gauche          
                     transform: translate(-30%);
+                    @include laptopL{
+                        transform: translate(-4%);
+                        width: 40%;
+                    }
+                    @include laptop{
+                        transform: translate(-4%);
+                        width: 50%;
+                    }
+                    @include tablette{
+                        transform: translate(-4%);
+                        width: 80%;
+                    }
                     transition: transform 500ms ease-in-out;
                    
                    
@@ -169,6 +464,15 @@
                     p{
                         text-align: left;
                         width: 40%;
+                        @include laptopL{
+                            width: 100%;
+                        }
+                        @include laptop{
+                            width: 80%;
+                        }
+                        @include tablette{
+                            width: 60%;
+                        }
                         font-size: 12px;
                         white-space: nowrap;    // no wrap à la ligne quand il n'y a plus d'espace
                         overflow: hidden;          // cacher ce que dépasse
@@ -177,6 +481,15 @@
                     &__euro{
                         display: flex;
                         width: 50%;
+                        @include laptopL{
+                            width: 100%;
+                        }
+                        @include laptop{
+                            width: 80%;
+                        }
+                        @include tablette{
+                            width: 60%;
+                        }
                         p{
                           text-align:left;
                           white-space: unset;    // no wrap à la ligne quand il n'y a plus d'espace
@@ -191,25 +504,46 @@
                      
                 
             }     
-        }
+        }   
         
     }
-    
-    &__plats{
-        padding-left: 30px;
-        padding-bottom: 20px;
-        &__plats--tmps1{animation-delay: 8s} 
+    &__desserts{
+
+        padding: 0px 0px 20px 30px;
+        @include laptopL{
+            padding: 0px 0px 20px 100px;
+            font-size: 16px;
+        }
+        @include laptop{
+            padding: 0px 0px 20px 70px;
+            font-size: 16px;
+        }
+        @include tablette{
+            padding: 0px 0px 20px 70px;
+        }
+             
+      
+
         &__heading{
             font-size: 14px;
             width: 30%;
-            &__heading--tmps1{animation-delay: 8s} 
+           
+            
         }
-       
-
-    
         &__trait{
             border-bottom:$couleur_tertiare solid 2px ;
             width: 35%;
+            font-weight: bold;
+
+            @include laptopL{
+                width: 10%;
+            }
+            @include laptop{
+                width: 15%;
+            }
+            @include tablette{
+                width: 18%;
+            }
             margin-bottom: 10px;
         }
        
@@ -222,160 +556,19 @@
             border: none;
             margin: 10px 0px 10px 0px;
             padding:10px 0px 10px 0px;
-            background-color: white; 
-            
-            // animations
-            animation: mymove 5s ;
-           
-            animation-delay: 2s;
-            @keyframes transition {
-                0%   { margin-top: -80px;opacity:0; }
-                100% { margin-top: 0;opacity:1; }
-                }
-            opacity:0;
-            animation: transition 1s ease-in-out 2s forwards;
-            @keyframes mymove {
-                from {bottom:0%;}
-                to {bottom: 100%;}
-               }
-            
-            &__btn--4{animation-delay: 1s}
-            &__btn--5{animation-delay: 1.2s}
-            &__btn--6{animation-delay: 1.4s}
-
-            &__choix {
-                p{
-                  font: {
-                    weight: bold;
-                    size: 14px;
-                  }  
-                  text-align: left;
-                  padding-left: 10px;
-                  width: 75%;                
-                }
-                       
+            @include laptopL{
+                margin: 10px 0px 10px 0px;  
             }
-            &__prix{
-                display: flex;      
-                padding-top: 10px;
-                p{
-                    text-align: left;
-                    width: 85%;
-                    padding-left: 10px;
-                    font-size: 12px;
-                }
-                &__euro{
-                    display: flex;
-                    width: 15%;
-                    i{
-                        opacity: 1;
-                    }
-                }
+            @include laptop{
+                margin: 10px 0px 10px 5px;
+
             }
-            &__check{
-                opacity: 0;
-                border-top-right-radius : 16px;
-                border-bottom-right-radius : 16px;
-                background-color:$couleur_tertiare;
-                width: 50px;
-                height: 60px;
-                position: absolute;
-                inset: 0; 
-                left: 90%;
-                top: 0px;
-
-              i{
-                opacity: 0;
-                transform: rotate(0deg);
-              }
-             
+            @include tablette{
+                margin: 10px 0px 10px 5px;
+                padding:10px 0px 10px 5px;
             }
-           
-            &:hover {
-                width: 90%;
-                .menu__container__check{ // au sur vol la case check apparait de droit à gauche 
-                    opacity: 1;
-                    //animation conteneur check se déplace vers la gauche          
-                    transform: translate(-30%);
-                    transition: transform 500ms ease-in-out;
-                   
-                   
-                   i{              
-                     opacity: 1;
-                     text-align: center;
-                     border-radius: 50%;
-                     width: 20px;
-                     height: 20px;
-                     color: $couleur_tertiare;
-                     background-color: white;
-                     margin: 18px 0px 0px 15px;
-                     padding-top: 2px;
 
-                     // animation - le symbole de check tourne au sur vol hover
-                     animation: check 1s ease-out  forwards;
-                     @keyframes check {
-                        from {transform: rotate(0deg); 
-                        }
-                        to { transform: rotate(360deg); 
-                        }
-                    }
-                    }
-                   
-                } 
-                .menu__container__prix{  //decalage de la ligne prix vers la gauche hover
-                    display: flex;      
-                     padding-top: 10px;
-                     p{
-                        text-align: left;
-                        width: 40%;
-                        font-size: 12px;
-                        white-space: nowrap;    // no wrap à la ligne quand il n'y a plus d'espace
-                        overflow: hidden;          // cacher ce qui dépasse
-                        text-overflow: ellipsis;  // met les trois points de suspension
-                    }
-                    &__euro{
-                        display: flex;
-                        width: 50%;
-                        p{
-                          text-align: left;
-                          white-space: unset;    // no wrap à la ligne quand il n'y a plus d'espace
-                          // cacher ce que dépasse
-                          text-overflow: unset; 
-                        }
-                        i{
-                           opacity: 1;
-                       }
-                    }
-                }
-                     
-                
-            }     
-        }
-        
-    }
-    &__desserts{
 
-        padding-left: 30px;
-        padding-bottom: 20px;
-        &__heading{
-            font-size: 14px;
-            width: 30%;            
-        }
-        &__trait{
-            border-bottom:$couleur_tertiare solid 2px ;
-            width: 35%;
-            margin-bottom: 10px;
-        }
-       
-        .menu__container{
-            position: relative; // parent en position qui permet la animation du check en position relative 
-            overflow: hidden;
-            width: 90%;
-            height: 60px;
-            border-radius: 16px;
-            border: none;
-            margin:  10px 0px 10px 0px;
-            padding: 10px 0px 10px 0px;
             background-color: white; 
             // animations
             animation: mymove 5s ;
@@ -392,16 +585,18 @@
                 to {bottom: 100%;}
                }
             
-            &__btn--7{animation-delay: 2.2s}
-            &__btn--8{animation-delay: 2.4s}
-            &__btn--9{animation-delay: 2.6s}
+            // animation chargement page 
+            
+            &__btn--1{animation-delay: 0.2s}
+            &__btn--2{animation-delay: 0.4s}
+            &__btn--3{animation-delay: 0.6s}
 
             &__choix {
                 p{
                   font: {
                     weight: bold;
                     size: 14px;  
-                 }
+                  }
                   text-align: left;
                   padding-left: 10px;
                   width: 75%;                
@@ -451,6 +646,18 @@
                     opacity: 1;
                     //animation conteneur check se déplace vers la gauche          
                     transform: translate(-30%);
+                    @include laptopL{
+                        transform: translate(-4%);
+                        width: 40%;
+                    }
+                    @include laptop{
+                        transform: translate(-4%);
+                        width: 50%;
+                    }
+                    @include tablette{
+                        transform: translate(-4%);
+                        width: 80%;
+                    }
                     transition: transform 500ms ease-in-out;
                    
                    
@@ -462,7 +669,7 @@
                      height: 20px;
                      color: $couleur_tertiare;
                      background-color: white;
-                     margin: 18px 0px 0px 15px;
+                     margin: 18px 0px 0px 15px;  // padding : top right bottom left
                      padding-top: 2px;
 
                      // animation - le symbole de check tourne au sur vol hover
@@ -478,21 +685,39 @@
                 } 
                 .menu__container__prix{  //decalage de la ligne prix vers la gauche hover
                     display: flex;      
-                     padding-top: 10px;
-                     p{
+                    padding-top: 10px;
+                    p{
                         text-align: left;
                         width: 40%;
+                        @include laptopL{
+                            width: 100%;
+                        }
+                        @include laptop{
+                            width: 80%;
+                        }
+                        @include tablette{
+                            width: 60%;
+                        }
                         font-size: 12px;
                         white-space: nowrap;    // no wrap à la ligne quand il n'y a plus d'espace
                         overflow: hidden;          // cacher ce que dépasse
-                        text-overflow: ellipsis;  // met les trois points de suspension 
+                        text-overflow: ellipsis;  // met les trois points de suspension
                     }
                     &__euro{
                         display: flex;
                         width: 50%;
+                        @include laptopL{
+                            width: 100%;
+                        }
+                        @include laptop{
+                            width: 80%;
+                        }
+                        @include tablette{
+                            width: 60%;
+                        }
                         p{
-                          text-align: left;
-                          white-space:unset;    // no wrap à la ligne quand il n'y a plus d'espace
+                          text-align:left;
+                          white-space: unset;    // no wrap à la ligne quand il n'y a plus d'espace
                           // cacher ce que dépasse
                           text-overflow: unset; 
                         }
@@ -516,7 +741,21 @@
         align-items: center;
         width: 35%;
         height: 30px; 
-        margin:20px 0px 0px 120px ;
+        margin:20px 0px 0px 35%;
+        @include laptopL{
+            
+            width: 20%;
+           
+        }
+        @include laptop{
+           
+            width: 25%;
+        }
+        @include tablette{
+           
+            width: 30%;
+        }
+
         border-radius: 16px;
         
         // melange des trois couleurs de la chartre graphique du site//

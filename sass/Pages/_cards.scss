@@ -1,7 +1,4 @@
-.card a{
-  color: black;
-  background-color:transparent;
-}
+
 .card{
   display: block;
   display: flex;
@@ -10,9 +7,22 @@
   gap:20px;
   width: 90%;
   padding: 20px 0px 0px 40px;   // padding : top right bottom left
+  // version desktop
+  @include laptopL{
+    padding: 20px 0px 0px 100px; 
+  }
+  @include laptop{
+    padding: 20px 0px 0px 100px; 
+  }
+  @include tablette{
+    padding: 20px 0px 0px 80px; 
+  }
+  
+
+
   &__heading h2{
     font-size: 20px;
-    padding: 20px 0px 10px 0px;          // padding : top right bottom left
+    padding: 20px 0px 5px 0px;          // padding : top right bottom left
     }
   &__restaurant{ 
       width: 100%;                       /* card responsive */
@@ -46,7 +56,15 @@
         inset: 0;                           // met le texte à l'interieur de l'image
         left: 68%;                          
         top: 10px;
-    
+        @include laptopL{
+          left: 93%;   
+        }
+        @include laptop{
+          left: 90%;   
+        }
+        @include tablette{
+          left: 85%;   
+        }
         p{
          display: flex;
          justify-content: center;
@@ -78,6 +96,16 @@
   &__nom{
     width: 80%;
     padding: 0px 50px 0px 10px ;
+    margin-right: 10px;
+    @include laptopL{
+      margin-right: 180px;
+     }
+    @include laptop{
+     margin-right: 100px;
+    }
+    @include tablette{
+      margin-right: 70px;
+     }
     font-weight: bold; 
     p{
       width: 200px;
@@ -85,7 +113,17 @@
   }
   &__lieu{
     width: 80%;
-    padding: 5px 0px 5px 0px;           // padding : top right bottom left
+    padding: 5px 0px 5px 0px;        // padding : top right bottom left
+    margin-right: 10px;
+    @include laptopL{
+      margin-right: 180px;
+     }
+    @include laptop{
+     margin-right: 100px;
+    }
+    @include tablette{
+      margin-right: 70px;
+     }    
     font-weight: normal;
   }
 
@@ -105,10 +143,10 @@
   width: 2%;
   height: fit-content;
   margin-left:95%;
-
   font-size: 20px;
   border: none;
   background-color: white;
+
   span {
     position: absolute;
     top: 0;
@@ -135,38 +173,9 @@
   }
  }
  
-  ///// coeur animation
+  
 
-  &__coeur {
-  position: relative;
-  width: 50%;
-  font-size: 20px;
-  &__rempli {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    transform:translate(0);
-    transition: all 1s;
-    font-size: 20px;
-  }
-  &:hover > &__rempli {
 
-    opacity: 1;
-    .fa-solid{
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      background-image: linear-gradient(to right, $couleur_secondaire,$couleur_primaire);
-    }  
-  }
-
-}
 }
 
 
