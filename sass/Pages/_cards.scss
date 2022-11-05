@@ -65,6 +65,9 @@
         @include tablette{
           left: 85%;   
         }
+        @include mobileL{
+          left: 78%;   
+        }
         p{
          display: flex;
          justify-content: center;

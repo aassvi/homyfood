@@ -208,6 +208,10 @@
                         transform: translate(-4%);
                         width: 80%;
                     }
+                    @include mobileL{
+                        transform: translate(-4%);
+                        width: 70%;
+                    }
                     transition: transform 500ms ease-in-out;
                    
                    
@@ -433,6 +437,10 @@
                         transform: translate(-4%);
                         width: 80%;
                     }
+                    @include mobileL{
+                        transform: translate(-4%);
+                        width: 70%;
+                    }
                     transition: transform 500ms ease-in-out;
                    
                    
@@ -567,7 +575,7 @@
                 margin: 10px 0px 10px 5px;
                 padding:10px 0px 10px 5px;
             }
-
+             
 
             background-color: white; 
             // animations
@@ -652,11 +660,16 @@
                     }
                     @include laptop{
                         transform: translate(-4%);
-                        width: 50%;
+                        width: 80%;
+                        
                     }
                     @include tablette{
                         transform: translate(-4%);
                         width: 80%;
+                    }
+                    @include mobileL{
+                        transform: translate(-4%);
+                        width: 70%;
                     }
                     transition: transform 500ms ease-in-out;
                    

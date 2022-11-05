@@ -389,13 +389,13 @@ header a:active {
     padding: 20px 0px 0px 10px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .header__logo--menu {
     width: 70%;
     padding: 20px 0px 0px 10px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .header__logo--menu {
     width: 70%;
     padding: 20px 0px 0px 10px;
@@ -418,13 +418,13 @@ header a:active {
     font-size: 24px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .header__logo--menu .fa-solid {
     width: 50%;
     font-size: 24px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .header__logo--menu .fa-solid {
     width: 50%;
     font-size: 24px;
@@ -520,7 +520,7 @@ form {
     padding-right: 8%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .form__input {
     padding-left: 4%;
     padding-right: 8%;
@@ -586,12 +586,12 @@ form {
     width: 20%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .form__button {
     width: 20%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .form__button {
     width: 30%;
   }
@@ -619,12 +619,12 @@ form {
     padding-left: 100px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .nav__heading {
     padding-left: 100px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .nav__heading {
     padding-left: 100px;
   }
@@ -645,12 +645,12 @@ form {
     padding-left: 100px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .nav__etape {
     padding-left: 100px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .nav__etape {
     padding-left: 100px;
   }
@@ -697,12 +697,12 @@ form {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .nav__etape button span {
     font-size: 16px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .nav__etape button span {
     font-size: 16px;
   }
@@ -729,12 +729,12 @@ form {
     padding: 20px 0px 0px 100px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .card {
     padding: 20px 0px 0px 100px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .card {
     padding: 20px 0px 0px 80px;
   }
@@ -780,14 +780,19 @@ form {
     left: 93%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .card__restaurant__nouveau > .content {
     left: 90%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .card__restaurant__nouveau > .content {
     left: 85%;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .card__restaurant__nouveau > .content {
+    left: 78%;
   }
 }
 .card__restaurant__nouveau > .content p {
@@ -821,12 +826,12 @@ form {
     margin-right: 180px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .card__nom {
     margin-right: 100px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .card__nom {
     margin-right: 50px;
   }
@@ -845,12 +850,12 @@ form {
     margin-right: 180px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .card__lieu {
     margin-right: 100px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .card__lieu {
     margin-right: 50px;
   }
@@ -933,13 +938,13 @@ form {
     font-size: 24px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__restaurant h1 {
     padding-left: 70px;
     font-size: 24px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__restaurant h1 {
     padding-left: 70px;
   }
@@ -954,12 +959,12 @@ form {
     padding: 20px 0px 0px 18%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__restaurant i {
     padding: 20px 0px 0px 18%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__restaurant i {
     padding: 20px 0px 0px 15%;
   }
@@ -973,13 +978,13 @@ form {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__entrees {
     padding: 0px 0px 20px 70px;
     font-size: 16px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__entrees {
     padding: 0px 0px 20px 70px;
   }
@@ -999,12 +1004,12 @@ form {
     width: 10%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__entrees__trait {
     width: 15%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__entrees__trait {
     width: 18%;
   }
@@ -1029,12 +1034,12 @@ form {
     margin: 10px 0px 10px 0px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__entrees .menu__container {
     margin: 10px 0px 10px 5px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__entrees .menu__container {
     margin: 10px 0px 10px 5px;
     padding: 10px 0px 10px 5px;
@@ -1121,16 +1126,22 @@ form {
     width: 40%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__entrees .menu__container:hover .menu__container__check {
     transform: translate(-4%);
     width: 50%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__entrees .menu__container:hover .menu__container__check {
     transform: translate(-4%);
     width: 80%;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .menu__entrees .menu__container:hover .menu__container__check {
+    transform: translate(-4%);
+    width: 70%;
   }
 }
 .menu__entrees .menu__container:hover .menu__container__check i {
@@ -1170,12 +1181,12 @@ form {
     width: 100%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__entrees .menu__container:hover .menu__container__prix p {
     width: 80%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__entrees .menu__container:hover .menu__container__prix p {
     width: 60%;
   }
@@ -1189,12 +1200,12 @@ form {
     width: 100%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__entrees .menu__container:hover .menu__container__prix__euro {
     width: 80%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__entrees .menu__container:hover .menu__container__prix__euro {
     width: 60%;
   }
@@ -1216,13 +1227,13 @@ form {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__plats {
     padding: 0px 0px 20px 70px;
     font-size: 16px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__plats {
     padding: 0px 0px 20px 70px;
   }
@@ -1245,12 +1256,12 @@ form {
     width: 8%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__plats__trait {
     width: 10%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__plats__trait {
     width: 18%;
   }
@@ -1275,12 +1286,12 @@ form {
     margin: 10px 0px 10px 0px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__plats .menu__container {
     margin: 10px 0px 10px 5px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__plats .menu__container {
     margin: 10px 0px 10px 5px;
     padding: 10px 0px 10px 5px;
@@ -1367,16 +1378,22 @@ form {
     width: 40%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__plats .menu__container:hover .menu__container__check {
     transform: translate(-4%);
     width: 50%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__plats .menu__container:hover .menu__container__check {
     transform: translate(-4%);
     width: 80%;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .menu__plats .menu__container:hover .menu__container__check {
+    transform: translate(-4%);
+    width: 70%;
   }
 }
 .menu__plats .menu__container:hover .menu__container__check i {
@@ -1416,12 +1433,12 @@ form {
     width: 100%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__plats .menu__container:hover .menu__container__prix p {
     width: 80%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__plats .menu__container:hover .menu__container__prix p {
     width: 60%;
   }
@@ -1435,12 +1452,12 @@ form {
     width: 100%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__plats .menu__container:hover .menu__container__prix__euro {
     width: 80%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__plats .menu__container:hover .menu__container__prix__euro {
     width: 60%;
   }
@@ -1462,13 +1479,13 @@ form {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__desserts {
     padding: 0px 0px 20px 70px;
     font-size: 16px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__desserts {
     padding: 0px 0px 20px 70px;
   }
@@ -1488,12 +1505,12 @@ form {
     width: 10%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__desserts__trait {
     width: 15%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__desserts__trait {
     width: 18%;
   }
@@ -1518,12 +1535,12 @@ form {
     margin: 10px 0px 10px 0px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__desserts .menu__container {
     margin: 10px 0px 10px 5px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__desserts .menu__container {
     margin: 10px 0px 10px 5px;
     padding: 10px 0px 10px 5px;
@@ -1610,16 +1627,22 @@ form {
     width: 40%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
-  .menu__desserts .menu__container:hover .menu__container__check {
-    transform: translate(-4%);
-    width: 50%;
-  }
-}
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__desserts .menu__container:hover .menu__container__check {
     transform: translate(-4%);
     width: 80%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu__desserts .menu__container:hover .menu__container__check {
+    transform: translate(-4%);
+    width: 80%;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .menu__desserts .menu__container:hover .menu__container__check {
+    transform: translate(-4%);
+    width: 70%;
   }
 }
 .menu__desserts .menu__container:hover .menu__container__check i {
@@ -1659,12 +1682,12 @@ form {
     width: 100%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__desserts .menu__container:hover .menu__container__prix p {
     width: 80%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__desserts .menu__container:hover .menu__container__prix p {
     width: 60%;
   }
@@ -1678,12 +1701,12 @@ form {
     width: 100%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__desserts .menu__container:hover .menu__container__prix__euro {
     width: 80%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__desserts .menu__container:hover .menu__container__prix__euro {
     width: 60%;
   }
@@ -1715,12 +1738,12 @@ form {
     width: 20%;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__button {
     width: 25%;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__button {
     width: 30%;
   }
@@ -1763,12 +1786,12 @@ footer a:visited {
     padding-left: 100px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .footer__logo {
     padding-left: 100px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .footer__logo {
     padding-left: 80px;
   }
@@ -1789,12 +1812,12 @@ footer a:visited {
     padding-left: 100px;
   }
 }
-@media screen and (min-width: 991px) and (max-width: 1399px) {
+@media screen and (min-width: 992px) and (max-width: 1399px) {
   .footer__iconText {
     padding-left: 100px;
   }
 }
-@media screen and (width >= 500px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .footer__iconText {
     padding-left: 80px;
   }

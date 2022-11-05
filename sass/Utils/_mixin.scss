@@ -36,17 +36,23 @@ $breakpoints: (
 }
 // laptop
 @mixin laptop {
-    @media screen and (min-width: 991px) and (max-width: 1399px) {
+    @media screen and (min-width: 992px) and (max-width: 1399px) {
         @content;
     }
-    }
+}
 
 
 //tablette
 
 
 @mixin tablette {
-    @media screen and (width >= 500px) and (max-width: 991px) {
+    @media screen and (min-width: 768px) and (max-width: 991px) {
         @content;
     }
+}
+
+@mixin mobileL {
+    @media screen and (min-width: 426px) and (max-width: 767px) {
+        @content;
     }
+}
