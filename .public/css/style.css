@@ -500,6 +500,9 @@ header {
 .section__width-- {
   height: 1200px;
 }
+.section__width--menuNote {
+  height: 1300px;
+}
 
 form {
   background-color: #f5f7f7;
@@ -1307,12 +1310,18 @@ form {
 .menu__plats .menu__container__btn--6 {
   animation-delay: 3s;
 }
+.menu__plats .menu__container__height-- {
+  height: 65px;
+}
 .menu__plats .menu__container__choix p {
   font-weight: bold;
   font-size: 14px;
   text-align: left;
   padding-left: 10px;
   width: 75%;
+}
+.menu__plats .menu__container__choix-- {
+  width: 70%;
 }
 .menu__plats .menu__container__prix {
   display: flex;
@@ -1725,6 +1734,9 @@ form {
 .menu__button:hover {
   box-shadow: 0 5px 5px -5px black;
   background-image: linear-gradient(#fface8, #c9abee);
+}
+.menu__button__menuNote-- {
+  margin: 100px 0px 0px 35%;
 }
 
 footer {

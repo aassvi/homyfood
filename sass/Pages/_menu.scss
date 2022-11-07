@@ -138,6 +138,9 @@
             &__btn--2{animation-delay: 0.4s}
             &__btn--3{animation-delay: 0.6s}
 
+
+           
+
             &__choix {
                 p{
                   font: {
@@ -283,6 +286,7 @@
                 
             }     
         }
+        
       
     }
     
@@ -367,7 +371,12 @@
             &__btn--4{animation-delay: 1s}
             &__btn--5{animation-delay: 2s}
             &__btn--6{animation-delay: 3s}
-
+            
+            // modificateur pour menu Note enchantée plats provence
+        &__height--{
+            height: 65px;
+        }
+            
             &__choix {
                 p{
                   font: {
@@ -378,8 +387,11 @@
                   padding-left: 10px;
                   width: 75%;                
                 }
-                       
+                    
             }
+            &__choix--{
+                width: 70%;
+            }  
             &__prix{
                 display: flex;      
                 padding-top: 10px;
@@ -790,6 +802,10 @@
           @include box-shadow-fonce($colour);  
           // mixin color background eclaircie //
           @include couleur-button-eclaircie;
+        }
+
+        &__menuNote--{
+            margin:100px 0px 0px 35%;
         }
     }
  
