@@ -7,8 +7,27 @@
  @font-face {
   font-family: "Shrikhand-Regular";
   src: url("/policeShrikhand/Shrikhand-Regular.otf") format("otf")
- }*/
+ }
 
+ @font-face{
+  font-family: "Shrikhand";
+  src: url("Shrikhand-Regular.ttf");
+  src: url("Shrikhand-Regular.otf");
+}
+*/
+/* shrikhand-regular - latin */
+@font-face {
+  font-family: 'Shrikhand';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/policeShrikhand/shrikhand-v11-latin-regular.ttf'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/policeShrikhand/shrikhand-v11-latin-regular.eot') format('embedded-opentype'), /* IE6-IE8 */
+       url('/policeShrikhand/shrikhand-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/policeShrikhand/shrikhand-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/policeShrikhand/shrikhand-v11-latin-regular.ttf') format('truetype') /* Safari, Android, iOS */
+      
+}
 
 * {
   box-sizing: border-box;
@@ -28,30 +47,31 @@ p,span,::placeholder,button,section,div{
 }
 
 h1, h2{
-  font-family: 'Shrikhand-Regular';
-  font-weight: bold;
+  font-family: 'Shrikhand';
+  
 }
 
 a{
   text-decoration: none;
   color: black;
+  background-color: transparent;
 }
-
-a:active{
+:link{
+  text-decoration: none;
   color: black;
-  background-color:white;
+  background-color: transparent;
 }
 a:visited{
   color: black;
   background-color:white;
 }
-a:link {
-  text-decoration: none;
+a:active{
+ 
   color: black;
+  background-color: transparent;
+  
+}
 
-}
-a::before{
-  text-decoration: none;
-  background-color: white;
-}
+
+
 

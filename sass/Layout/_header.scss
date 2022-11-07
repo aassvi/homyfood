@@ -5,10 +5,7 @@ header{
   text-align: center;
   
 }
-header a:active{
-  text-decoration: none;
-  background-color:unset;
-}
+
 .header{
   
   &__logo{
@@ -36,10 +33,11 @@ header a:active{
     
   }
   .fa-solid{
-   color: black;
+   color:black;
    font-weight: bold;
    width: 30%;
    text-align: left;
+  
    @include laptopL{
     width: 70%;
     font-size: 24px;
@@ -51,10 +49,14 @@ header a:active{
    @include tablette{
     width: 50%;
     font-size: 24px;
-  }
+    }
   
    font-size: 18px;
    font-weight: bolder;
+  }
+  .fa-solid:active{
+    
+    background-color: transparent;
   }
   }
 }

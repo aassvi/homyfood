@@ -1,3 +1,70 @@
+/*@font-face {
+  font-family: "Shrikhand-Regular";
+  src: url("/policeShrikhand/Shrikhand-Regular.ttf") format("ttf")
+ }
+ @font-face {
+  font-family: "Shrikhand-Regular";
+  src: url("/policeShrikhand/Shrikhand-Regular.otf") format("otf")
+ }
+
+ @font-face{
+  font-family: "Shrikhand";
+  src: url("Shrikhand-Regular.ttf");
+  src: url("Shrikhand-Regular.otf");
+}
+*/
+/* shrikhand-regular - latin */
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/policeShrikhand/shrikhand-v11-latin-regular.ttf"); /* IE9 Compat Modes */
+  src: local(""), url("/policeShrikhand/shrikhand-v11-latin-regular.eot") format("embedded-opentype"), url("/policeShrikhand/shrikhand-v11-latin-regular.woff2") format("woff2"), url("/policeShrikhand/shrikhand-v11-latin-regular.woff") format("woff"), url("/policeShrikhand/shrikhand-v11-latin-regular.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, main {
+  width: 100%;
+}
+
+p, span, ::placeholder, button, section, div {
+  font-family: "roboto";
+}
+
+h1, h2 {
+  font-family: "Shrikhand";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+}
+
+:link {
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+}
+
+a:visited {
+  color: black;
+  background-color: white;
+}
+
+a:active {
+  color: black;
+  background-color: transparent;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -307,71 +374,10 @@ template {
   display: none;
 }
 
-/*@font-face {
-  font-family: "Shrikhand-Regular";
-  src: url("/policeShrikhand/Shrikhand-Regular.ttf") format("ttf")
- }
- @font-face {
-  font-family: "Shrikhand-Regular";
-  src: url("/policeShrikhand/Shrikhand-Regular.otf") format("otf")
- }*/
-* {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-html, body, main {
-  width: 100%;
-}
-
-p, span, ::placeholder, button, section, div {
-  font-family: "roboto";
-}
-
-h1, h2 {
-  font-family: "Shrikhand-Regular";
-  font-weight: bold;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:active {
-  color: black;
-  background-color: white;
-}
-
-a:visited {
-  color: black;
-  background-color: white;
-}
-
-a:link {
-  text-decoration: none;
-  color: black;
-}
-
-a::before {
-  text-decoration: none;
-  background-color: white;
-}
-
 header {
   width: 100%;
   display: block;
   text-align: center;
-}
-
-header a:active {
-  text-decoration: none;
-  background-color: unset;
 }
 
 .header__logo {
@@ -429,6 +435,9 @@ header a:active {
     width: 50%;
     font-size: 24px;
   }
+}
+.header__logo--menu .fa-solid:active {
+  background-color: transparent;
 }
 
 .loader-spin {
@@ -927,8 +936,6 @@ form {
 }
 .menu__restaurant h1 {
   padding-left: 30px;
-  font-weight: bold;
-  font-style: italic;
   font-size: 22px;
   width: 70%;
 }
@@ -1024,8 +1031,6 @@ form {
   margin: 10px 0px 10px 0px;
   padding: 10px 0px 10px 0px;
   background-color: white;
-  animation: mymove 5s;
-  animation-delay: 2s;
   opacity: 0;
   animation: transition 1s ease-in-out 2s forwards;
 }
@@ -1053,14 +1058,6 @@ form {
   100% {
     margin-top: 0;
     opacity: 1;
-  }
-}
-@keyframes mymove {
-  from {
-    bottom: 0%;
-  }
-  to {
-    bottom: 100%;
   }
 }
 .menu__entrees .menu__container__btn--1 {
@@ -1110,7 +1107,6 @@ form {
 }
 .menu__entrees .menu__container__check i {
   opacity: 0;
-  transform: rotate(0deg);
 }
 .menu__entrees .menu__container:hover {
   width: 90%;
@@ -1238,9 +1234,6 @@ form {
     padding: 0px 0px 20px 70px;
   }
 }
-.menu__plats__plats--tmps1 {
-  animation-delay: 8s;
-}
 .menu__plats__heading {
   font-size: 14px;
   width: 30%;
@@ -1276,8 +1269,6 @@ form {
   margin: 10px 0px 10px 0px;
   padding: 10px 0px 10px 0px;
   background-color: white;
-  animation: mymove 5s;
-  animation-delay: 2s;
   opacity: 0;
   animation: transition 1s ease-in-out 2s forwards;
 }
@@ -1307,22 +1298,14 @@ form {
     opacity: 1;
   }
 }
-@keyframes mymove {
-  from {
-    bottom: 0%;
-  }
-  to {
-    bottom: 100%;
-  }
+.menu__plats .menu__container__btn--4 {
+  animation-delay: 1s;
 }
-.menu__plats .menu__container__btn--1 {
-  animation-delay: 0.2s;
+.menu__plats .menu__container__btn--5 {
+  animation-delay: 2s;
 }
-.menu__plats .menu__container__btn--2 {
-  animation-delay: 0.4s;
-}
-.menu__plats .menu__container__btn--3 {
-  animation-delay: 0.6s;
+.menu__plats .menu__container__btn--6 {
+  animation-delay: 3s;
 }
 .menu__plats .menu__container__choix p {
   font-weight: bold;
@@ -1362,7 +1345,6 @@ form {
 }
 .menu__plats .menu__container__check i {
   opacity: 0;
-  transform: rotate(0deg);
 }
 .menu__plats .menu__container:hover {
   width: 90%;
@@ -1525,8 +1507,6 @@ form {
   margin: 10px 0px 10px 0px;
   padding: 10px 0px 10px 0px;
   background-color: white;
-  animation: mymove 5s;
-  animation-delay: 2s;
   opacity: 0;
   animation: transition 1s ease-in-out 2s forwards;
 }
@@ -1556,22 +1536,14 @@ form {
     opacity: 1;
   }
 }
-@keyframes mymove {
-  from {
-    bottom: 0%;
-  }
-  to {
-    bottom: 100%;
-  }
+.menu__desserts .menu__container__btn--7 {
+  animation-delay: 4s;
 }
-.menu__desserts .menu__container__btn--1 {
-  animation-delay: 0.2s;
+.menu__desserts .menu__container__btn--8 {
+  animation-delay: 5s;
 }
-.menu__desserts .menu__container__btn--2 {
-  animation-delay: 0.4s;
-}
-.menu__desserts .menu__container__btn--3 {
-  animation-delay: 0.6s;
+.menu__desserts .menu__container__btn--9 {
+  animation-delay: 6s;
 }
 .menu__desserts .menu__container__choix p {
   font-weight: bold;
@@ -1611,7 +1583,6 @@ form {
 }
 .menu__desserts .menu__container__check i {
   opacity: 0;
-  transform: rotate(0deg);
 }
 .menu__desserts .menu__container:hover {
   width: 90%;
@@ -1797,9 +1768,7 @@ footer a:visited {
   }
 }
 .footer__logo h2 {
-  font-weight: bold;
   font-size: 18px;
-  font-style: italic;
   width: 100%;
 }
 .footer__iconText {
