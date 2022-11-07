@@ -18,8 +18,8 @@
   font-family: "Shrikhand";
   font-style: normal;
   font-weight: 400;
-  src: url("/policeShrikhand/shrikhand-v11-latin-regular.ttf"); /* IE9 Compat Modes */
-  src: local(""), url("/policeShrikhand/shrikhand-v11-latin-regular.eot") format("embedded-opentype"), url("/policeShrikhand/shrikhand-v11-latin-regular.woff2") format("woff2"), url("/policeShrikhand/shrikhand-v11-latin-regular.woff") format("woff"), url("/policeShrikhand/shrikhand-v11-latin-regular.ttf") format("truetype");
+  src: url("shrikhand-v11-latin-regular.ttf"); /* IE9 Compat Modes */
+  src: local(""), url("shrikhand-v11-latin-regular.eot") format("embedded-opentype"), url("shrikhand-v11-latin-regular.woff2") format("woff2"), url("shrikhand-v11-latin-regular.woff") format("woff"), url("shrikhand-v11-latin-regular.ttf") format("truetype");
 }
 * {
   box-sizing: border-box;
