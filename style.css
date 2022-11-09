@@ -380,14 +380,76 @@ header {
   text-align: center;
 }
 
+/*
+.header{
+
+  &__logo{
+    padding: 10px 0px 0px 20px ;
+    width:100% ;
+    height: 60px;
+  }
+  &__logo--menu{    /// modificateur page restaurant menu
+    height: 20px;
+    padding: 20px 90px 0px 10px;  // padding : top right bottom left
+    @include laptopL{
+      width:55% ;
+      padding: 20px 0px 0px 10px;
+     }
+     @include laptop{
+      width:70% ;
+      padding: 20px 0px 0px 10px;
+     }
+     @include tablette{
+      width:70% ;
+      padding: 20px 0px 0px 10px;
+     }
+  img{
+    width: 150px;
+
+  }
+
+  .fa-solid{
+   color:black;
+   font-weight: bold;
+   width: 30%;
+   text-align: left;
+
+   @include laptopL{
+    width: 70%;
+    font-size: 24px;
+   }
+   @include laptop{
+     width: 50%;
+     font-size: 24px;
+   }
+   @include tablette{
+    width: 50%;
+    font-size: 24px;
+    }
+
+   font-size: 18px;
+
+  }
+  .fa-solid:active{
+
+    background-color: transparent;
+  }
+  }
+}*/
 .header__logo {
   padding: 10px 0px 0px 20px;
   width: 100%;
   height: 60px;
 }
 .header__logo--menu {
-  height: 20px;
-  padding: 20px 90px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 10px;
+  padding-top: 40px;
+  padding-right: 80px;
+  padding-left: 0%;
 }
 @media screen and (min-width: 1400px) {
   .header__logo--menu {
@@ -410,33 +472,34 @@ header {
 .header__logo--menu img {
   width: 150px;
 }
-.header__logo--menu .fa-solid {
+.header__logo--menu i {
   color: black;
   font-weight: bold;
+  font-size: 18px;
   width: 30%;
   text-align: left;
-  font-size: 18px;
-  font-weight: bolder;
+  padding: 5px 20px 0px 0px;
+  align-content: flex-start;
 }
 @media screen and (min-width: 1400px) {
-  .header__logo--menu .fa-solid {
+  .header__logo--menu i {
     width: 70%;
     font-size: 24px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
-  .header__logo--menu .fa-solid {
+  .header__logo--menu i {
     width: 50%;
     font-size: 24px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .header__logo--menu .fa-solid {
+  .header__logo--menu i {
     width: 50%;
     font-size: 24px;
   }
 }
-.header__logo--menu .fa-solid:active {
+.header__logo--menu i:active {
   background-color: transparent;
 }
 
@@ -499,9 +562,11 @@ header {
 }
 .section__width-- {
   height: 1200px;
+  margin-top: 30px;
 }
 .section__width--menuNote {
-  height: 1300px;
+  height: 1280px;
+  margin-top: 30px;
 }
 
 form {
@@ -641,11 +706,12 @@ form {
     padding-left: 100px;
   }
 }
-.nav__heading h1 {
+.nav__heading p {
   font-size: 20px;
+  font-weight: bold;
 }
 @media screen and (min-width: 1400px) {
-  .nav__heading h1 {
+  .nav__heading p {
     font-size: 22px;
   }
 }
@@ -751,8 +817,9 @@ form {
     padding: 20px 0px 0px 80px;
   }
 }
-.card__heading h2 {
+.card__heading p {
   font-size: 20px;
+  font-weight: bold;
   padding: 20px 0px 5px 0px;
 }
 .card__restaurant {
@@ -939,7 +1006,7 @@ form {
 }
 .menu__restaurant h1 {
   padding-left: 30px;
-  font-size: 22px;
+  font-size: 20px;
   width: 70%;
 }
 @media screen and (min-width: 1400px) {
@@ -1077,24 +1144,46 @@ form {
   font-size: 14px;
   text-align: left;
   padding-left: 10px;
-  width: 75%;
+  width: 78%;
 }
 .menu__entrees .menu__container__prix {
   display: flex;
-  padding-top: 10px;
+  padding-top: 7px;
 }
 .menu__entrees .menu__container__prix p {
   text-align: left;
   width: 85%;
   padding-left: 10px;
-  font-size: 12px;
+  font-size: 13px;
 }
 .menu__entrees .menu__container__prix__euro {
   display: flex;
-  width: 15%;
+  font-weight: bold;
+  width: 20%;
 }
 .menu__entrees .menu__container__prix__euro i {
   opacity: 1;
+}
+@media screen and (min-width: 1400px) {
+  .menu__entrees .menu__container__prix__euro {
+    padding-left: 40px;
+    width: 10%;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+  .menu__entrees .menu__container__prix__euro {
+    width: 15%;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu__entrees .menu__container__prix__euro {
+    width: 10%;
+  }
+}
+.menu__entrees .menu__container__prix-- {
+  padding-top: 4px;
 }
 .menu__entrees .menu__container__check {
   opacity: 0;
@@ -1165,12 +1254,12 @@ form {
 }
 .menu__entrees .menu__container:hover .menu__container__prix {
   display: flex;
-  padding-top: 10px;
+  padding-top: 8px;
 }
 .menu__entrees .menu__container:hover .menu__container__prix p {
   text-align: left;
   width: 40%;
-  font-size: 12px;
+  font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1190,23 +1279,53 @@ form {
     width: 60%;
   }
 }
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .menu__entrees .menu__container:hover .menu__container__prix p {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .menu__entrees .menu__container:hover .menu__container__prix p {
+    width: 42%;
+  }
+}
 .menu__entrees .menu__container:hover .menu__container__prix__euro {
   display: flex;
-  width: 50%;
+  width: 70%;
+  padding-left: 110px;
+  font-size: 14px;
 }
 @media screen and (min-width: 1400px) {
   .menu__entrees .menu__container:hover .menu__container__prix__euro {
     width: 100%;
+    padding-left: 640px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__entrees .menu__container:hover .menu__container__prix__euro {
     width: 80%;
+    padding-left: 380px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__entrees .menu__container:hover .menu__container__prix__euro {
     width: 60%;
+    padding-left: 210px;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .menu__entrees .menu__container:hover .menu__container__prix__euro {
+    padding-left: 140px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .menu__entrees .menu__container:hover .menu__container__prix__euro {
+    padding-left: 115px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .menu__entrees .menu__container:hover .menu__container__prix__euro {
+    padding-left: 80px;
   }
 }
 .menu__entrees .menu__container:hover .menu__container__prix__euro p {
@@ -1216,6 +1335,9 @@ form {
 }
 .menu__entrees .menu__container:hover .menu__container__prix__euro i {
   opacity: 1;
+}
+.menu__entrees .menu__container:hover .menu__container__prix-- {
+  padding-top: 4px;
 }
 .menu__plats {
   padding: 0px 0px 20px 30px;
@@ -1302,16 +1424,13 @@ form {
   }
 }
 .menu__plats .menu__container__btn--4 {
-  animation-delay: 1s;
+  animation-delay: 0, 2s;
 }
 .menu__plats .menu__container__btn--5 {
-  animation-delay: 2s;
+  animation-delay: 0, 4s;
 }
 .menu__plats .menu__container__btn--6 {
-  animation-delay: 3s;
-}
-.menu__plats .menu__container__height-- {
-  height: 65px;
+  animation-delay: 0, 6s;
 }
 .menu__plats .menu__container__choix p {
   font-weight: bold;
@@ -1321,24 +1440,61 @@ form {
   width: 75%;
 }
 .menu__plats .menu__container__choix-- {
-  width: 70%;
+  width: 75%;
 }
 .menu__plats .menu__container__prix {
   display: flex;
-  padding-top: 10px;
+  padding-top: 7px;
 }
 .menu__plats .menu__container__prix p {
   text-align: left;
   width: 85%;
   padding-left: 10px;
-  font-size: 12px;
+  font-size: 13px;
+}
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .menu__plats .menu__container__prix {
+    padding-top: 4px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .menu__plats .menu__container__prix {
+    padding-top: 4px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .menu__plats .menu__container__prix {
+    padding-top: 4px;
+  }
 }
 .menu__plats .menu__container__prix__euro {
   display: flex;
-  width: 15%;
+  font-weight: bold;
+  width: 20%;
 }
 .menu__plats .menu__container__prix__euro i {
   opacity: 1;
+}
+@media screen and (min-width: 1400px) {
+  .menu__plats .menu__container__prix__euro {
+    padding-left: 40px;
+    width: 10%;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+  .menu__plats .menu__container__prix__euro {
+    width: 15%;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu__plats .menu__container__prix__euro {
+    width: 10%;
+  }
+}
+.menu__plats .menu__container__prix-- {
+  padding-top: 4px;
 }
 .menu__plats .menu__container__check {
   opacity: 0;
@@ -1409,12 +1565,21 @@ form {
 }
 .menu__plats .menu__container:hover .menu__container__prix {
   display: flex;
-  padding-top: 10px;
+  padding-top: 7px;
+  /*@include mobileL{
+      padding-top: 4px;  // trois lignes conteneur
+  }
+  @include mobileM{
+      padding-top: 4px;  // trois lignes conteneur
+  }
+  @include mobileS{
+      padding-top: 4px;  // trois lignes conteneur
+  }*/
 }
 .menu__plats .menu__container:hover .menu__container__prix p {
   text-align: left;
   width: 40%;
-  font-size: 12px;
+  font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1434,23 +1599,53 @@ form {
     width: 60%;
   }
 }
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .menu__plats .menu__container:hover .menu__container__prix p {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .menu__plats .menu__container:hover .menu__container__prix p {
+    width: 42%;
+  }
+}
 .menu__plats .menu__container:hover .menu__container__prix__euro {
   display: flex;
-  width: 50%;
+  width: 70%;
+  padding-left: 110px;
+  font-size: 14px;
 }
 @media screen and (min-width: 1400px) {
   .menu__plats .menu__container:hover .menu__container__prix__euro {
     width: 100%;
+    padding-left: 640px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__plats .menu__container:hover .menu__container__prix__euro {
     width: 80%;
+    padding-left: 380px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__plats .menu__container:hover .menu__container__prix__euro {
     width: 60%;
+    padding-left: 210px;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .menu__plats .menu__container:hover .menu__container__prix__euro {
+    padding-left: 140px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .menu__plats .menu__container:hover .menu__container__prix__euro {
+    padding-left: 115px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .menu__plats .menu__container:hover .menu__container__prix__euro {
+    padding-left: 80px;
   }
 }
 .menu__plats .menu__container:hover .menu__container__prix__euro p {
@@ -1460,6 +1655,9 @@ form {
 }
 .menu__plats .menu__container:hover .menu__container__prix__euro i {
   opacity: 1;
+}
+.menu__plats .menu__container:hover .menu__container__prix-- {
+  padding-top: 4px;
 }
 .menu__desserts {
   padding: 0px 0px 20px 30px;
@@ -1493,12 +1691,12 @@ form {
 }
 @media screen and (min-width: 1400px) {
   .menu__desserts__trait {
-    width: 10%;
+    width: 8%;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__desserts__trait {
-    width: 15%;
+    width: 10%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1546,13 +1744,13 @@ form {
   }
 }
 .menu__desserts .menu__container__btn--7 {
-  animation-delay: 4s;
+  animation-delay: 0, 2s;
 }
 .menu__desserts .menu__container__btn--8 {
-  animation-delay: 5s;
+  animation-delay: 0, 4s;
 }
 .menu__desserts .menu__container__btn--9 {
-  animation-delay: 6s;
+  animation-delay: 0, 6s;
 }
 .menu__desserts .menu__container__choix p {
   font-weight: bold;
@@ -1561,22 +1759,47 @@ form {
   padding-left: 10px;
   width: 75%;
 }
+.menu__desserts .menu__container__choix-- {
+  width: 70%;
+}
 .menu__desserts .menu__container__prix {
   display: flex;
-  padding-top: 10px;
+  padding-top: 7px;
 }
 .menu__desserts .menu__container__prix p {
   text-align: left;
   width: 85%;
   padding-left: 10px;
-  font-size: 12px;
+  font-size: 13px;
 }
 .menu__desserts .menu__container__prix__euro {
   display: flex;
-  width: 15%;
+  font-weight: bold;
+  width: 20%;
 }
 .menu__desserts .menu__container__prix__euro i {
   opacity: 1;
+}
+@media screen and (min-width: 1400px) {
+  .menu__desserts .menu__container__prix__euro {
+    padding-left: 40px;
+    width: 10%;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+  .menu__desserts .menu__container__prix__euro {
+    width: 15%;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu__desserts .menu__container__prix__euro {
+    width: 10%;
+  }
+}
+.menu__desserts .menu__container__prix-- {
+  padding-top: 4px;
 }
 .menu__desserts .menu__container__check {
   opacity: 0;
@@ -1610,7 +1833,7 @@ form {
 @media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__desserts .menu__container:hover .menu__container__check {
     transform: translate(-4%);
-    width: 80%;
+    width: 50%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1647,12 +1870,12 @@ form {
 }
 .menu__desserts .menu__container:hover .menu__container__prix {
   display: flex;
-  padding-top: 10px;
+  padding-top: 7px;
 }
 .menu__desserts .menu__container:hover .menu__container__prix p {
   text-align: left;
   width: 40%;
-  font-size: 12px;
+  font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1672,23 +1895,53 @@ form {
     width: 60%;
   }
 }
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .menu__desserts .menu__container:hover .menu__container__prix p {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .menu__desserts .menu__container:hover .menu__container__prix p {
+    width: 42%;
+  }
+}
 .menu__desserts .menu__container:hover .menu__container__prix__euro {
   display: flex;
-  width: 50%;
+  width: 70%;
+  padding-left: 110px;
+  font-size: 14px;
 }
 @media screen and (min-width: 1400px) {
   .menu__desserts .menu__container:hover .menu__container__prix__euro {
     width: 100%;
+    padding-left: 640px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__desserts .menu__container:hover .menu__container__prix__euro {
     width: 80%;
+    padding-left: 380px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__desserts .menu__container:hover .menu__container__prix__euro {
     width: 60%;
+    padding-left: 210px;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .menu__desserts .menu__container:hover .menu__container__prix__euro {
+    padding-left: 140px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .menu__desserts .menu__container:hover .menu__container__prix__euro {
+    padding-left: 115px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .menu__desserts .menu__container:hover .menu__container__prix__euro {
+    padding-left: 80px;
   }
 }
 .menu__desserts .menu__container:hover .menu__container__prix__euro p {
@@ -1698,6 +1951,9 @@ form {
 }
 .menu__desserts .menu__container:hover .menu__container__prix__euro i {
   opacity: 1;
+}
+.menu__desserts .menu__container:hover .menu__container__prix-- {
+  padding-top: 4px;
 }
 .menu__button {
   display: flex;
@@ -1779,8 +2035,8 @@ footer a:visited {
     padding-left: 80px;
   }
 }
-.footer__logo h2 {
-  font-size: 18px;
+.footer__logo h1 {
+  font-size: 16px;
   width: 100%;
 }
 .footer__iconText {

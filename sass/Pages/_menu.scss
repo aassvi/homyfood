@@ -36,7 +36,7 @@
             @include tablette{
                 padding-left: 70px;
             }
-            font-size: 22px;
+            font-size: 20px;
             width: 70%;
         }
         i{
@@ -149,28 +149,43 @@
                   }
                   text-align: left;
                   padding-left: 10px;
-                  width: 75%;                
+                  width: 78%;                
                 }
                        
             }
             &__prix{
-                display: flex;      
-                padding-top: 10px;
+                display: flex;    
+                padding-top: 7px;
                 p{
                     text-align: left;
                     width: 85%;
                     padding-left: 10px;
-                    font-size: 12px;
+                    font-size: 13px;
                 }
                 &__euro{
                     display: flex;
-                    width: 15%;
+                    font-weight: bold;   
+                    width: 20%;
                     i{
                         opacity: 1;
                     }
-                    
+                    @include laptopL{
+                        padding-left: 40px;
+                        width: 10%;
+                        font-size: 24px;
+                    }
+                    @include laptop{
+                        width: 15%;
+                        font-size: 24px;
+                    }
+                    @include tablette{
+                        width: 10%;
+                    }
                 }
             }
+            &__prix--{
+                padding-top: 4px;
+              }
             &__check{
                 opacity: 0;
                 border-top-right-radius : 16px;
@@ -241,7 +256,7 @@
                 } 
                 .menu__container__prix{  //decalage de la ligne prix vers la gauche hover
                     display: flex;      
-                    padding-top: 10px;
+                    padding-top: 8px;
                     p{
                         text-align: left;
                         width: 40%;
@@ -254,22 +269,48 @@
                         @include tablette{
                             width: 60%;
                         }
-                        font-size: 12px;
+                        @include mobileL{
+                            width: 50%;
+                        }
+                        @include mobileM{
+                            width: 42%;
+                        }
+                        font-size: 13px;
                         white-space: nowrap;    // no wrap à la ligne quand il n'y a plus d'espace
                         overflow: hidden;          // cacher ce que dépasse
                         text-overflow: ellipsis;  // met les trois points de suspension
                     }
                     &__euro{
                         display: flex;
-                        width: 50%;
+                        width: 70%;
+                        padding-left: 110px;
+                        font-size: 14px;
+
                         @include laptopL{
                             width: 100%;
+                            padding-left: 640px;
+
                         }
                         @include laptop{
                             width: 80%;
+                            padding-left: 380px;
+
                         }
                         @include tablette{
                             width: 60%;
+                            padding-left: 210px;
+
+                        }
+                        @include mobileL{
+                           
+                            padding-left: 140px;
+                        }
+                        @include mobileM{
+                           
+                            padding-left: 115px;
+                        }
+                        @include mobileS{
+                            padding-left: 80px;
                         }
                         p{
                           text-align:left;
@@ -282,7 +323,9 @@
                        }
                     }
                 }
-                     
+                .menu__container__prix--{
+                    padding-top: 4px;
+                }     
                 
             }     
         }
@@ -368,14 +411,14 @@
            
             // animation chargement page 
             
-            &__btn--4{animation-delay: 1s}
-            &__btn--5{animation-delay: 2s}
-            &__btn--6{animation-delay: 3s}
+            &__btn--4{animation-delay: 0,2s}
+            &__btn--5{animation-delay: 0,4s}
+            &__btn--6{animation-delay: 0,6s}
             
-            // modificateur pour menu Note enchantée plats provence
-        &__height--{
-            height: 65px;
-        }
+            // modificateur pour menu Note enchantée plats provence conteneur
+            //&__height--{
+            // height: 65px;
+            //}
             
             &__choix {
                 p{
@@ -389,26 +432,52 @@
                 }
                     
             }
+            // modificateur pour menu Note enchantée plats provence with nom
             &__choix--{
-                width: 70%;
+                width: 75%;
             }  
             &__prix{
-                display: flex;      
-                padding-top: 10px;
+                display: flex;         
+                padding-top: 7px;
                 p{
                     text-align: left;
                     width: 85%;
                     padding-left: 10px;
-                    font-size: 12px;
+                    font-size: 13px;
+                }
+                @include mobileL{
+                    padding-top: 4px;
+                }
+                @include mobileM{
+                    padding-top: 4px;
+                }
+                @include mobileS{
+                    padding-top: 4px;
                 }
                 &__euro{
                     display: flex;
-                    width: 15%;
+                    font-weight: bold;   
+                    width: 20%;
                     i{
                         opacity: 1;
                     }
+                    @include laptopL{
+                        padding-left: 40px;
+                        width: 10%;
+                        font-size: 24px;
+                    }
+                    @include laptop{
+                        width: 15%;
+                        font-size: 24px;
+                    }
+                    @include tablette{
+                        width: 10%;
+                    }
                     
                 }
+            }
+            &__prix--{
+              padding-top: 4px;
             }
             &__check{
                 opacity: 0;
@@ -480,7 +549,16 @@
                 } 
                 .menu__container__prix{  //decalage de la ligne prix vers la gauche hover
                     display: flex;      
-                    padding-top: 10px;
+                    padding-top: 7px;
+                    /*@include mobileL{
+                        padding-top: 4px;  // trois lignes conteneur
+                    }
+                    @include mobileM{
+                        padding-top: 4px;  // trois lignes conteneur
+                    }
+                    @include mobileS{
+                        padding-top: 4px;  // trois lignes conteneur
+                    }*/
                     p{
                         text-align: left;
                         width: 40%;
@@ -493,23 +571,51 @@
                         @include tablette{
                             width: 60%;
                         }
-                        font-size: 12px;
+                        @include mobileL{
+                            width: 50%;
+                        }
+                        @include mobileM{
+                            width: 42%;
+                        }
+                        font-size: 13px;
                         white-space: nowrap;    // no wrap à la ligne quand il n'y a plus d'espace
                         overflow: hidden;          // cacher ce que dépasse
                         text-overflow: ellipsis;  // met les trois points de suspension
                     }
                     &__euro{
                         display: flex;
-                        width: 50%;
+                        width: 70%;
+                        padding-left: 110px;
+                        font-size: 14px;
+
                         @include laptopL{
                             width: 100%;
+                            padding-left: 640px;
+
                         }
                         @include laptop{
                             width: 80%;
+                            padding-left: 380px;
+
                         }
                         @include tablette{
                             width: 60%;
+                            padding-left: 210px;
+
                         }
+                        @include mobileL{
+                           
+                            padding-left: 140px;
+                        }
+                        @include mobileM{
+                           
+                            padding-left: 115px;
+                        }
+                        @include mobileS{
+                            padding-left: 80px;
+                            
+                        }
+                       
                         p{
                           text-align:left;
                           white-space: unset;    // no wrap à la ligne quand il n'y a plus d'espace
@@ -521,8 +627,9 @@
                        }
                     }
                 }
-                     
-                
+                .menu__container__prix--{
+                    padding-top: 4px;
+                }
             }     
         }   
         
@@ -541,7 +648,7 @@
         @include tablette{
             padding: 0px 0px 20px 70px;
         }
-             
+      
       
 
         &__heading{
@@ -556,17 +663,17 @@
             font-weight: bold;
 
             @include laptopL{
-                width: 10%;
+                width: 8%;
             }
             @include laptop{
-                width: 15%;
+                width: 10%;
             }
             @include tablette{
                 width: 18%;
             }
             margin-bottom: 10px;
         }
-     
+       
         .menu__container{
             position: relative; // parent en position qui permet la animation du check en position relative 
             overflow: hidden;
@@ -587,31 +694,31 @@
                 margin: 10px 0px 10px 5px;
                 padding:10px 0px 10px 5px;
             }
-             
 
-            background-color: white; 
+
+            background-color: white;
             opacity:0;
 
-            // animations
-
+            // animations          
+            
             // animation conteneurs apparition progressive 
-
+            
             animation: transition 1s ease-in-out 2s forwards;
             
-           
             @keyframes transition {
                 0%   { margin-top: -80px;opacity:0; }
                 100% { margin-top: 0;opacity:1; }
                 }
-            
-            &__btn--7{animation-delay: 4s}
-            &__btn--8{animation-delay: 5s}
-            &__btn--9{animation-delay: 6s}
-    
-            
+           
+           
             // animation chargement page 
             
-          
+            &__btn--7{animation-delay: 0,2s}
+            &__btn--8{animation-delay: 0,4s}
+            &__btn--9{animation-delay: 0,6s}
+            
+           
+            
             &__choix {
                 p{
                   font: {
@@ -622,26 +729,44 @@
                   padding-left: 10px;
                   width: 75%;                
                 }
-                       
+                    
             }
+            &__choix--{
+                width: 70%;
+            }  
             &__prix{
-                display: flex;      
-                padding-top: 10px;
+                display: flex;  
+                padding-top: 7px;
                 p{
                     text-align: left;
                     width: 85%;
                     padding-left: 10px;
-                    font-size: 12px;
+                    font-size: 13px;
                 }
                 &__euro{
                     display: flex;
-                    width: 15%;
+                    font-weight: bold;   
+                    width: 20%;
                     i{
                         opacity: 1;
                     }
-                    
+                    @include laptopL{
+                        padding-left: 40px;
+                        width: 10%;
+                        font-size: 24px;
+                    }
+                    @include laptop{
+                        width: 15%;
+                        font-size: 24px;
+                    }
+                    @include tablette{
+                        width: 10%;
+                    }
                 }
             }
+            &__prix--{
+                padding-top: 4px;
+              }
             &__check{
                 opacity: 0;
                 border-top-right-radius : 16px;
@@ -655,7 +780,7 @@
                 top: 0px;
 
               i{
-                opacity: 0;   // check caché 
+                opacity: 0; // check invisible 
               }
              
             }
@@ -663,21 +788,19 @@
             &:hover {
                 width: 90%;
                 .menu__container__check{ // au sur vol la case check apparait de droit à gauche 
-                   
-                    opacity: 1;    // check apparait
+                    opacity: 1; // check visible 
                     
                     //animation conteneur check se déplace vers la gauche          
                     transform: translate(-30%);
                     transition: transform 500ms ease-in-out;
-                   
+
                     @include laptopL{
                         transform: translate(-4%);
                         width: 40%;
                     }
                     @include laptop{
                         transform: translate(-4%);
-                        width: 80%;
-                        
+                        width: 50%;
                     }
                     @include tablette{
                         transform: translate(-4%);
@@ -714,7 +837,7 @@
                 } 
                 .menu__container__prix{  //decalage de la ligne prix vers la gauche hover
                     display: flex;      
-                    padding-top: 10px;
+                    padding-top: 7px;
                     p{
                         text-align: left;
                         width: 40%;
@@ -727,23 +850,50 @@
                         @include tablette{
                             width: 60%;
                         }
-                        font-size: 12px;
+                        @include mobileL{
+                            width: 50%;
+                        }
+                        @include mobileM{
+                            width: 42%;
+                        }
+                        font-size: 13px;
                         white-space: nowrap;    // no wrap à la ligne quand il n'y a plus d'espace
                         overflow: hidden;          // cacher ce que dépasse
                         text-overflow: ellipsis;  // met les trois points de suspension
                     }
                     &__euro{
                         display: flex;
-                        width: 50%;
+                        width: 70%;
+                        padding-left: 110px;
+                        font-size: 14px;
+
                         @include laptopL{
                             width: 100%;
+                            padding-left: 640px;
+
                         }
                         @include laptop{
                             width: 80%;
+                            padding-left: 380px;
+
                         }
                         @include tablette{
                             width: 60%;
+                            padding-left: 210px;
+
                         }
+                        @include mobileL{
+                           
+                            padding-left: 140px;
+                        }
+                        @include mobileM{
+                           
+                            padding-left: 115px;
+                        }
+                        @include mobileS{
+                            padding-left: 80px;
+                        }
+                       
                         p{
                           text-align:left;
                           white-space: unset;    // no wrap à la ligne quand il n'y a plus d'espace
@@ -755,10 +905,12 @@
                        }
                     }
                 }
-                     
+                .menu__container__prix--{
+                    padding-top: 4px;
+                }     
                 
             }     
-        }
+        }   
         
     }
        

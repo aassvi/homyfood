@@ -5,7 +5,7 @@ header{
   text-align: center;
   
 }
-
+/*
 .header{
   
   &__logo{
@@ -32,6 +32,7 @@ header{
     width: 150px;
     
   }
+  
   .fa-solid{
    color:black;
    font-weight: bold;
@@ -52,11 +53,75 @@ header{
     }
   
    font-size: 18px;
-   font-weight: bolder;
+  
   }
   .fa-solid:active{
     
     background-color: transparent;
   }
+  }
+}*/
+
+
+//
+.header{
+  
+  &__logo{
+    padding: 10px 0px 0px 20px ;
+    width:100% ;
+    height: 60px;
+    
+  }
+  &__logo--menu{    /// modificateur page restaurant menu
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    width: 100%;
+    height: 10px;
+    padding-top: 40px;
+    padding-right: 80px;
+    padding-left: 0%;
+    @include laptopL{
+      width:55% ;
+      padding: 20px 0px 0px 10px;   // padding : top right bottom left
+     }
+     @include laptop{
+      width:70% ;
+      padding: 20px 0px 0px 10px;
+     }
+     @include tablette{
+      width:70% ;
+      padding: 20px 0px 0px 10px;
+     }
+    img{
+       width: 150px;
+     }
+    i{
+      color:black;
+      font-weight: bold;
+      font-size: 18px;
+      width: 30%;
+      text-align: left;
+      padding: 5px 20px 0px 0px;
+      align-content: flex-start;
+  
+    @include laptopL{
+      width: 70%;
+      font-size: 24px;
+    }
+    @include laptop{
+      width: 50%;
+      font-size: 24px;
+    }
+    @include tablette{
+      width: 50%;
+      font-size: 24px;
+    }
+   &:active{
+    background-color: transparent;
+   }
+    
+  }
+  
   }
 }
