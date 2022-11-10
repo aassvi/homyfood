@@ -380,62 +380,6 @@ header {
   text-align: center;
 }
 
-/*
-.header{
-
-  &__logo{
-    padding: 10px 0px 0px 20px ;
-    width:100% ;
-    height: 60px;
-  }
-  &__logo--menu{    /// modificateur page restaurant menu
-    height: 20px;
-    padding: 20px 90px 0px 10px;  // padding : top right bottom left
-    @include laptopL{
-      width:55% ;
-      padding: 20px 0px 0px 10px;
-     }
-     @include laptop{
-      width:70% ;
-      padding: 20px 0px 0px 10px;
-     }
-     @include tablette{
-      width:70% ;
-      padding: 20px 0px 0px 10px;
-     }
-  img{
-    width: 150px;
-
-  }
-
-  .fa-solid{
-   color:black;
-   font-weight: bold;
-   width: 30%;
-   text-align: left;
-
-   @include laptopL{
-    width: 70%;
-    font-size: 24px;
-   }
-   @include laptop{
-     width: 50%;
-     font-size: 24px;
-   }
-   @include tablette{
-    width: 50%;
-    font-size: 24px;
-    }
-
-   font-size: 18px;
-
-  }
-  .fa-solid:active{
-
-    background-color: transparent;
-  }
-  }
-}*/
 .header__logo {
   padding: 10px 0px 0px 20px;
   width: 100%;
@@ -451,10 +395,16 @@ header {
   padding-right: 80px;
   padding-left: 0%;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .header__logo--menu {
-    width: 55%;
+    width: 65%;
     padding: 20px 0px 0px 10px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .header__logo--menu {
+    width: 65%;
+    padding: 20px 0px 0px 60px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
@@ -481,7 +431,13 @@ header {
   padding: 5px 20px 0px 0px;
   align-content: flex-start;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .header__logo--menu i {
+    width: 70%;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .header__logo--menu i {
     width: 70%;
     font-size: 24px;
@@ -591,7 +547,7 @@ form {
   border: 1px solid #e4e6e8;
   box-shadow: inset 0px 2px 3px -3px rgba(50, 50, 50, 0.75);
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .form__input {
     padding-left: 4%;
     padding-right: 8%;
@@ -658,7 +614,7 @@ form {
   margin-top: 30px;
   margin-bottom: 40px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .form__button {
     width: 20%;
   }
@@ -691,9 +647,14 @@ form {
   padding-top: 20px;
   padding-left: 40px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .nav__heading {
-    padding-left: 100px;
+    padding-left: 150px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .nav__heading {
+    padding-left: 120px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
@@ -710,7 +671,7 @@ form {
   font-size: 20px;
   font-weight: bold;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .nav__heading p {
     font-size: 22px;
   }
@@ -718,9 +679,14 @@ form {
 .nav__etape {
   padding-left: 50px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .nav__etape {
-    padding-left: 100px;
+    padding-left: 150px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .nav__etape {
+    padding-left: 120px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
@@ -770,7 +736,7 @@ form {
   width: 70%;
   text-align: left;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .nav__etape button span {
     font-size: 16px;
   }
@@ -802,9 +768,14 @@ form {
   width: 90%;
   padding: 20px 0px 0px 40px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .card {
-    padding: 20px 0px 0px 100px;
+    padding: 20px 0px 0px 140px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .card {
+    padding: 20px 0px 0px 120px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
@@ -854,7 +825,12 @@ form {
   left: 68%;
   top: 10px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .card__restaurant__nouveau > .content {
+    left: 93%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .card__restaurant__nouveau > .content {
     left: 93%;
   }
@@ -869,7 +845,7 @@ form {
     left: 85%;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .card__restaurant__nouveau > .content {
     left: 78%;
   }
@@ -900,9 +876,14 @@ form {
   margin-right: 10px;
   font-weight: bold;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .card__nom {
-    margin-right: 180px;
+    margin-right: 200px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .card__nom {
+    margin-right: 190px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
@@ -924,9 +905,14 @@ form {
   margin-right: 10px;
   font-weight: normal;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .card__lieu {
-    margin-right: 180px;
+    margin-right: 200px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .card__lieu {
+    margin-right: 190px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
@@ -1009,7 +995,13 @@ form {
   font-size: 20px;
   width: 70%;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__restaurant h1 {
+    padding-left: 150px;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__restaurant h1 {
     padding-left: 100px;
     font-size: 24px;
@@ -1031,14 +1023,22 @@ form {
   font-size: 22px;
   width: 20%;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__restaurant i {
+    padding: 20px 0px 0px 19%;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__restaurant i {
     padding: 20px 0px 0px 18%;
+    font-size: 24px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__restaurant i {
     padding: 20px 0px 0px 18%;
+    font-size: 24px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1049,7 +1049,13 @@ form {
 .menu__entrees {
   padding: 0px 0px 20px 33px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__entrees {
+    padding: 0px 0px 20px 150px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__entrees {
     padding: 0px 0px 20px 100px;
     font-size: 16px;
@@ -1076,7 +1082,12 @@ form {
   font-weight: bold;
   margin-bottom: 10px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__entrees__trait {
+    width: 5%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__entrees__trait {
     width: 10%;
   }
@@ -1098,13 +1109,24 @@ form {
   height: 60px;
   border-radius: 16px;
   border: none;
+  background-color: white;
   margin: 10px 0px 10px 0px;
   padding: 10px 0px 10px 0px;
-  background-color: white;
-  opacity: 0;
-  animation: transition 1s ease-in-out 2s forwards;
+  /* animation: transition 1s ease-in-out 2s forwards;
+
+  @keyframes transition {
+      0%   { margin-top: -80px;opacity:0; }
+      100% { margin-top: 0;opacity:1; }
+      }
+  */
+  animation: apparition 1s 1s ease-in-out backwards;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__entrees .menu__container {
+    margin: 10px 0px 10px 0px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__entrees .menu__container {
     margin: 10px 0px 10px 0px;
   }
@@ -1120,13 +1142,14 @@ form {
     padding: 10px 0px 10px 5px;
   }
 }
-@keyframes transition {
-  0% {
-    margin-top: -80px;
+@keyframes apparition {
+  from {
+    transform: translateY(20px);
+    transform-origin: bottom;
     opacity: 0;
   }
-  100% {
-    margin-top: 0;
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -1164,10 +1187,17 @@ form {
 .menu__entrees .menu__container__prix__euro i {
   opacity: 1;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__entrees .menu__container__prix__euro {
+    padding-left: 160px;
+    width: 15%;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__entrees .menu__container__prix__euro {
     padding-left: 40px;
-    width: 10%;
+    width: 15%;
     font-size: 24px;
   }
 }
@@ -1182,6 +1212,11 @@ form {
     width: 10%;
   }
 }
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .menu__entrees .menu__container__prix__euro {
+    width: 15%;
+  }
+}
 .menu__entrees .menu__container__prix-- {
   padding-top: 4px;
 }
@@ -1190,7 +1225,7 @@ form {
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   background-color: #99E2D0;
-  width: 50px;
+  width: 17%;
   height: 60px;
   position: absolute;
   inset: 0;
@@ -1208,7 +1243,13 @@ form {
   transform: translate(-30%);
   transition: transform 500ms ease-in-out;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__entrees .menu__container:hover .menu__container__check {
+    transform: translate(-4%);
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__entrees .menu__container:hover .menu__container__check {
     transform: translate(-4%);
     width: 40%;
@@ -1226,7 +1267,7 @@ form {
     width: 80%;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .menu__entrees .menu__container:hover .menu__container__check {
     transform: translate(-4%);
     width: 70%;
@@ -1264,9 +1305,14 @@ form {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .menu__entrees .menu__container:hover .menu__container__prix p {
     width: 100%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .menu__entrees .menu__container:hover .menu__container__prix p {
+    width: 90%;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
@@ -1279,12 +1325,12 @@ form {
     width: 60%;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .menu__entrees .menu__container:hover .menu__container__prix p {
     width: 50%;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 424px) {
   .menu__entrees .menu__container:hover .menu__container__prix p {
     width: 42%;
   }
@@ -1292,40 +1338,51 @@ form {
 .menu__entrees .menu__container:hover .menu__container__prix__euro {
   display: flex;
   width: 70%;
-  padding-left: 110px;
+  padding-left: 37%;
   font-size: 14px;
+  transform: translate(-3%);
+  transition: transform 1s ease-in-out;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .menu__entrees .menu__container:hover .menu__container__prix__euro {
     width: 100%;
-    padding-left: 640px;
+    padding-left: 57%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .menu__entrees .menu__container:hover .menu__container__prix__euro {
+    width: 100%;
+    padding-left: 55%;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__entrees .menu__container:hover .menu__container__prix__euro {
-    width: 80%;
-    padding-left: 380px;
+    width: 70%;
+    padding-left: 40%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__entrees .menu__container:hover .menu__container__prix__euro {
     width: 60%;
-    padding-left: 210px;
+    padding-left: 34%;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .menu__entrees .menu__container:hover .menu__container__prix__euro {
-    padding-left: 140px;
+    width: 60%;
+    padding-left: 34%;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 424px) {
   .menu__entrees .menu__container:hover .menu__container__prix__euro {
-    padding-left: 115px;
+    width: 70%;
+    padding-left: 37%;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 374px) {
   .menu__entrees .menu__container:hover .menu__container__prix__euro {
-    padding-left: 80px;
+    width: 80%;
+    padding-left: 37%;
   }
 }
 .menu__entrees .menu__container:hover .menu__container__prix__euro p {
@@ -1342,7 +1399,13 @@ form {
 .menu__plats {
   padding: 0px 0px 20px 30px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__plats {
+    padding: 0px 0px 20px 150px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__plats {
     padding: 0px 0px 20px 100px;
     font-size: 16px;
@@ -1369,7 +1432,12 @@ form {
   font-weight: bold;
   margin-bottom: 10px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__plats__trait {
+    width: 5%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__plats__trait {
     width: 8%;
   }
@@ -1391,13 +1459,19 @@ form {
   height: 60px;
   border-radius: 16px;
   border: none;
+  background-color: white;
   margin: 10px 0px 10px 0px;
   padding: 10px 0px 10px 0px;
-  background-color: white;
-  opacity: 0;
-  animation: transition 1s ease-in-out 2s forwards;
+  /*animation: transition 1s ease-in-out 2s forwards;
+
+  @keyframes transition {
+      0%   { margin-top: -80px;opacity:0; }
+      100% { margin-top: 0;opacity:1; }
+      }
+  */
+  animation: apparition 1s 1s ease-in-out backwards;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__plats .menu__container {
     margin: 10px 0px 10px 0px;
   }
@@ -1413,24 +1487,25 @@ form {
     padding: 10px 0px 10px 5px;
   }
 }
-@keyframes transition {
-  0% {
-    margin-top: -80px;
+@keyframes apparition {
+  from {
+    transform: translateY(20px);
+    transform-origin: bottom;
     opacity: 0;
   }
-  100% {
-    margin-top: 0;
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
 .menu__plats .menu__container__btn--4 {
-  animation-delay: 0, 2s;
+  animation-delay: 0, 8s;
 }
 .menu__plats .menu__container__btn--5 {
-  animation-delay: 0, 4s;
+  animation-delay: 1s;
 }
 .menu__plats .menu__container__btn--6 {
-  animation-delay: 0, 6s;
+  animation-delay: 1, 2s;
 }
 .menu__plats .menu__container__choix p {
   font-weight: bold;
@@ -1452,12 +1527,12 @@ form {
   padding-left: 10px;
   font-size: 13px;
 }
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .menu__plats .menu__container__prix {
     padding-top: 4px;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 424px) {
   .menu__plats .menu__container__prix {
     padding-top: 4px;
   }
@@ -1475,7 +1550,14 @@ form {
 .menu__plats .menu__container__prix__euro i {
   opacity: 1;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__plats .menu__container__prix__euro {
+    padding-left: 160px;
+    width: 15%;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__plats .menu__container__prix__euro {
     padding-left: 40px;
     width: 10%;
@@ -1491,6 +1573,11 @@ form {
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__plats .menu__container__prix__euro {
     width: 10%;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .menu__plats .menu__container__prix__euro {
+    width: 15%;
   }
 }
 .menu__plats .menu__container__prix-- {
@@ -1519,7 +1606,13 @@ form {
   transform: translate(-30%);
   transition: transform 500ms ease-in-out;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__plats .menu__container:hover .menu__container__check {
+    transform: translate(-4%);
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__plats .menu__container:hover .menu__container__check {
     transform: translate(-4%);
     width: 40%;
@@ -1537,7 +1630,7 @@ form {
     width: 80%;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .menu__plats .menu__container:hover .menu__container__check {
     transform: translate(-4%);
     width: 70%;
@@ -1566,15 +1659,6 @@ form {
 .menu__plats .menu__container:hover .menu__container__prix {
   display: flex;
   padding-top: 7px;
-  /*@include mobileL{
-      padding-top: 4px;  // trois lignes conteneur
-  }
-  @include mobileM{
-      padding-top: 4px;  // trois lignes conteneur
-  }
-  @include mobileS{
-      padding-top: 4px;  // trois lignes conteneur
-  }*/
 }
 .menu__plats .menu__container:hover .menu__container__prix p {
   text-align: left;
@@ -1584,9 +1668,14 @@ form {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .menu__plats .menu__container:hover .menu__container__prix p {
     width: 100%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .menu__plats .menu__container:hover .menu__container__prix p {
+    width: 90%;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
@@ -1599,12 +1688,12 @@ form {
     width: 60%;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .menu__plats .menu__container:hover .menu__container__prix p {
     width: 50%;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 424px) {
   .menu__plats .menu__container:hover .menu__container__prix p {
     width: 42%;
   }
@@ -1614,38 +1703,49 @@ form {
   width: 70%;
   padding-left: 110px;
   font-size: 14px;
+  transform: translate(-3%);
+  transition: transform 1s ease-in-out;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .menu__plats .menu__container:hover .menu__container__prix__euro {
     width: 100%;
-    padding-left: 640px;
+    padding-left: 57%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .menu__plats .menu__container:hover .menu__container__prix__euro {
+    width: 100%;
+    padding-left: 55%;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__plats .menu__container:hover .menu__container__prix__euro {
-    width: 80%;
-    padding-left: 380px;
+    width: 70%;
+    padding-left: 40%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__plats .menu__container:hover .menu__container__prix__euro {
     width: 60%;
-    padding-left: 210px;
+    padding-left: 34%;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .menu__plats .menu__container:hover .menu__container__prix__euro {
-    padding-left: 140px;
+    width: 60%;
+    padding-left: 34%;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 424px) {
   .menu__plats .menu__container:hover .menu__container__prix__euro {
-    padding-left: 115px;
+    width: 70%;
+    padding-left: 37%;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 374px) {
   .menu__plats .menu__container:hover .menu__container__prix__euro {
-    padding-left: 80px;
+    width: 80%;
+    padding-left: 37%;
   }
 }
 .menu__plats .menu__container:hover .menu__container__prix__euro p {
@@ -1662,7 +1762,13 @@ form {
 .menu__desserts {
   padding: 0px 0px 20px 30px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__desserts {
+    padding: 0px 0px 20px 150px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__desserts {
     padding: 0px 0px 20px 100px;
     font-size: 16px;
@@ -1689,7 +1795,12 @@ form {
   font-weight: bold;
   margin-bottom: 10px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__desserts__trait {
+    width: 5%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__desserts__trait {
     width: 8%;
   }
@@ -1711,13 +1822,19 @@ form {
   height: 60px;
   border-radius: 16px;
   border: none;
+  background-color: white;
   margin: 10px 0px 10px 0px;
   padding: 10px 0px 10px 0px;
-  background-color: white;
-  opacity: 0;
-  animation: transition 1s ease-in-out 2s forwards;
+  /*animation: transition 1s ease-in-out 2s forwards;
+
+  @keyframes transition {
+      0%   { margin-top: -80px;opacity:0; }
+      100% { margin-top: 0;opacity:1; }
+      }
+  */
+  animation: apparition 1s 1s ease-in-out backwards;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__desserts .menu__container {
     margin: 10px 0px 10px 0px;
   }
@@ -1733,24 +1850,28 @@ form {
     padding: 10px 0px 10px 5px;
   }
 }
-@keyframes transition {
-  0% {
-    margin-top: -80px;
+@keyframes apparition {
+  from {
+    transform: translateY(20px);
+    transform-origin: bottom;
     opacity: 0;
   }
-  100% {
-    margin-top: 0;
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
 .menu__desserts .menu__container__btn--7 {
-  animation-delay: 0, 2s;
+  animation-delay: 1, 4s;
 }
 .menu__desserts .menu__container__btn--8 {
-  animation-delay: 0, 4s;
+  animation-delay: 1, 6s;
 }
 .menu__desserts .menu__container__btn--9 {
-  animation-delay: 0, 6s;
+  animation-delay: 1, 8s;
+}
+.menu__desserts .menu__container__btn--10 {
+  animation-delay: 2s;
 }
 .menu__desserts .menu__container__choix p {
   font-weight: bold;
@@ -1780,7 +1901,14 @@ form {
 .menu__desserts .menu__container__prix__euro i {
   opacity: 1;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__desserts .menu__container__prix__euro {
+    padding-left: 160px;
+    width: 15%;
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__desserts .menu__container__prix__euro {
     padding-left: 40px;
     width: 10%;
@@ -1796,6 +1924,11 @@ form {
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__desserts .menu__container__prix__euro {
     width: 10%;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .menu__desserts .menu__container__prix__euro {
+    width: 15%;
   }
 }
 .menu__desserts .menu__container__prix-- {
@@ -1824,7 +1957,13 @@ form {
   transform: translate(-30%);
   transition: transform 500ms ease-in-out;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__desserts .menu__container:hover .menu__container__check {
+    transform: translate(-4%);
+    width: 20%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__desserts .menu__container:hover .menu__container__check {
     transform: translate(-4%);
     width: 40%;
@@ -1842,7 +1981,7 @@ form {
     width: 80%;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .menu__desserts .menu__container:hover .menu__container__check {
     transform: translate(-4%);
     width: 70%;
@@ -1880,9 +2019,14 @@ form {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .menu__desserts .menu__container:hover .menu__container__prix p {
     width: 100%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .menu__desserts .menu__container:hover .menu__container__prix p {
+    width: 90%;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
@@ -1895,12 +2039,12 @@ form {
     width: 60%;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .menu__desserts .menu__container:hover .menu__container__prix p {
     width: 50%;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 424px) {
   .menu__desserts .menu__container:hover .menu__container__prix p {
     width: 42%;
   }
@@ -1910,38 +2054,49 @@ form {
   width: 70%;
   padding-left: 110px;
   font-size: 14px;
+  transform: translate(-3%);
+  transition: transform 1s ease-in-out;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .menu__desserts .menu__container:hover .menu__container__prix__euro {
     width: 100%;
-    padding-left: 640px;
+    padding-left: 57%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .menu__desserts .menu__container:hover .menu__container__prix__euro {
+    width: 100%;
+    padding-left: 55%;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
   .menu__desserts .menu__container:hover .menu__container__prix__euro {
-    width: 80%;
-    padding-left: 380px;
+    width: 70%;
+    padding-left: 40%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menu__desserts .menu__container:hover .menu__container__prix__euro {
     width: 60%;
-    padding-left: 210px;
+    padding-left: 34%;
   }
 }
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
   .menu__desserts .menu__container:hover .menu__container__prix__euro {
-    padding-left: 140px;
+    width: 60%;
+    padding-left: 34%;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 424px) {
   .menu__desserts .menu__container:hover .menu__container__prix__euro {
-    padding-left: 115px;
+    width: 70%;
+    padding-left: 37%;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 374px) {
   .menu__desserts .menu__container:hover .menu__container__prix__euro {
-    padding-left: 80px;
+    width: 80%;
+    padding-left: 37%;
   }
 }
 .menu__desserts .menu__container:hover .menu__container__prix__euro p {
@@ -1969,7 +2124,13 @@ form {
   color: #F2F2F2;
   font-size: 12px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
+  .menu__button {
+    width: 15%;
+    margin: 20px 0px 0px 40%;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
   .menu__button {
     width: 20%;
   }
@@ -2020,9 +2181,14 @@ footer a:visited {
 .footer__logo {
   padding: 30px 0px 10px 40px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .footer__logo {
-    padding-left: 100px;
+    padding-left: 150px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .footer__logo {
+    padding-left: 120px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {
@@ -2044,9 +2210,14 @@ footer a:visited {
   width: 100%;
   padding: 5px 0px 5px 40px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 2000px) {
   .footer__iconText {
-    padding-left: 100px;
+    padding-left: 150px;
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 1999px) {
+  .footer__iconText {
+    padding-left: 120px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1399px) {

@@ -9,8 +9,11 @@
       text-align: left;
       padding-top: 20px;
       padding-left: 40px;
+      @include laptopXL{
+        padding-left: 150px;
+      }
       @include laptopL{
-        padding-left: 100px;
+        padding-left: 120px;
       }
       @include laptop{
         padding-left: 100px;
@@ -28,9 +31,12 @@
     }
     }
     &__etape{
-        padding-left: 50px; 
+        padding-left: 50px;
+        @include laptopXL{
+            padding-left: 150px;
+          } 
         @include laptopL{
-            padding-left: 100px;
+            padding-left: 120px;
         }
         @include laptop{
             padding-left: 100px;

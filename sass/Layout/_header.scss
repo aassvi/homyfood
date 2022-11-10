@@ -5,65 +5,7 @@ header{
   text-align: center;
   
 }
-/*
-.header{
-  
-  &__logo{
-    padding: 10px 0px 0px 20px ;
-    width:100% ;
-    height: 60px;
-  }
-  &__logo--menu{    /// modificateur page restaurant menu
-    height: 20px;
-    padding: 20px 90px 0px 10px;  // padding : top right bottom left
-    @include laptopL{
-      width:55% ;
-      padding: 20px 0px 0px 10px;
-     }
-     @include laptop{
-      width:70% ;
-      padding: 20px 0px 0px 10px;
-     }
-     @include tablette{
-      width:70% ;
-      padding: 20px 0px 0px 10px;
-     }
-  img{
-    width: 150px;
-    
-  }
-  
-  .fa-solid{
-   color:black;
-   font-weight: bold;
-   width: 30%;
-   text-align: left;
-  
-   @include laptopL{
-    width: 70%;
-    font-size: 24px;
-   }
-   @include laptop{
-     width: 50%;
-     font-size: 24px;
-   }
-   @include tablette{
-    width: 50%;
-    font-size: 24px;
-    }
-  
-   font-size: 18px;
-  
-  }
-  .fa-solid:active{
-    
-    background-color: transparent;
-  }
-  }
-}*/
 
-
-//
 .header{
   
   &__logo{
@@ -81,9 +23,13 @@ header{
     padding-top: 40px;
     padding-right: 80px;
     padding-left: 0%;
-    @include laptopL{
-      width:55% ;
+    @include laptopXL{
+      width:65% ;
       padding: 20px 0px 0px 10px;   // padding : top right bottom left
+     }
+    @include laptopL{
+      width:65% ;
+      padding: 20px 0px 0px 60px;   // padding : top right bottom left
      }
      @include laptop{
       width:70% ;
@@ -104,20 +50,23 @@ header{
       text-align: left;
       padding: 5px 20px 0px 0px;
       align-content: flex-start;
-  
-    @include laptopL{
-      width: 70%;
-      font-size: 24px;
-    }
-    @include laptop{
-      width: 50%;
-      font-size: 24px;
-    }
-    @include tablette{
-      width: 50%;
-      font-size: 24px;
-    }
-   &:active{
+      @include laptopL{
+        width: 70%;
+        font-size: 24px;
+      }
+      @include laptopL{
+        width: 70%;
+        font-size: 24px;
+      }
+      @include laptop{
+        width: 50%;
+       font-size: 24px;
+      }
+      @include tablette{
+        width: 50%;
+        font-size: 24px;
+      }
+    &:active{
     background-color: transparent;
    }
     

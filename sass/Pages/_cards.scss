@@ -8,8 +8,11 @@
   width: 90%;
   padding: 20px 0px 0px 40px;   // padding : top right bottom left
   // version desktop
+  @include laptopXL{
+    padding: 20px 0px 0px 140px; 
+  }
   @include laptopL{
-    padding: 20px 0px 0px 100px; 
+    padding: 20px 0px 0px 120px; 
   }
   @include laptop{
     padding: 20px 0px 0px 100px; 
@@ -57,6 +60,9 @@
         inset: 0;                           // met le texte à l'interieur de l'image
         left: 68%;                          
         top: 10px;
+        @include laptopXL{
+          left: 93%;   
+        }
         @include laptopL{
           left: 93%;   
         }
@@ -101,8 +107,11 @@
     width: 80%;
     padding: 0px 50px 0px 10px ;
     margin-right: 10px;
+    @include laptopXL{
+      margin-right: 200px;
+     }
     @include laptopL{
-      margin-right: 180px;
+      margin-right: 190px;
      }
     @include laptop{
      margin-right: 100px;
@@ -119,8 +128,11 @@
     width: 80%;
     padding: 5px 0px 5px 0px;        // padding : top right bottom left
     margin-right: 10px;
+    @include laptopXL{
+      margin-right: 200px;
+     }
     @include laptopL{
-      margin-right: 180px;
+      margin-right: 190px;
      }
     @include laptop{
      margin-right: 100px;
