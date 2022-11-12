@@ -783,9 +783,10 @@ form {
     padding: 20px 0px 0px 80px;
   }
 }
-.card__heading p {
+.card__heading h1 {
   font-size: 20px;
   font-weight: bold;
+  font-family: "roboto";
   padding: 20px 0px 5px 0px;
 }
 .card__restaurant {
@@ -2196,7 +2197,7 @@ footer a:visited {
     padding-left: 80px;
   }
 }
-.footer__logo h1 {
+.footer__logo h2 {
   font-size: 16px;
   width: 100%;
 }
