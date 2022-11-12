@@ -1500,7 +1500,7 @@ form {
   animation-delay: 1s;
 }
 .menu__plats .menu__container__btn--6 {
-  animation-delay: 1s, 200ms;
+  animation-delay: 1200ms;
 }
 .menu__plats .menu__container__choix p {
   font-weight: bold;
@@ -1857,13 +1857,13 @@ form {
   }
 }
 .menu__desserts .menu__container__btn--7 {
-  animation-delay: 1s, 400ms;
+  animation-delay: 1400ms;
 }
 .menu__desserts .menu__container__btn--8 {
-  animation-delay: 1s, 600ms;
+  animation-delay: 1600ms;
 }
 .menu__desserts .menu__container__btn--9 {
-  animation-delay: 1s, 800ms;
+  animation-delay: 1800ms;
 }
 .menu__desserts .menu__container__btn--10 {
   animation-delay: 2s;
