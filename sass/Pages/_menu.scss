@@ -169,6 +169,7 @@
             &__btn--1{animation-delay: 200ms}
             &__btn--2{animation-delay: 400ms}
             &__btn--3{animation-delay: 600ms}
+            &__btn--4{animation-delay: 800ms}
 
 
            
@@ -253,7 +254,7 @@
                 
                     //animation conteneur check se déplace vers la gauche          
                     transform: translate(-30%);
-                    transition: transform 500ms ease-in-out;
+                    transition: transform 1s ease-in-out;
                     @include laptopXL{
                         transform: translate(-4%);
                         width: 20%;
@@ -909,7 +910,7 @@
                     
                     //animation conteneur check se déplace vers la gauche          
                     transform: translate(-30%);
-                    transition: transform 500ms ease-in-out;
+                    transition: transform 1s ease-in-out;
                     @include laptopXL{
                         transform: translate(-4%);
                         width: 20%;

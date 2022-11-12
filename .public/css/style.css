@@ -1158,6 +1158,9 @@ form {
 .menu__entrees .menu__container__btn--3 {
   animation-delay: 600ms;
 }
+.menu__entrees .menu__container__btn--4 {
+  animation-delay: 800ms;
+}
 .menu__entrees .menu__container__choix p {
   font-weight: bold;
   font-size: 14px;
@@ -1237,7 +1240,7 @@ form {
 .menu__entrees .menu__container:hover .menu__container__check {
   opacity: 1;
   transform: translate(-30%);
-  transition: transform 500ms ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 @media screen and (min-width: 2000px) {
   .menu__entrees .menu__container:hover .menu__container__check {
@@ -1951,7 +1954,7 @@ form {
 .menu__desserts .menu__container:hover .menu__container__check {
   opacity: 1;
   transform: translate(-30%);
-  transition: transform 500ms ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 @media screen and (min-width: 2000px) {
   .menu__desserts .menu__container:hover .menu__container__check {
